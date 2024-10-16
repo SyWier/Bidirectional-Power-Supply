@@ -1,1 +1,3 @@
-Record=TopLevelDocument|FileName=UPS.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=Battery.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=Battery.SchDoc|FileName=BuckBoost.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=Battery.SchDoc|FileName=UPS.SchDoc|SheetNumber=1
