@@ -1,0 +1,1 @@
+python ../../dwarformer.py -o test.txt -i Blinky_LED_1_KIT_TC375_LK.elf -e -s test_sorted.txt -b 8 -v

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Project>
+    <Project_name>DSP280039</Project_name>
+    <Address_size>32</Address_size>
+    <Addressable_size>16</Addressable_size>
+    <Command_timeout>3</Command_timeout>
+    <Erase_timeout>10</Erase_timeout>
+    <ProgramWholeMemory>0</ProgramWholeMemory>
+    <Downloader_required>1</Downloader_required>
+    <Downloader_file_name>sw280039downloader.mhx</Downloader_file_name>
+    <Downloader_BaudRate>38400</Downloader_BaudRate>
+    <API_required>1</API_required>
+    <API_start_address>&amp;HA000</API_start_address>
+    <API_end_address>&amp;HCFFF</API_end_address>
+    <API_file_name>sw280039api.mhx</API_file_name>
+    <API_BaudRate>57600</API_BaudRate>
+    <BOOT_required>1</BOOT_required>
+    <BOOT_start_address>&amp;H80000</BOOT_start_address>
+    <BOOT_end_address>&amp;H82FFD</BOOT_end_address>
+    <BOOT_Sector_From>0</BOOT_Sector_From>
+    <BOOT_Sector_To>2</BOOT_Sector_To>
+    <BOOT_serial_address>&amp;H82FFE</BOOT_serial_address>
+    <BOOT_BaudRate>57600</BOOT_BaudRate>
+    <SW_start_address>&amp;H83000</SW_start_address>
+    <SW_end_address>&amp;H8FFFE</SW_end_address>
+    <SW_CRC_required>1</SW_CRC_required>
+    <SW_CRC_address>&amp;H8FFFF</SW_CRC_address>
+    <SW_Sector_From>3</SW_Sector_From>
+    <SW_Sector_To>15</SW_Sector_To>
+    <SW_BaudRate>57600</SW_BaudRate>
+  </Project>
+</DocumentElement>

@@ -1,0 +1,1 @@
+python ../../dwarformer.py -o test.txt -i test.out -c -s test_sorted.txt -b 16

@@ -1,0 +1,16 @@
+{
+    "interruptInfo" : [
+        {
+            "interruptName": "INT_ADC0_1",
+            "interruptHandler": "INT_ADC0_1_ISR"
+        },
+        {
+            "interruptName": "INT_TIMER_1MS",
+            "interruptHandler": "INT_TIMER_1MS_ISR"
+        },
+        {
+            "interruptName": "INT_GATE_PWM_TZ",
+            "interruptHandler": "INT_GATE_PWM_TZ_ISR"
+        }
+    ]
+}

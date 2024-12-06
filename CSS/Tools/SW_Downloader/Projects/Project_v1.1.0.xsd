@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Project" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Project">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Project_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Address_size" type="xs:string" minOccurs="0" />
+              <xs:element name="Addressable_size" type="xs:string" minOccurs="0" />
+              <xs:element name="Command_timeout" type="xs:string" minOccurs="0" />
+              <xs:element name="Erase_timeout" type="xs:string" minOccurs="0" />
+              <xs:element name="ProgramWholeMemory" type="xs:string" minOccurs="0" />
+              <xs:element name="Downloader_required" type="xs:string" minOccurs="0" />
+              <xs:element name="Downloader_file_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Downloader_BaudRate" type="xs:string" minOccurs="0" />
+              <xs:element name="API_required" type="xs:string" minOccurs="0" />
+              <xs:element name="API_start_address" type="xs:string" minOccurs="0" />
+              <xs:element name="API_end_address" type="xs:string" minOccurs="0" />
+              <xs:element name="API_file_name" type="xs:string" minOccurs="0" />
+              <xs:element name="API_BaudRate" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_required" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_start_address" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_end_address" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_Sector_From" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_Sector_To" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_serial_address" type="xs:string" minOccurs="0" />
+              <xs:element name="BOOT_BaudRate" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_start_address" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_end_address" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_CRC_required" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_CRC_address" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_Sector_From" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_Sector_To" type="xs:string" minOccurs="0" />
+              <xs:element name="SW_BaudRate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

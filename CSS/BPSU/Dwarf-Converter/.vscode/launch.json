@@ -1,0 +1,82 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "dwarformer infineon",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-o",
+                "test.txt",
+                "-i",
+                "example/infineon/Blinky_LED_1_KIT_TC375_LK.elf",
+                "-e",
+                "-s",
+                "sorted.txt",
+                "-b",
+                "8",
+                "-sr",
+                "^(Ifx).*"
+            ]
+        },
+        {
+            "name": "dwarformer ti",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-o",
+                "test.txt",
+                "-i",
+                "example/texas/test.out",
+                "-c",
+                "-s",
+                "sorted.txt",
+                "-b",
+                "16"
+            ]
+        },
+        {
+            "name": "dwarformer napino",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-o",
+                "test.txt",
+                "-i",
+                "T:/Build/LAUNCHXL-F280039C/Debug/Napino-RA-OBC-LAUNCHXL-F280039C.elf",
+                "-e",
+                "-b",
+                "16",
+                "-v"
+            ]
+        },
+        {
+            "name": "dwarformer ktnlbmscharger",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-o",
+                "test.txt",
+                "-i",
+                "Q:/Debug/KTNL_BMS_Charger.elf",
+                "-e",
+                "-b",
+                "16",
+                "-v",
+                "-s",
+                "sorted.txt"
+            ]
+        }
+    ]
+}

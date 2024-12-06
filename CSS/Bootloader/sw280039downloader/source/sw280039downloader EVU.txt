@@ -1,0 +1,12 @@
+2024.04.12.
+- inic
+
+2024.04.15.
+- A downloader elég hosszú lett kb. 5x akkora, mint szokott.
+- PK30-Control kártyán zöld LED villogtatása, míg fut a downloader.
+- A f28003x_defaultisr.c-t nem fordítja bele, így rövidebb a program. Ki lett szedve a CCS-ben a fordítandó fájlok közül.
+
+2024.04.16.
+- SCI beállítás a DriverLib nélkül, így rövidebb a program.
+- InitSysCtrl()-t nem használjuk, külön meg lett írva amit csinál. Így rövidebb.
+- A DriverLib/interrupt.c-t nem fordítja bele, így rövidebb a program. Ki lett szedve a CCS-ben a fordítandó fájlok közül.
