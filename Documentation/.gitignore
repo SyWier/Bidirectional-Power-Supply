@@ -1,0 +1,12 @@
+*
+!*/
+
+# Track this file
+!.gitignore
+!README.md
+
+# Whitelist these:
+!Szakdolgozat.pdf
+!Schematic.pdf
+!Mikrokontroller perifériák konfigurálása.pdf
+!Ketiranyu-teljesitmenyaramlasra-alkalmas-Feladatkiiras.pdf
