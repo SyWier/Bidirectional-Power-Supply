@@ -1,0 +1,51 @@
+Started on Wed Apr 30 12:16:53 2025
+
+emprvem: v1.0.0
+Invoking vmesh...
+FEM_VMESH v2.152.55
+Generating DC mesh
+Building Model
+
+
+
+ Checking face descriptors
+ Checking face descriptors
+Generating Solver Files
+Generated: 
+  28765 mesh elements
+Invoking VemEngine...
+
+Starting the DC solver at Wed Apr 30 12:16:55 2025
+Creating the DC design
+..parsing the options file 
+..using NUMBER_OF_PROCESSORS = 24
+..parsing the layout file 
+..parsing the stimulus file 
+..extracting the connectivity 
+..extracting the substrate 
+Initializing electric analysis
+Electric analysis
+..loading the electric component models
+..electric matrix size: 33620
+..loading the electric matrix equation
+..solving the electric matrix equation
+.........|.........|.........|.........|
+..max voltage: 3.2938
+..writing the output files
+Electric N-port analysis
+..number of ports: 9
+..loading the electric component models
+..electric matrix size: 33620
+..loading the electric matrix equation
+..solving the electric matrix equation
+.........|.........|.........|.........|
+..writing the model file
+DC solver resources
+..elapsed time: 0.8 s
+..user time: 8.5 s
+..physical memory: 80 MB
+..virtual memory: 130 MB
+
+Finished on Wed Apr 30 12:16:56 2025
+
+Total Elapsed Time : 2.24579s
