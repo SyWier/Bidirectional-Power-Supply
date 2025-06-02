@@ -8,3 +8,5 @@ The developement board is easily configurable through serial communication, have
 ## Directories
 - Altium: **Altium** project of the hardware.
 - CSS: **Code Composer Studio** project and other tools to flash the microcontroller
+
+![image](https://github.com/user-attachments/assets/e51c3931-6591-430c-9c16-c1e37a86f703)
