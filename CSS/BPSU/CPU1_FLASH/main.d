@@ -8,10 +8,10 @@ main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/incl
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/sys/_types.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/sys/cdefs.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_types.h
+main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib/inc/hw_memmap.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib/adc.h
-main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdint.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/_stdint40.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/sys/stdint.h
@@ -109,13 +109,18 @@ main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib/driver_inclusiv
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/device.h
 main.obj: D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stddef.h
 main.obj: syscfg/board.h
+main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/func.h
 main.obj: syscfg/c2000ware_libraries.h
+main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/DeviceSupport/include/f28003x_piectrl.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/MUCI_bsp.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/hw_types.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/Term_defs.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/MUCI/MUCI.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/device/MUCI_bsp.h
 main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/MUCI/MUCI_Recorder.h
+main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/pid.h
+main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/globals.h
+main.obj: C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/fsm.h
 
 ../main.c:
 
@@ -133,13 +138,13 @@ D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/sys/cd
 
 D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/machine/_types.h:
 
+D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h:
+
 C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib.h:
 
 C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib/inc/hw_memmap.h:
 
 C:/Users/Daniel/CodeComposer/UPS_MUCI/device/driverlib/adc.h:
-
-D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h:
 
 D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdint.h:
 
@@ -335,7 +340,11 @@ D:/Programs/TI/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stddef
 
 syscfg/board.h:
 
+C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/func.h:
+
 syscfg/c2000ware_libraries.h:
+
+C:/Users/Daniel/CodeComposer/UPS_MUCI/DeviceSupport/include/f28003x_piectrl.h:
 
 C:/Users/Daniel/CodeComposer/UPS_MUCI/device/MUCI_bsp.h:
 
@@ -348,4 +357,10 @@ C:/Users/Daniel/CodeComposer/UPS_MUCI/MUCI/MUCI.h:
 C:/Users/Daniel/CodeComposer/UPS_MUCI/device/MUCI_bsp.h:
 
 C:/Users/Daniel/CodeComposer/UPS_MUCI/MUCI/MUCI_Recorder.h:
+
+C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/pid.h:
+
+C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/globals.h:
+
+C:/Users/Daniel/CodeComposer/UPS_MUCI/inc/fsm.h:
 

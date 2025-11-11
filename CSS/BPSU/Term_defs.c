@@ -2,7 +2,7 @@
 #include "MUCI_Recorder.h"
 #include "Term_defs.h"
 
-uint32_t f_samp = 10000;    /*!< sampling frequency - should be in a spearate file */
+uint32_t f_samp = 200000;    /*!< sampling frequency - should be in a spearate file */
 const uint16_t mon_ver = 200;      /*!< monitor version */
 const uint16_t en_fl_bbx = 1;  /*!< enable monitoring floating point variables in the recorder */
 const uint16_t nr_tabs=MON_MAXTABS;/*!< maximum number of tabs */
@@ -12,7 +12,7 @@ const uint32_t len_ehist = 0; /*!< length of error history */
 const uint16_t noofBBXch = MUCI_RECORDER_CHANNEL_NUMBER;
 uint32_t serial_nr = 12345;
 
-uint32_t BuildDate = 20201006;
+uint32_t BuildDate = 20250316;
 uint32_t BuildTime = 100000;
 
 /* extern variables */

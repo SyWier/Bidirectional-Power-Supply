@@ -16,88 +16,122 @@
 // Included Files
 //
 #include <stdio.h>
+#include <stdbool.h>
 #include "driverlib.h"
 #include "device.h"
 #include "board.h"
+#include "func.h"
 #include "c2000ware_libraries.h"
+
+typedef unsigned int Uint16;
+#include "f28003x_piectrl.h"
 
 #include "MUCI_bsp.h"
 
-
+#include "pid.h"
+#include "globals.h"
+#include "fsm.h"
 
 //
 // Globals
 //
 
 // Flags
-bool timerFlag = 0;
+bool timer100uSecFlag = 0;
+bool timer1mSecFlag = 0;
+bool timer5SecFlag = 0;
 bool adcFlag = 0;
+bool tzFlag = 0;
 
 // Counters
 uint32_t BackgndCounter = 0;
-uint32_t pwmTzIntCnt = 0;
+uint32_t timer1Cnt = 0;
+uint32_t timer5Cnt = 0;
+uint32_t tzIntCnt = 0;
 uint32_t adcIntCnt= 0;
-uint32_t timerIntCnt = 0;
 uint32_t ledCnt = 0;
-uint32_t CmpaVal = 600;
-uint32_t CmpaMax = 156;
-uint32_t CmpaCnt = 0;
-
-
-
-#define BUFFER_SIZE 256
-uint16_t index = 0;
+uint32_t ellapsedTime = 0;
+uint32_t lastTime = 0;
 
 // Adc values
-uint16_t Adc5V;
-uint16_t AdcBatt;
-uint16_t AdcCurrent;
-uint16_t AdcRef;
-uint16_t AdcRefBuff[BUFFER_SIZE];
+typedef struct {
+    uint16_t Main;
+    uint16_t Batt;
+    uint16_t Current;
+    uint16_t Ref;
+} adcStruct_t;
+adcStruct_t adc;
 
-float V5v;
+float VMain;
+float VMainAvg;
+float VMainBuff[16];
+uint8_t VMainBuffCnt;
 float VBatt;
 float VCurr;
 float VRef;
-float I;
+float VLimit = 4.85;
+float IBatt;
+float PWMVal = 0.7;
 
 // Control variables
-uint32_t IOTestMode = 1;
-uint32_t StartPWM = 0;
-uint32_t StartPWMJump = 0;
-uint32_t StartState = 0;
-uint32_t StopPWM = 0;
-uint32_t enableGate = 0;
-uint32_t disableGate = 0;
+uint32_t StateTestMode = 0;
+#define HANDLE_TEST_MODE 0
+uint32_t HandleTestMode = 0; // Currently not in use
 uint32_t ackTripZone = 0;
-
 uint16_t ControlEnabled = 0;
-float Iref = 0;
-float Cur_reg_error = 0;
-float Cur_reg_error_old = 0;
-float Cur_reg_P = 0;
-float Cur_reg_I = 0;
-float Cur_reg_output = 0;
-float Cur_reg_min = 0.05;
-float Cur_reg_max = 0.95;
+uint8_t MuciEnable = 0;
+
+State_t gateState = {.state = 0, .enable = 0, .disable = 0};
+State_t pwmState = {.state = 0, .enable = 0, .disable = 0};
+
+typedef struct {
+    bool buck;
+    bool boost;
+    bool current;
+    bool pwm;
+    bool buckPwm;
+} enable_t;
+enable_t enReg;
+
+typedef struct {
+    uint32_t t[10];
+} timer_t;
+volatile timer_t timer;
+#define TIMER 1
+#define TIMER_PRD 10000
+#define TIMER_READ_CYCLES 7
+uint8_t timerCnt = 0;
+
+void inline SampleTime() {
+#if TIMER
+    timer.t[timerCnt] = TIMER_PRD - CPUTimer_getTimerCount(TIMER_0_BASE) - timerCnt*TIMER_READ_CYCLES;
+    timerCnt = timerCnt + 1;
+#endif
+}
+
+void inline SampleTimeReset() {
+#if TIMER
+    CPUTimer_reloadTimerCounter(TIMER_0_BASE);
+    // Wait two cycle to take effect
+    asm("       NOP");
+    asm("       NOP");
+    timerCnt = 0;
+#endif
+}
+
 
 
 //
 // Interrupt Function Prototypes
 //
 __interrupt void INT_TIMER_1MS_ISR(void);
-__interrupt void INT_GATE_PWM_TZ_ISR(void);
 __interrupt void INT_ADC0_1_ISR(void);
 
 //
 // Function Prototypes
 //
-void EnableAll();
-void Control();
 void Application();
-void Blink(uint32_t pin, uint32_t cntMax, uint32_t* cnt);
-void TimerDelay(uint32_t cntMax, uint32_t* cnt);
-
+void Control();
 
 //
 // Main
@@ -121,37 +155,42 @@ void main(void)
     Board_init();
 
     // Disable ePWM1 by default
-    SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    //SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
 
     // Initialize MUCI variable monitoring
     MUCI_bsp_Init();
+
+    // Disable PWM output, enable gate,
+    GateControl(0);
+    GPIO_writePin(GATE_EN, 1);
+    gateState.state = 1;
 
     // Enable Global Interrupt (INTM) and real time interrupt (DBGM)
     EINT;
     ERTM;
 
     while(1) {
-        MUCI_bsp_Background();
         BackgndCounter++;
+        MUCI_bsp_Background();
 
-        if(IOTestMode) {
-            Control();
-        } else {
-            EnableAll();
+        Control();
+
+        if(timer100uSecFlag) {
+            timer100uSecFlag = 0;
+
+            if(!MuciEnable) {
+                MUCI_Recorder_Trigger();
+            }
         }
 
-        /*
-        if(adcFlag) {
-            adcFlag = 0;
+        if(timer1mSecFlag) {
+            timer1mSecFlag = 0;
 
-        }
-        */
-
-        if(timerFlag) {
-            timerFlag = 0;
-
+            // Update states manually if { StateTestMode = 1 }
+            if(!StateTestMode) {
+                UpdatePowerState();
+            }
             Application();
-            Blink(LED2, 1000, &ledCnt);
         }
     }
 }
@@ -161,172 +200,167 @@ void main(void)
 //
 
 // 1ms timer interrupt for timing
-__interrupt void INT_TIMER_1MS_ISR(void)
-{
-    timerFlag = 1;
-    timerIntCnt++;
+// Extra 8 cycles to enable nesting vs ISR routine + return ...
+#pragma CODE_SECTION(INT_TIMER_1MS_ISR, ".TI.ramfunc")
+__interrupt void INT_TIMER_1_ISR(void) {
+    // === Enables IT priority for ADC_IT ===
+    // Save PIEIER register for later
+    uint16_t TempPIEIER;
+    TempPIEIER = PieCtrlRegs.PIEIER1.all;
 
-    // The CPU acknowledges the interrupt.
-}
+    // Enable Group 1 interrupts
+    IER |= 0x0001;
+    IER &= 0x0001;
 
-// ePWM Trip-Zone triggered interrupt
-__interrupt void INT_GATE_PWM_TZ_ISR(void)
-{
-    pwmTzIntCnt++;
+    // Set group priority to allow INT1.1 to interrupt current ISR
+    PieCtrlRegs.PIEIER1.all &= 0x0001;
+    PieCtrlRegs.PIEACK.all = 0xFFFF; // Enable PIE interrupts
 
-    // Disable gate outputs and pwm
-    GPIO_writePin(GATE_EN, 0);
-    //SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    // Clear INTM to enable interrupts
+    asm("       NOP"); // Wait one cycle
+    EINT;
+    // === === === === ===
 
-    // Wait to acknowledge the Trip-Zone
-    while(!ackTripZone) {
-        ackTripZone = 0;
-        MUCI_bsp_Background();
-        EPWM_clearTripZoneFlag(GATE_PWM_BASE, (EPWM_TZ_INTERRUPT | EPWM_TZ_FLAG_OST));
+    // ISR code...
+    timer100uSecFlag = 1;
+
+    static PowerState lastState = BOOT;
+
+    if(lastState != powerState) {
+        lastState = powerState;
+        timer5SecFlag = 0;
+        timer5Cnt = 0;
     }
 
-    //SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    timer5Cnt++;
+    if(timer5Cnt >= 50000) {
+        timer5SecFlag = 1;
+        timer5Cnt = 0;
+    }
 
-    // Acknowledge this interrupt to receive more interrupts from group
-    Interrupt_clearACKGroup(INT_GATE_PWM_TZ_INTERRUPT_ACK_GROUP);
+    timer1Cnt++;
+    if(timer1Cnt >= 10) {
+        timer1mSecFlag = 1;
+        timer1Cnt = 0;
+    }
+
+    // Restore state
+    DINT;
+    PieCtrlRegs.PIEIER1.all = TempPIEIER;
+
+    // The CPU acknowledges the interrupt.
 }
 
 // ADC end of conversion interrupt
 // ADC conversion is generated at every ePWM ZRO/PRD events
 #pragma CODE_SECTION(INT_ADC0_1_ISR, ".TI.ramfunc")
-__interrupt void INT_ADC0_1_ISR(void)
-{
+__interrupt void INT_ADC0_1_ISR(void) {
+    SampleTimeReset();
+    SampleTime();
+
     adcFlag = 1;
     adcIntCnt++;
 
-    // Add the latest result to the buffer
-    AdcCurrent = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
-    Adc5V = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
-    AdcRef = ADC_readResult(ADCBRESULT_BASE, ADC_SOC_NUMBER0);
-    //AdcRefBuff[(index++)%BUFFER_SIZE] = AdcRef;
-    AdcBatt = ADC_readResult(ADCBRESULT_BASE, ADC_SOC_NUMBER1);
+    // Read ADC
+    adc.Current = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
+    adc.Main = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
+    adc.Ref = ADC_readResult(ADCBRESULT_BASE, ADC_SOC_NUMBER0);
+    adc.Batt = ADC_readResult(ADCBRESULT_BASE, ADC_SOC_NUMBER1);
 
-    VCurr = (float)AdcCurrent * 0.000805664; // AdcCurrent/4096 * 3.3
-    I = -(VCurr-VRef)/0.2f;
+    SampleTime();
 
-    Cur_reg_error = Iref - I;
+    // Calculate voltages
+    // Other 2 value calculated at the main Application every 1ms
+    VMain = (float)adc.Main * 0.001371343; // Adc.Main/4096 * 3.3 * (4.7+3.3)/4.7
+    VBatt = (float)adc.Batt * 0.001371343; // Adc.Batt/4096 * 3.3 * (4.7+3.3)/4.7
+    VCurr = (float)adc.Current * 0.000805664; // Adc.Current/4096*3.3
+    IBatt = -(VCurr-VRef) * 5; // -(VCurr-VRef) / 0.2f;
 
-    if(ControlEnabled) {
-        Cur_reg_output += Cur_reg_error * Cur_reg_I + (Cur_reg_error - Cur_reg_error_old) * Cur_reg_P;
-        Cur_reg_error_old = Cur_reg_error;
-        if(Cur_reg_output > Cur_reg_max)
-            Cur_reg_output = Cur_reg_max;
-        else if(Cur_reg_output < Cur_reg_min)
-            Cur_reg_output = Cur_reg_min;
-        EPWM_setCounterCompareValue(GATE_PWM_BASE, EPWM_COUNTER_COMPARE_A, (1.0-Cur_reg_output) * 600);
+    SampleTime();
+
+    // Manual/Automatic conversion control
+#if HANDLE_TEST_MODE
+    if(enReg.buck)          ControlBuck(VBuckReg.ref);
+    else if(enReg.boost)    ControlBoost(VBoostReg.ref);
+    else if(enReg.current)  ControlCurrent(IBattReg.ref);
+    else if(enReg.pwm)      EPWM_setCounterCompareValue(GATE_PWM_BASE, EPWM_COUNTER_COMPARE_A, (1.0-PWMVal) * TBPRD);
+#else
+    HandlePowerStates();
+#endif
+
+    SampleTime();
+
+    // Display values in graph
+    if(MuciEnable) {
+        MUCI_Recorder_Trigger();
     }
 
-    MUCI_Recorder_Trigger();
+    SampleTime();
+
+    // Check if overflow has occurred (continuous mode)
+    if(true == ADC_getInterruptOverflowStatus(ADCA_BASE, ADC_INT_NUMBER1)) {
+        ADC_clearInterruptOverflowStatus(ADCA_BASE, ADC_INT_NUMBER1);
+        ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
+    }
 
     // Clear the interrupt flag
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
 
-    // Check if overflow has occurred
-    if(true == ADC_getInterruptOverflowStatus(ADCA_BASE, ADC_INT_NUMBER1))
-    {
-        ADC_clearInterruptOverflowStatus(ADCA_BASE, ADC_INT_NUMBER1);
-        ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
-        GPIO_togglePin(LED1);
-    }
-
     // Acknowledge the interrupt
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
+
+    SampleTime();
 }
 
 //
 // Functions
 //
 
-// Enable ALL peripherals
-void EnableAll() {
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
-    GPIO_writePin(GATE_EN, 1);
-}
-
 // Function to toggle peripherals
 void Control() {
-    //GPIO_togglePin(LED1);
-
-    if(StartPWM) {
-        StartPWM = 0;
-        //StartState = 1;
-        SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    if(pwmState.enable) {
+        pwmState.enable = 0;
+        GateControl(1);
+        //SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
     }
 
-    if(StartPWMJump) {
-        StartPWMJump = 0;
-        SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
-        EPWM_setCounterCompareValue(GATE_PWM_BASE, EPWM_COUNTER_COMPARE_A, 156);
-        //EPWM_forceTripZoneEvent(base, tzForceEvent)
-    }
-
-    if(StopPWM) {
-        StopPWM = 0;
-        //StartState = 0;
-        //CmpaVal = 600;
+    if(pwmState.disable) {
+        pwmState.disable = 0;
+        GateControl(0);
         SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
     }
 
-    if(enableGate) {
-        enableGate = 0;
+    if(gateState.enable) {
+        gateState.state = 1;
+        gateState.enable = 0;
         GPIO_writePin(GATE_EN, 1);
     }
 
-    if(disableGate) {
-        disableGate = 0;
+    if(gateState.disable) {
+        gateState.state = 0;
+        gateState.disable = 0;
         GPIO_writePin(GATE_EN, 0);
     }
 }
 
 // Main calculations
 void Application() {
-    V5v = (float)Adc5V * 0.001371343; // Adc5V/4096 * 3.3 * (4.7+3.3)/4.7
-    VBatt = (float)AdcBatt * 0.001371343; // AdcBatt/4096 * 3.3 * (4.7+3.3)/4.7
-//    uint32_t buffer = 0;
-//    uint32_t i;
-//    for(i = 0; i < BUFFER_SIZE; i++) {
-//        buffer += AdcRefBuff[i];
-//    }
-//    buffer = buffer;
-    VRef = (float)AdcRef * 0.000805664; // AdcRef/4096 * 3.3
+    VRef = (float)adc.Ref * 0.000805664; // Adc.Ref/4096 * 3.3
 
-    /*
-    if(StartState) {
-        if(CmpaVal > CmpaMax) {
-            TimerDelay(25, &CmpaCnt);
-        }
-
+    VMainBuff[VMainBuffCnt] = VMain;
+    VMainBuffCnt++;
+    if(VMainBuffCnt >= 16) {
+        VMainBuffCnt = 0;
     }
-    */
-}
-
-// A function to toggle the LED pins
-void Blink(uint32_t pin, uint32_t cntMax, uint32_t* cnt)
-{
-    (*cnt)++;
-    if(cntMax <= *cnt) {
-        *cnt = 0;
-
-        GPIO_togglePin(pin);
+    VMainAvg = 0;
+    int i;
+    for(i = 0; i < 16; i++) {
+        VMainAvg += VMainBuff[i];
     }
+    VMainAvg /= 16;
+
+    LedState();
 }
-
-void TimerDelay(uint32_t cntMax, uint32_t* cnt) {
-    (*cnt)++;
-    if(cntMax <= *cnt) {
-        *cnt = 0;
-
-        CmpaVal--;
-        EPWM_setCounterCompareValue(GATE_PWM_BASE, EPWM_COUNTER_COMPARE_A, CmpaVal);
-    }
-}
-
-
 
 //
 // End of File

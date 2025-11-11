@@ -1,0 +1,1869 @@
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.1.LTS *
+       3              ;* Date/Time created: Wed May 21 09:51:55 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --cla_support=cla2 --diag_wrap=off --float_support=fpu32 --hll_source=on
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../device/driverlib/clb.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.1.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\Daniel\CodeComposer\UPS_MUCI\CPU1_FLASH")
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("__error__")
+      16                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("___error__")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      20                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$24)
+      21              
+      22              $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      23                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$26)
+      24              
+      25                      .dwendtag $C$DW$1
+      26              
+      27              
+      28              $C$DW$4 .dwtag  DW_TAG_subprogram
+      29                      .dwattr $C$DW$4, DW_AT_name("__eallow")
+      30                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("___eallow")
+      31                      .dwattr $C$DW$4, DW_AT_declaration
+      32                      .dwattr $C$DW$4, DW_AT_external
+      33                      .dwendtag $C$DW$4
+      34              
+      35              
+      36              $C$DW$5 .dwtag  DW_TAG_subprogram
+      37                      .dwattr $C$DW$5, DW_AT_name("__edis")
+      38                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("___edis")
+      39                      .dwattr $C$DW$5, DW_AT_declaration
+      40                      .dwattr $C$DW$5, DW_AT_external
+      41                      .dwendtag $C$DW$5
+      42              
+      43              ;       D:\Programs\TI\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\opt2000.exe C:\\Users\\Daniel\\
+      44              ;       D:\Programs\TI\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\ac2000.exe -@C:\\Users\\Daniel\
+      45 00000000               .sect   ".text:_CLB_clearFIFOs"
+      46                      .clink
+      47                      .global _CLB_clearFIFOs
+      48              
+      49              $C$DW$6 .dwtag  DW_TAG_subprogram
+      50                      .dwattr $C$DW$6, DW_AT_name("CLB_clearFIFOs")
+      51                      .dwattr $C$DW$6, DW_AT_low_pc(_CLB_clearFIFOs)
+      52                      .dwattr $C$DW$6, DW_AT_high_pc(0x00)
+      53                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_CLB_clearFIFOs")
+      54                      .dwattr $C$DW$6, DW_AT_external
+      55                      .dwattr $C$DW$6, DW_AT_TI_begin_file("../device/driverlib/clb.c")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    2
+
+      56                      .dwattr $C$DW$6, DW_AT_TI_begin_line(0x58)
+      57                      .dwattr $C$DW$6, DW_AT_TI_begin_column(0x06)
+      58                      .dwattr $C$DW$6, DW_AT_TI_max_frame_size(-4)
+      59                      .dwpsn  file "../device/driverlib/clb.c",line 89,column 1,is_stmt,address _CLB_clearFIFOs,isa 0
+      60              
+      61                      .dwfde $C$DW$CIE, _CLB_clearFIFOs
+      62              $C$DW$7 .dwtag  DW_TAG_formal_parameter
+      63                      .dwattr $C$DW$7, DW_AT_name("base")
+      64                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_base")
+      65                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$26)
+      66                      .dwattr $C$DW$7, DW_AT_location[DW_OP_reg0]
+      67              
+      68              
+      69              ;***************************************************************
+      70              ;* FNAME: _CLB_clearFIFOs               FR SIZE:   2           *
+      71              ;*                                                             *
+      72              ;* FUNCTION ENVIRONMENT                                        *
+      73              ;*                                                             *
+      74              ;* FUNCTION PROPERTIES                                         *
+      75              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+      76              ;***************************************************************
+      77              
+      78              _CLB_clearFIFOs:
+      79              ;* AR5   assigned to $O$U25
+      80              ;* AR1   assigned to _base
+      81              $C$DW$8 .dwtag  DW_TAG_variable
+      82                      .dwattr $C$DW$8, DW_AT_name("base")
+      83                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_base")
+      84                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$33)
+      85                      .dwattr $C$DW$8, DW_AT_location[DW_OP_reg6]
+      86              
+      87                      .dwcfi  cfa_offset, -2
+      88                      .dwcfi  save_reg_to_mem, 26, 0
+      89 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+      90                      .dwcfi  save_reg_to_mem, 7, 2
+      91                      .dwcfi  cfa_offset, -4
+      92 00000001 8BA9          MOVL      XAR1,ACC              ; [CPU_ALU] |89| 
+      93                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+      94 00000002 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000003 3000 
+      95 00000004 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+      96 00000005 610D          B         $C$L1,EQ              ; [CPU_ALU] |553| 
+      97                      ; branchcc occurs ; [] |553| 
+      98 00000006 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000007 3400 
+      99 00000008 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     100 00000009 6109          B         $C$L1,EQ              ; [CPU_ALU] |553| 
+     101                      ; branchcc occurs ; [] |553| 
+     102 0000000a FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         0000000b 3800 
+     103 0000000c 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     104 0000000d 6105          B         $C$L1,EQ              ; [CPU_ALU] |553| 
+     105                      ; branchcc occurs ; [] |553| 
+     106 0000000e FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         0000000f 3C00 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    3
+
+     107 00000010 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     108 00000011 6003          B         $C$L2,NEQ             ; [CPU_ALU] |553| 
+     109                      ; branchcc occurs ; [] |553| 
+     110 00000012       $C$L1:    
+     111 00000012 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     112 00000013 6006          B         $C$L3,NEQ             ; [CPU_ALU] |553| 
+     113                      ; branchcc occurs ; [] |553| 
+     114 00000014       $C$L2:    
+     115                      .dwpsn  file "../device/driverlib/clb.c",line 92,column 5,is_stmt,isa 0
+     116 00000014 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |92| 
+         00000015 0000 
+     117 00000016 025C          MOVB      ACC,#92               ; [CPU_ALU] |92| 
+     118              $C$DW$9 .dwtag  DW_TAG_TI_branch
+     119                      .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     120                      .dwattr $C$DW$9, DW_AT_name("___error__")
+     121                      .dwattr $C$DW$9, DW_AT_TI_call
+     122              
+     123 00000017 7640!         LCR       #___error__           ; [CPU_ALU] |92| 
+         00000018 0000 
+     124                      ; call occurs [#___error__] ; [] |92| 
+     125 00000019       $C$L3:    
+     126 00000019 D540          MOVB      XAR5,#64              ; [CPU_ALU] 
+     127 0000001a BE03          MOVB      XAR6,#3               ; [CPU_ALU] 
+     128                      .dwpsn  file "../device/driverlib/clb.c",line 96,column 9,is_stmt,isa 0
+     129 0000001b B600          MOVB      XAR7,#0               ; [CPU_ALU] |96| 
+     130 0000001c 8D00          MOVL      XAR0,#384             ; [CPU_ALU] |96| 
+         0000001d 0180 
+     131 0000001e       $C$L4:    
+     132 0000001e B2A9          MOVL      ACC,XAR1              ; [CPU_ALU] |96| 
+     133 0000001f 0DA5          ADDU      ACC,AR5               ; [CPU_ALU] |96| 
+     134 00000020 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |96| 
+     135                      .dwpsn  file "../device/driverlib/clb.c",line 94,column 17,is_stmt,isa 0
+     136 00000021 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |94| 
+     137                      .dwpsn  file "../device/driverlib/clb.c",line 96,column 9,is_stmt,isa 0
+     138 00000022 C394          MOVL      *+XAR4[AR0],XAR7      ; [CPU_FPU] |96| 
+     139                      .dwpsn  file "../device/driverlib/clb.c",line 94,column 17,is_stmt,isa 0
+     140 00000023 000E          BANZ      $C$L4,AR6--           ; [CPU_ALU] |94| 
+         00000024 FFFB 
+     141                      ; branchcc occurs ; [] |94| 
+     142                      .dwpsn  file "../device/driverlib/clb.c",line 99,column 5,is_stmt,isa 0
+     143 00000025 0200          MOVB      ACC,#0                ; [CPU_ALU] |99| 
+     144 00000026 8D00          MOVL      XAR0,#270             ; [CPU_ALU] |99| 
+         00000027 010E 
+     145 00000028 1E91          MOVL      *+XAR1[AR0],ACC       ; [CPU_ALU] |99| 
+     146 00000029 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     147                      .dwcfi  cfa_offset, -2
+     148                      .dwcfi  restore_reg, 7
+     149              $C$DW$10        .dwtag  DW_TAG_TI_branch
+     150                      .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+     151                      .dwattr $C$DW$10, DW_AT_TI_return
+     152              
+     153 0000002a 0006          LRETR     ; [CPU_ALU] 
+     154                      ; return occurs ; [] 
+     155                      .dwattr $C$DW$6, DW_AT_TI_end_file("../device/driverlib/clb.c")
+     156                      .dwattr $C$DW$6, DW_AT_TI_end_line(0x64)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    4
+
+     157                      .dwattr $C$DW$6, DW_AT_TI_end_column(0x01)
+     158                      .dwendentry
+     159                      .dwendtag $C$DW$6
+     160              
+     161 00000000               .sect   ".text:_CLB_writeFIFOs"
+     162                      .clink
+     163                      .global _CLB_writeFIFOs
+     164              
+     165              $C$DW$11        .dwtag  DW_TAG_subprogram
+     166                      .dwattr $C$DW$11, DW_AT_name("CLB_writeFIFOs")
+     167                      .dwattr $C$DW$11, DW_AT_low_pc(_CLB_writeFIFOs)
+     168                      .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     169                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_CLB_writeFIFOs")
+     170                      .dwattr $C$DW$11, DW_AT_external
+     171                      .dwattr $C$DW$11, DW_AT_TI_begin_file("../device/driverlib/clb.c")
+     172                      .dwattr $C$DW$11, DW_AT_TI_begin_line(0x6b)
+     173                      .dwattr $C$DW$11, DW_AT_TI_begin_column(0x06)
+     174                      .dwattr $C$DW$11, DW_AT_TI_max_frame_size(-6)
+     175                      .dwpsn  file "../device/driverlib/clb.c",line 108,column 1,is_stmt,address _CLB_writeFIFOs,isa 0
+     176              
+     177                      .dwfde $C$DW$CIE, _CLB_writeFIFOs
+     178              $C$DW$12        .dwtag  DW_TAG_formal_parameter
+     179                      .dwattr $C$DW$12, DW_AT_name("base")
+     180                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_base")
+     181                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$26)
+     182                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+     183              
+     184              $C$DW$13        .dwtag  DW_TAG_formal_parameter
+     185                      .dwattr $C$DW$13, DW_AT_name("pullData")
+     186                      .dwattr $C$DW$13, DW_AT_TI_symbol_name("_pullData")
+     187                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$34)
+     188                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg12]
+     189              
+     190              
+     191              ;***************************************************************
+     192              ;* FNAME: _CLB_writeFIFOs               FR SIZE:   4           *
+     193              ;*                                                             *
+     194              ;* FUNCTION ENVIRONMENT                                        *
+     195              ;*                                                             *
+     196              ;* FUNCTION PROPERTIES                                         *
+     197              ;*                            0 Parameter,  0 Auto,  4 SOE     *
+     198              ;***************************************************************
+     199              
+     200              _CLB_writeFIFOs:
+     201              ;* AR1   assigned to _base
+     202              $C$DW$14        .dwtag  DW_TAG_variable
+     203                      .dwattr $C$DW$14, DW_AT_name("base")
+     204                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_base")
+     205                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$33)
+     206                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg6]
+     207              
+     208              ;* AR2   assigned to _pullData
+     209              $C$DW$15        .dwtag  DW_TAG_variable
+     210                      .dwattr $C$DW$15, DW_AT_name("pullData")
+     211                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_pullData")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    5
+
+     212                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$54)
+     213                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg8]
+     214              
+     215                      .dwcfi  cfa_offset, -2
+     216                      .dwcfi  save_reg_to_mem, 26, 0
+     217 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     218                      .dwcfi  save_reg_to_mem, 7, 2
+     219                      .dwcfi  cfa_offset, -4
+     220 00000001 8BA9          MOVL      XAR1,ACC              ; [CPU_ALU] |108| 
+     221                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     222 00000002 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000003 3000 
+     223 00000004 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     224                      .dwcfi  save_reg_to_mem, 9, 4
+     225                      .dwcfi  cfa_offset, -6
+     226                      .dwpsn  file "../device/driverlib/clb.c",line 108,column 1,is_stmt,isa 0
+     227 00000005 86A4          MOVL      XAR2,XAR4             ; [CPU_ALU] |108| 
+     228                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     229 00000006 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     230 00000007 610D          B         $C$L5,EQ              ; [CPU_ALU] |553| 
+     231                      ; branchcc occurs ; [] |553| 
+     232 00000008 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000009 3400 
+     233 0000000a 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     234 0000000b 6109          B         $C$L5,EQ              ; [CPU_ALU] |553| 
+     235                      ; branchcc occurs ; [] |553| 
+     236 0000000c FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         0000000d 3800 
+     237 0000000e 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     238 0000000f 6105          B         $C$L5,EQ              ; [CPU_ALU] |553| 
+     239                      ; branchcc occurs ; [] |553| 
+     240 00000010 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000011 3C00 
+     241 00000012 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     242 00000013 6003          B         $C$L6,NEQ             ; [CPU_ALU] |553| 
+     243                      ; branchcc occurs ; [] |553| 
+     244 00000014       $C$L5:    
+     245 00000014 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     246 00000015 6006          B         $C$L7,NEQ             ; [CPU_ALU] |553| 
+     247                      ; branchcc occurs ; [] |553| 
+     248 00000016       $C$L6:    
+     249                      .dwpsn  file "../device/driverlib/clb.c",line 109,column 5,is_stmt,isa 0
+     250 00000016 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |109| 
+         00000017 0000 
+     251 00000018 026D          MOVB      ACC,#109              ; [CPU_ALU] |109| 
+     252              $C$DW$16        .dwtag  DW_TAG_TI_branch
+     253                      .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     254                      .dwattr $C$DW$16, DW_AT_name("___error__")
+     255                      .dwattr $C$DW$16, DW_AT_TI_call
+     256              
+     257 00000019 7640!         LCR       #___error__           ; [CPU_ALU] |109| 
+         0000001a 0000 
+     258                      ; call occurs [#___error__] ; [] |109| 
+     259 0000001b       $C$L7:    
+     260                      .dwpsn  file "../device/driverlib/clb.c",line 114,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    6
+
+     261 0000001b B2A9          MOVL      ACC,XAR1              ; [CPU_ALU] |114| 
+     262              $C$DW$17        .dwtag  DW_TAG_TI_branch
+     263                      .dwattr $C$DW$17, DW_AT_low_pc(0x00)
+     264                      .dwattr $C$DW$17, DW_AT_name("_CLB_clearFIFOs")
+     265                      .dwattr $C$DW$17, DW_AT_TI_call
+     266              
+     267 0000001c 7640+         LCR       #_CLB_clearFIFOs      ; [CPU_ALU] |114| 
+         0000001d 0000 
+     268                      ; call occurs [#_CLB_clearFIFOs] ; [] |114| 
+     269                      .dwpsn  file "../device/driverlib/clb.c",line 119,column 5,is_stmt,isa 0
+     270 0000001e 8D00          MOVL      XAR0,#448             ; [CPU_ALU] |119| 
+         0000001f 01C0 
+     271 00000020 06C2          MOVL      ACC,*+XAR2[0]         ; [CPU_ALU] |119| 
+     272 00000021 1E91          MOVL      *+XAR1[AR0],ACC       ; [CPU_ALU] |119| 
+     273                      .dwpsn  file "../device/driverlib/clb.c",line 120,column 5,is_stmt,isa 0
+     274 00000022 8D00          MOVL      XAR0,#450             ; [CPU_ALU] |120| 
+         00000023 01C2 
+     275 00000024 06D2          MOVL      ACC,*+XAR2[2]         ; [CPU_ALU] |120| 
+     276 00000025 1E91          MOVL      *+XAR1[AR0],ACC       ; [CPU_ALU] |120| 
+     277                      .dwpsn  file "../device/driverlib/clb.c",line 121,column 5,is_stmt,isa 0
+     278 00000026 8D00          MOVL      XAR0,#452             ; [CPU_ALU] |121| 
+         00000027 01C4 
+     279 00000028 06E2          MOVL      ACC,*+XAR2[4]         ; [CPU_ALU] |121| 
+     280 00000029 1E91          MOVL      *+XAR1[AR0],ACC       ; [CPU_ALU] |121| 
+     281                      .dwpsn  file "../device/driverlib/clb.c",line 122,column 5,is_stmt,isa 0
+     282 0000002a 8D00          MOVL      XAR0,#454             ; [CPU_ALU] |122| 
+         0000002b 01C6 
+     283 0000002c 06F2          MOVL      ACC,*+XAR2[6]         ; [CPU_ALU] |122| 
+     284 0000002d 1E91          MOVL      *+XAR1[AR0],ACC       ; [CPU_ALU] |122| 
+     285 0000002e 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+     286                      .dwcfi  cfa_offset, -4
+     287                      .dwcfi  restore_reg, 9
+     288 0000002f 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     289                      .dwcfi  cfa_offset, -2
+     290                      .dwcfi  restore_reg, 7
+     291              $C$DW$18        .dwtag  DW_TAG_TI_branch
+     292                      .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     293                      .dwattr $C$DW$18, DW_AT_TI_return
+     294              
+     295 00000030 0006          LRETR     ; [CPU_ALU] 
+     296                      ; return occurs ; [] 
+     297                      .dwattr $C$DW$11, DW_AT_TI_end_file("../device/driverlib/clb.c")
+     298                      .dwattr $C$DW$11, DW_AT_TI_end_line(0x7b)
+     299                      .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     300                      .dwendentry
+     301                      .dwendtag $C$DW$11
+     302              
+     303 00000000               .sect   ".text:_CLB_readFIFOs"
+     304                      .clink
+     305                      .global _CLB_readFIFOs
+     306              
+     307              $C$DW$19        .dwtag  DW_TAG_subprogram
+     308                      .dwattr $C$DW$19, DW_AT_name("CLB_readFIFOs")
+     309                      .dwattr $C$DW$19, DW_AT_low_pc(_CLB_readFIFOs)
+     310                      .dwattr $C$DW$19, DW_AT_high_pc(0x00)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    7
+
+     311                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_CLB_readFIFOs")
+     312                      .dwattr $C$DW$19, DW_AT_external
+     313                      .dwattr $C$DW$19, DW_AT_TI_begin_file("../device/driverlib/clb.c")
+     314                      .dwattr $C$DW$19, DW_AT_TI_begin_line(0x82)
+     315                      .dwattr $C$DW$19, DW_AT_TI_begin_column(0x06)
+     316                      .dwattr $C$DW$19, DW_AT_TI_max_frame_size(-6)
+     317                      .dwpsn  file "../device/driverlib/clb.c",line 131,column 1,is_stmt,address _CLB_readFIFOs,isa 0
+     318              
+     319                      .dwfde $C$DW$CIE, _CLB_readFIFOs
+     320              $C$DW$20        .dwtag  DW_TAG_formal_parameter
+     321                      .dwattr $C$DW$20, DW_AT_name("base")
+     322                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_base")
+     323                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$26)
+     324                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg0]
+     325              
+     326              $C$DW$21        .dwtag  DW_TAG_formal_parameter
+     327                      .dwattr $C$DW$21, DW_AT_name("pushData")
+     328                      .dwattr $C$DW$21, DW_AT_TI_symbol_name("_pushData")
+     329                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$36)
+     330                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg12]
+     331              
+     332              
+     333              ;***************************************************************
+     334              ;* FNAME: _CLB_readFIFOs                FR SIZE:   4           *
+     335              ;*                                                             *
+     336              ;* FUNCTION ENVIRONMENT                                        *
+     337              ;*                                                             *
+     338              ;* FUNCTION PROPERTIES                                         *
+     339              ;*                            0 Parameter,  0 Auto,  4 SOE     *
+     340              ;***************************************************************
+     341              
+     342              _CLB_readFIFOs:
+     343              ;* AR1   assigned to _base
+     344              $C$DW$22        .dwtag  DW_TAG_variable
+     345                      .dwattr $C$DW$22, DW_AT_name("base")
+     346                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_base")
+     347                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$33)
+     348                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg6]
+     349              
+     350              ;* AR2   assigned to _pushData
+     351              $C$DW$23        .dwtag  DW_TAG_variable
+     352                      .dwattr $C$DW$23, DW_AT_name("pushData")
+     353                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_pushData")
+     354                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$53)
+     355                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg8]
+     356              
+     357                      .dwcfi  cfa_offset, -2
+     358                      .dwcfi  save_reg_to_mem, 26, 0
+     359 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     360                      .dwcfi  save_reg_to_mem, 7, 2
+     361                      .dwcfi  cfa_offset, -4
+     362 00000001 8BA9          MOVL      XAR1,ACC              ; [CPU_ALU] |131| 
+     363                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     364 00000002 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000003 3000 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    8
+
+     365 00000004 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     366                      .dwcfi  save_reg_to_mem, 9, 4
+     367                      .dwcfi  cfa_offset, -6
+     368                      .dwpsn  file "../device/driverlib/clb.c",line 131,column 1,is_stmt,isa 0
+     369 00000005 86A4          MOVL      XAR2,XAR4             ; [CPU_ALU] |131| 
+     370                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     371 00000006 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     372 00000007 610D          B         $C$L8,EQ              ; [CPU_ALU] |553| 
+     373                      ; branchcc occurs ; [] |553| 
+     374 00000008 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000009 3400 
+     375 0000000a 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     376 0000000b 6109          B         $C$L8,EQ              ; [CPU_ALU] |553| 
+     377                      ; branchcc occurs ; [] |553| 
+     378 0000000c FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         0000000d 3800 
+     379 0000000e 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     380 0000000f 6105          B         $C$L8,EQ              ; [CPU_ALU] |553| 
+     381                      ; branchcc occurs ; [] |553| 
+     382 00000010 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000011 3C00 
+     383 00000012 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |553| 
+     384 00000013 6003          B         $C$L9,NEQ             ; [CPU_ALU] |553| 
+     385                      ; branchcc occurs ; [] |553| 
+     386 00000014       $C$L8:    
+     387 00000014 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     388 00000015 6006          B         $C$L10,NEQ            ; [CPU_ALU] |553| 
+     389                      ; branchcc occurs ; [] |553| 
+     390 00000016       $C$L9:    
+     391                      .dwpsn  file "../device/driverlib/clb.c",line 132,column 5,is_stmt,isa 0
+     392 00000016 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |132| 
+         00000017 0000 
+     393 00000018 0284          MOVB      ACC,#132              ; [CPU_ALU] |132| 
+     394              $C$DW$24        .dwtag  DW_TAG_TI_branch
+     395                      .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     396                      .dwattr $C$DW$24, DW_AT_name("___error__")
+     397                      .dwattr $C$DW$24, DW_AT_TI_call
+     398              
+     399 00000019 7640!         LCR       #___error__           ; [CPU_ALU] |132| 
+         0000001a 0000 
+     400                      ; call occurs [#___error__] ; [] |132| 
+     401 0000001b       $C$L10:    
+     402                      .dwpsn  file "../device/driverlib/clb.c",line 137,column 5,is_stmt,isa 0
+     403 0000001b 8D00          MOVL      XAR0,#384             ; [CPU_ALU] |137| 
+         0000001c 0180 
+     404 0000001d 0691          MOVL      ACC,*+XAR1[AR0]       ; [CPU_ALU] |137| 
+     405                      .dwpsn  file "../device/driverlib/clb.c",line 138,column 5,is_stmt,isa 0
+     406 0000001e 8D00          MOVL      XAR0,#386             ; [CPU_ALU] |138| 
+         0000001f 0182 
+     407                      .dwpsn  file "../device/driverlib/clb.c",line 137,column 5,is_stmt,isa 0
+     408 00000020 1EC2          MOVL      *+XAR2[0],ACC         ; [CPU_ALU] |137| 
+     409                      .dwpsn  file "../device/driverlib/clb.c",line 138,column 5,is_stmt,isa 0
+     410 00000021 0691          MOVL      ACC,*+XAR1[AR0]       ; [CPU_ALU] |138| 
+     411                      .dwpsn  file "../device/driverlib/clb.c",line 139,column 5,is_stmt,isa 0
+     412 00000022 8D00          MOVL      XAR0,#388             ; [CPU_ALU] |139| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE    9
+
+         00000023 0184 
+     413                      .dwpsn  file "../device/driverlib/clb.c",line 138,column 5,is_stmt,isa 0
+     414 00000024 1ED2          MOVL      *+XAR2[2],ACC         ; [CPU_ALU] |138| 
+     415                      .dwpsn  file "../device/driverlib/clb.c",line 139,column 5,is_stmt,isa 0
+     416 00000025 0691          MOVL      ACC,*+XAR1[AR0]       ; [CPU_ALU] |139| 
+     417                      .dwpsn  file "../device/driverlib/clb.c",line 140,column 5,is_stmt,isa 0
+     418 00000026 8D00          MOVL      XAR0,#390             ; [CPU_ALU] |140| 
+         00000027 0186 
+     419                      .dwpsn  file "../device/driverlib/clb.c",line 139,column 5,is_stmt,isa 0
+     420 00000028 1EE2          MOVL      *+XAR2[4],ACC         ; [CPU_ALU] |139| 
+     421                      .dwpsn  file "../device/driverlib/clb.c",line 140,column 5,is_stmt,isa 0
+     422 00000029 0691          MOVL      ACC,*+XAR1[AR0]       ; [CPU_ALU] |140| 
+     423 0000002a 1EF2          MOVL      *+XAR2[6],ACC         ; [CPU_ALU] |140| 
+     424 0000002b 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+     425                      .dwcfi  cfa_offset, -4
+     426                      .dwcfi  restore_reg, 9
+     427 0000002c 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     428                      .dwcfi  cfa_offset, -2
+     429                      .dwcfi  restore_reg, 7
+     430              $C$DW$25        .dwtag  DW_TAG_TI_branch
+     431                      .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     432                      .dwattr $C$DW$25, DW_AT_TI_return
+     433              
+     434 0000002d 0006          LRETR     ; [CPU_ALU] 
+     435                      ; return occurs ; [] 
+     436                      .dwattr $C$DW$19, DW_AT_TI_end_file("../device/driverlib/clb.c")
+     437                      .dwattr $C$DW$19, DW_AT_TI_end_line(0x8d)
+     438                      .dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
+     439                      .dwendentry
+     440                      .dwendtag $C$DW$19
+     441              
+     442 00000000               .sect   ".text:_CLB_configCounterLoadMatch"
+     443                      .clink
+     444                      .global _CLB_configCounterLoadMatch
+     445              
+     446              $C$DW$26        .dwtag  DW_TAG_subprogram
+     447                      .dwattr $C$DW$26, DW_AT_name("CLB_configCounterLoadMatch")
+     448                      .dwattr $C$DW$26, DW_AT_low_pc(_CLB_configCounterLoadMatch)
+     449                      .dwattr $C$DW$26, DW_AT_high_pc(0x00)
+     450                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_CLB_configCounterLoadMatch")
+     451                      .dwattr $C$DW$26, DW_AT_external
+     452                      .dwattr $C$DW$26, DW_AT_TI_begin_file("../device/driverlib/clb.c")
+     453                      .dwattr $C$DW$26, DW_AT_TI_begin_line(0x30)
+     454                      .dwattr $C$DW$26, DW_AT_TI_begin_column(0x06)
+     455                      .dwattr $C$DW$26, DW_AT_TI_max_frame_size(-12)
+     456                      .dwpsn  file "../device/driverlib/clb.c",line 50,column 1,is_stmt,address _CLB_configCounterLoadMatch
+     457              
+     458                      .dwfde $C$DW$CIE, _CLB_configCounterLoadMatch
+     459              $C$DW$27        .dwtag  DW_TAG_formal_parameter
+     460                      .dwattr $C$DW$27, DW_AT_name("base")
+     461                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_base")
+     462                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$26)
+     463                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg0]
+     464              
+     465              $C$DW$28        .dwtag  DW_TAG_formal_parameter
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   10
+
+     466                      .dwattr $C$DW$28, DW_AT_name("counterID")
+     467                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_counterID")
+     468                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$20)
+     469                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg12]
+     470              
+     471              $C$DW$29        .dwtag  DW_TAG_formal_parameter
+     472                      .dwattr $C$DW$29, DW_AT_name("load")
+     473                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_load")
+     474                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$26)
+     475                      .dwattr $C$DW$29, DW_AT_location[DW_OP_breg20 -14]
+     476              
+     477              $C$DW$30        .dwtag  DW_TAG_formal_parameter
+     478                      .dwattr $C$DW$30, DW_AT_name("match1")
+     479                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_match1")
+     480                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$26)
+     481                      .dwattr $C$DW$30, DW_AT_location[DW_OP_breg20 -16]
+     482              
+     483              $C$DW$31        .dwtag  DW_TAG_formal_parameter
+     484                      .dwattr $C$DW$31, DW_AT_name("match2")
+     485                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_match2")
+     486                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$26)
+     487                      .dwattr $C$DW$31, DW_AT_location[DW_OP_breg20 -18]
+     488              
+     489              
+     490              ;***************************************************************
+     491              ;* FNAME: _CLB_configCounterLoadMatch   FR SIZE:  10           *
+     492              ;*                                                             *
+     493              ;* FUNCTION ENVIRONMENT                                        *
+     494              ;*                                                             *
+     495              ;* FUNCTION PROPERTIES                                         *
+     496              ;*                            0 Parameter,  4 Auto,  6 SOE     *
+     497              ;***************************************************************
+     498              
+     499              _CLB_configCounterLoadMatch:
+     500              ;* AR3   assigned to _base
+     501              $C$DW$32        .dwtag  DW_TAG_variable
+     502                      .dwattr $C$DW$32, DW_AT_name("base")
+     503                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_base")
+     504                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$33)
+     505                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg10]
+     506              
+     507              ;* AR1   assigned to _counterID
+     508              $C$DW$33        .dwtag  DW_TAG_variable
+     509                      .dwattr $C$DW$33, DW_AT_name("counterID")
+     510                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_counterID")
+     511                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$21)
+     512                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg6]
+     513              
+     514              ;* AR2   assigned to _load
+     515              $C$DW$34        .dwtag  DW_TAG_variable
+     516                      .dwattr $C$DW$34, DW_AT_name("load")
+     517                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_load")
+     518                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$33)
+     519                      .dwattr $C$DW$34, DW_AT_location[DW_OP_reg8]
+     520              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   11
+
+     521              $C$DW$35        .dwtag  DW_TAG_variable
+     522                      .dwattr $C$DW$35, DW_AT_name("match1")
+     523                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_match1")
+     524                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$33)
+     525                      .dwattr $C$DW$35, DW_AT_location[DW_OP_breg20 -2]
+     526              
+     527              $C$DW$36        .dwtag  DW_TAG_variable
+     528                      .dwattr $C$DW$36, DW_AT_name("match2")
+     529                      .dwattr $C$DW$36, DW_AT_TI_symbol_name("_match2")
+     530                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$33)
+     531                      .dwattr $C$DW$36, DW_AT_location[DW_OP_breg20 -4]
+     532              
+     533                      .dwcfi  cfa_offset, -2
+     534                      .dwcfi  save_reg_to_mem, 26, 0
+     535 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     536                      .dwcfi  save_reg_to_mem, 7, 2
+     537                      .dwcfi  cfa_offset, -4
+     538 00000001 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     539                      .dwcfi  save_reg_to_mem, 9, 4
+     540                      .dwcfi  cfa_offset, -6
+     541 00000002 A2BD          MOVL      *SP++,XAR3            ; [CPU_ALU] 
+     542                      .dwcfi  save_reg_to_mem, 11, 6
+     543                      .dwcfi  cfa_offset, -8
+     544 00000003 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+     545                      .dwcfi  cfa_offset, -12
+     546 00000004 C452          MOVL      XAR6,*-SP[18]         ; [CPU_ALU] |50| 
+     547 00000005 82A9          MOVL      XAR3,ACC              ; [CPU_ALU] |50| 
+     548                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     549 00000006 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000007 3000 
+     550                      .dwpsn  file "../device/driverlib/clb.c",line 50,column 1,is_stmt,isa 0
+     551 00000008 C244          MOVL      *-SP[4],XAR6          ; [CPU_ALU] |50| 
+     552 00000009 C450          MOVL      XAR6,*-SP[16]         ; [CPU_ALU] |50| 
+     553                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     554 0000000a 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     555                      .dwpsn  file "../device/driverlib/clb.c",line 50,column 1,is_stmt,isa 0
+     556 0000000b 864E          MOVL      XAR2,*-SP[14]         ; [CPU_FPU] |50| 
+     557 0000000c 59A4          MOVZ      AR1,AR4               ; [CPU_ALU] |50| 
+     558 0000000d C242          MOVL      *-SP[2],XAR6          ; [CPU_ALU] |50| 
+     559                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     560 0000000e 610D          B         $C$L11,EQ             ; [CPU_ALU] |553| 
+     561                      ; branchcc occurs ; [] |553| 
+     562 0000000f FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000010 3400 
+     563 00000011 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     564 00000012 6109          B         $C$L11,EQ             ; [CPU_ALU] |553| 
+     565                      ; branchcc occurs ; [] |553| 
+     566 00000013 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000014 3800 
+     567 00000015 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     568 00000016 6105          B         $C$L11,EQ             ; [CPU_ALU] |553| 
+     569                      ; branchcc occurs ; [] |553| 
+     570 00000017 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000018 3C00 
+     571 00000019 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   12
+
+     572 0000001a 6003          B         $C$L12,NEQ            ; [CPU_ALU] |553| 
+     573                      ; branchcc occurs ; [] |553| 
+     574 0000001b       $C$L11:    
+     575 0000001b 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     576 0000001c 6006          B         $C$L13,NEQ            ; [CPU_ALU] |553| 
+     577                      ; branchcc occurs ; [] |553| 
+     578 0000001d       $C$L12:    
+     579                      .dwpsn  file "../device/driverlib/clb.c",line 51,column 5,is_stmt,isa 0
+     580 0000001d 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |51| 
+         0000001e 0000 
+     581 0000001f 0233          MOVB      ACC,#51               ; [CPU_ALU] |51| 
+     582              $C$DW$37        .dwtag  DW_TAG_TI_branch
+     583                      .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     584                      .dwattr $C$DW$37, DW_AT_name("___error__")
+     585                      .dwattr $C$DW$37, DW_AT_TI_call
+     586              
+     587 00000020 7640!         LCR       #___error__           ; [CPU_ALU] |51| 
+         00000021 0000 
+     588                      ; call occurs [#___error__] ; [] |51| 
+     589 00000022       $C$L13:    
+     590                      .dwpsn  file "../device/driverlib/clb.c",line 53,column 5,is_stmt,isa 0
+     591 00000022 7622          EALLOW    ; [CPU_ALU] |53| 
+     592                      .dwpsn  file "../device/driverlib/clb.c",line 54,column 5,is_stmt,isa 0
+     593 00000023 92A1          MOV       AL,AR1                ; [CPU_ALU] |54| 
+     594 00000024 FFE1          B         $C$L33,EQ             ; [CPU_ALU] |54| 
+         00000025 00DC 
+     595                      ; branchcc occurs ; [] |54| 
+     596 00000026 5201          CMPB      AL,#1                 ; [CPU_ALU] |54| 
+     597 00000027 616F          B         $C$L23,EQ             ; [CPU_ALU] |54| 
+     598                      ; branchcc occurs ; [] |54| 
+     599 00000028 5202          CMPB      AL,#2                 ; [CPU_ALU] |54| 
+     600 00000029 FFE0          B         $C$L44,NEQ            ; [CPU_ALU] |54| 
+         0000002a 014D 
+     601                      ; branchcc occurs ; [] |54| 
+     602                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     603 0000002b FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         0000002c 3000 
+     604 0000002d 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     605 0000002e 610D          B         $C$L14,EQ             ; [CPU_ALU] |553| 
+     606                      ; branchcc occurs ; [] |553| 
+     607 0000002f FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000030 3400 
+     608 00000031 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     609 00000032 6109          B         $C$L14,EQ             ; [CPU_ALU] |553| 
+     610                      ; branchcc occurs ; [] |553| 
+     611 00000033 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000034 3800 
+     612 00000035 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     613 00000036 6105          B         $C$L14,EQ             ; [CPU_ALU] |553| 
+     614                      ; branchcc occurs ; [] |553| 
+     615 00000037 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000038 3C00 
+     616 00000039 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     617 0000003a 6003          B         $C$L15,NEQ            ; [CPU_ALU] |553| 
+     618                      ; branchcc occurs ; [] |553| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   13
+
+     619 0000003b       $C$L14:    
+     620 0000003b 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     621 0000003c 6007          B         $C$L16,NEQ            ; [CPU_ALU] |553| 
+     622                      ; branchcc occurs ; [] |553| 
+     623 0000003d       $C$L15:    
+     624                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     625 0000003d FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         0000003e 0352 
+     626 0000003f 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         00000040 001A 
+     627              $C$DW$38        .dwtag  DW_TAG_TI_branch
+     628                      .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     629                      .dwattr $C$DW$38, DW_AT_name("___error__")
+     630                      .dwattr $C$DW$38, DW_AT_TI_call
+     631              
+     632 00000041 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         00000042 0000 
+     633                      ; call occurs [#___error__] ; [] |850| 
+     634 00000043       $C$L16:    
+     635                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     636 00000043 7622          EALLOW    ; [CPU_ALU] |853| 
+     637                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     638 00000044 A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+     639                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     640 00000045 BE02          MOVB      XAR6,#2               ; [CPU_ALU] |854| 
+     641 00000046 8D40          MOVL      XAR1,#258             ; [CPU_ALU] |854| 
+         00000047 0102 
+     642                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     643 00000048 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         00000049 0104 
+     644                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     645 0000004a FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         0000004b 0001 
+     646 0000004c 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+     647                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     648 0000004d C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_ALU] |854| 
+     649                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     650 0000004e AA93          MOVL      *+XAR3[AR0],XAR2      ; [CPU_ALU] |855| 
+     651                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     652 0000004f 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+     653 00000050 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+     654 00000051 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+     655                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+     656 00000052 761A          EDIS      ; [CPU_ALU] |857| 
+     657                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     658 00000053 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000054 3000 
+     659 00000055 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     660 00000056 610D          B         $C$L17,EQ             ; [CPU_ALU] |553| 
+     661                      ; branchcc occurs ; [] |553| 
+     662 00000057 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000058 3400 
+     663 00000059 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     664 0000005a 6109          B         $C$L17,EQ             ; [CPU_ALU] |553| 
+     665                      ; branchcc occurs ; [] |553| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   14
+
+     666 0000005b FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         0000005c 3800 
+     667 0000005d 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     668 0000005e 6105          B         $C$L17,EQ             ; [CPU_ALU] |553| 
+     669                      ; branchcc occurs ; [] |553| 
+     670 0000005f FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000060 3C00 
+     671 00000061 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     672 00000062 6003          B         $C$L18,NEQ            ; [CPU_ALU] |553| 
+     673                      ; branchcc occurs ; [] |553| 
+     674 00000063       $C$L17:    
+     675 00000063 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     676 00000064 6007          B         $C$L19,NEQ            ; [CPU_ALU] |553| 
+     677                      ; branchcc occurs ; [] |553| 
+     678 00000065       $C$L18:    
+     679                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     680 00000065 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         00000066 0352 
+     681 00000067 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         00000068 001A 
+     682              $C$DW$39        .dwtag  DW_TAG_TI_branch
+     683                      .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     684                      .dwattr $C$DW$39, DW_AT_name("___error__")
+     685                      .dwattr $C$DW$39, DW_AT_TI_call
+     686              
+     687 00000069 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         0000006a 0000 
+     688                      ; call occurs [#___error__] ; [] |850| 
+     689 0000006b       $C$L19:    
+     690                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     691 0000006b 7622          EALLOW    ; [CPU_ALU] |853| 
+     692                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     693 0000006c BE06          MOVB      XAR6,#6               ; [CPU_ALU] |854| 
+     694                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     695 0000006d A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+     696 0000006e FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         0000006f 0001 
+     697                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     698 00000070 C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_FPU] |854| 
+     699 00000071 C442          MOVL      XAR6,*-SP[2]          ; [CPU_FPU] |854| 
+     700                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     701 00000072 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+     702                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     703 00000073 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         00000074 0104 
+     704                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     705 00000075 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+     706                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     707 00000076 C293          MOVL      *+XAR3[AR0],XAR6      ; [CPU_ALU] |855| 
+     708                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     709 00000077 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+     710 00000078 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+     711                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+     712 00000079 761A          EDIS      ; [CPU_ALU] |857| 
+     713                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   15
+
+     714 0000007a FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         0000007b 3000 
+     715 0000007c 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     716 0000007d 610D          B         $C$L20,EQ             ; [CPU_ALU] |553| 
+     717                      ; branchcc occurs ; [] |553| 
+     718 0000007e FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         0000007f 3400 
+     719 00000080 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     720 00000081 6109          B         $C$L20,EQ             ; [CPU_ALU] |553| 
+     721                      ; branchcc occurs ; [] |553| 
+     722 00000082 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000083 3800 
+     723 00000084 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     724 00000085 6105          B         $C$L20,EQ             ; [CPU_ALU] |553| 
+     725                      ; branchcc occurs ; [] |553| 
+     726 00000086 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000087 3C00 
+     727 00000088 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     728 00000089 6003          B         $C$L21,NEQ            ; [CPU_ALU] |553| 
+     729                      ; branchcc occurs ; [] |553| 
+     730 0000008a       $C$L20:    
+     731 0000008a 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     732 0000008b 6007          B         $C$L22,NEQ            ; [CPU_ALU] |553| 
+     733                      ; branchcc occurs ; [] |553| 
+     734 0000008c       $C$L21:    
+     735                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     736 0000008c FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         0000008d 0352 
+     737 0000008e 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         0000008f 001A 
+     738              $C$DW$40        .dwtag  DW_TAG_TI_branch
+     739                      .dwattr $C$DW$40, DW_AT_low_pc(0x00)
+     740                      .dwattr $C$DW$40, DW_AT_name("___error__")
+     741                      .dwattr $C$DW$40, DW_AT_TI_call
+     742              
+     743 00000090 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         00000091 0000 
+     744                      ; call occurs [#___error__] ; [] |850| 
+     745 00000092       $C$L22:    
+     746                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     747 00000092 7622          EALLOW    ; [CPU_ALU] |853| 
+     748                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     749 00000093 BE0A          MOVB      XAR6,#10              ; [CPU_ALU] |854| 
+     750                      .dwpsn  file "../device/driverlib/clb.c",line 72,column 13,is_stmt,isa 0
+     751 00000094 FFEF          B         $C$L43,UNC            ; [CPU_ALU] |72| 
+         00000095 00D5 
+     752                      ; branch occurs ; [] |72| 
+     753 00000096       $C$L23:    
+     754                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     755 00000096 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000097 3000 
+     756 00000098 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     757 00000099 610D          B         $C$L24,EQ             ; [CPU_ALU] |553| 
+     758                      ; branchcc occurs ; [] |553| 
+     759 0000009a FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   16
+
+         0000009b 3400 
+     760 0000009c 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     761 0000009d 6109          B         $C$L24,EQ             ; [CPU_ALU] |553| 
+     762                      ; branchcc occurs ; [] |553| 
+     763 0000009e FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         0000009f 3800 
+     764 000000a0 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     765 000000a1 6105          B         $C$L24,EQ             ; [CPU_ALU] |553| 
+     766                      ; branchcc occurs ; [] |553| 
+     767 000000a2 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         000000a3 3C00 
+     768 000000a4 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     769 000000a5 6003          B         $C$L25,NEQ            ; [CPU_ALU] |553| 
+     770                      ; branchcc occurs ; [] |553| 
+     771 000000a6       $C$L24:    
+     772 000000a6 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     773 000000a7 6007          B         $C$L26,NEQ            ; [CPU_ALU] |553| 
+     774                      ; branchcc occurs ; [] |553| 
+     775 000000a8       $C$L25:    
+     776                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     777 000000a8 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         000000a9 0352 
+     778 000000aa 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         000000ab 001A 
+     779              $C$DW$41        .dwtag  DW_TAG_TI_branch
+     780                      .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     781                      .dwattr $C$DW$41, DW_AT_name("___error__")
+     782                      .dwattr $C$DW$41, DW_AT_TI_call
+     783              
+     784 000000ac 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         000000ad 0000 
+     785                      ; call occurs [#___error__] ; [] |850| 
+     786 000000ae       $C$L26:    
+     787                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     788 000000ae 7622          EALLOW    ; [CPU_ALU] |853| 
+     789                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     790 000000af A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+     791                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     792 000000b0 BE01          MOVB      XAR6,#1               ; [CPU_ALU] |854| 
+     793 000000b1 8D40          MOVL      XAR1,#258             ; [CPU_ALU] |854| 
+         000000b2 0102 
+     794                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     795 000000b3 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         000000b4 0104 
+     796                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     797 000000b5 FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         000000b6 0001 
+     798 000000b7 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+     799                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     800 000000b8 C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_ALU] |854| 
+     801                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     802 000000b9 AA93          MOVL      *+XAR3[AR0],XAR2      ; [CPU_ALU] |855| 
+     803                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     804 000000ba 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+     805 000000bb 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   17
+
+     806 000000bc 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+     807                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+     808 000000bd 761A          EDIS      ; [CPU_ALU] |857| 
+     809                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     810 000000be FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         000000bf 3000 
+     811 000000c0 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     812 000000c1 610D          B         $C$L27,EQ             ; [CPU_ALU] |553| 
+     813                      ; branchcc occurs ; [] |553| 
+     814 000000c2 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         000000c3 3400 
+     815 000000c4 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     816 000000c5 6109          B         $C$L27,EQ             ; [CPU_ALU] |553| 
+     817                      ; branchcc occurs ; [] |553| 
+     818 000000c6 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         000000c7 3800 
+     819 000000c8 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     820 000000c9 6105          B         $C$L27,EQ             ; [CPU_ALU] |553| 
+     821                      ; branchcc occurs ; [] |553| 
+     822 000000ca FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         000000cb 3C00 
+     823 000000cc 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     824 000000cd 6003          B         $C$L28,NEQ            ; [CPU_ALU] |553| 
+     825                      ; branchcc occurs ; [] |553| 
+     826 000000ce       $C$L27:    
+     827 000000ce 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     828 000000cf 6007          B         $C$L29,NEQ            ; [CPU_ALU] |553| 
+     829                      ; branchcc occurs ; [] |553| 
+     830 000000d0       $C$L28:    
+     831                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     832 000000d0 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         000000d1 0352 
+     833 000000d2 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         000000d3 001A 
+     834              $C$DW$42        .dwtag  DW_TAG_TI_branch
+     835                      .dwattr $C$DW$42, DW_AT_low_pc(0x00)
+     836                      .dwattr $C$DW$42, DW_AT_name("___error__")
+     837                      .dwattr $C$DW$42, DW_AT_TI_call
+     838              
+     839 000000d4 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         000000d5 0000 
+     840                      ; call occurs [#___error__] ; [] |850| 
+     841 000000d6       $C$L29:    
+     842                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     843 000000d6 7622          EALLOW    ; [CPU_ALU] |853| 
+     844                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     845 000000d7 BE05          MOVB      XAR6,#5               ; [CPU_ALU] |854| 
+     846                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     847 000000d8 A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+     848 000000d9 FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         000000da 0001 
+     849                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     850 000000db C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_FPU] |854| 
+     851 000000dc C442          MOVL      XAR6,*-SP[2]          ; [CPU_FPU] |854| 
+     852                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   18
+
+     853 000000dd 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+     854                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     855 000000de 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         000000df 0104 
+     856                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     857 000000e0 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+     858                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     859 000000e1 C293          MOVL      *+XAR3[AR0],XAR6      ; [CPU_ALU] |855| 
+     860                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     861 000000e2 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+     862 000000e3 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+     863                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+     864 000000e4 761A          EDIS      ; [CPU_ALU] |857| 
+     865                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     866 000000e5 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         000000e6 3000 
+     867 000000e7 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     868 000000e8 610D          B         $C$L30,EQ             ; [CPU_ALU] |553| 
+     869                      ; branchcc occurs ; [] |553| 
+     870 000000e9 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         000000ea 3400 
+     871 000000eb 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     872 000000ec 6109          B         $C$L30,EQ             ; [CPU_ALU] |553| 
+     873                      ; branchcc occurs ; [] |553| 
+     874 000000ed FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         000000ee 3800 
+     875 000000ef 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     876 000000f0 6105          B         $C$L30,EQ             ; [CPU_ALU] |553| 
+     877                      ; branchcc occurs ; [] |553| 
+     878 000000f1 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         000000f2 3C00 
+     879 000000f3 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     880 000000f4 6003          B         $C$L31,NEQ            ; [CPU_ALU] |553| 
+     881                      ; branchcc occurs ; [] |553| 
+     882 000000f5       $C$L30:    
+     883 000000f5 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     884 000000f6 6007          B         $C$L32,NEQ            ; [CPU_ALU] |553| 
+     885                      ; branchcc occurs ; [] |553| 
+     886 000000f7       $C$L31:    
+     887                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     888 000000f7 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         000000f8 0352 
+     889 000000f9 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         000000fa 001A 
+     890              $C$DW$43        .dwtag  DW_TAG_TI_branch
+     891                      .dwattr $C$DW$43, DW_AT_low_pc(0x00)
+     892                      .dwattr $C$DW$43, DW_AT_name("___error__")
+     893                      .dwattr $C$DW$43, DW_AT_TI_call
+     894              
+     895 000000fb 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         000000fc 0000 
+     896                      ; call occurs [#___error__] ; [] |850| 
+     897 000000fd       $C$L32:    
+     898                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     899 000000fd 7622          EALLOW    ; [CPU_ALU] |853| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   19
+
+     900                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     901 000000fe BE09          MOVB      XAR6,#9               ; [CPU_ALU] |854| 
+     902                      .dwpsn  file "../device/driverlib/clb.c",line 66,column 13,is_stmt,isa 0
+     903 000000ff 6F6A          B         $C$L43,UNC            ; [CPU_ALU] |66| 
+     904                      ; branch occurs ; [] |66| 
+     905 00000100       $C$L33:    
+     906                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     907 00000100 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000101 3000 
+     908 00000102 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     909 00000103 610D          B         $C$L34,EQ             ; [CPU_ALU] |553| 
+     910                      ; branchcc occurs ; [] |553| 
+     911 00000104 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000105 3400 
+     912 00000106 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     913 00000107 6109          B         $C$L34,EQ             ; [CPU_ALU] |553| 
+     914                      ; branchcc occurs ; [] |553| 
+     915 00000108 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000109 3800 
+     916 0000010a 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     917 0000010b 6105          B         $C$L34,EQ             ; [CPU_ALU] |553| 
+     918                      ; branchcc occurs ; [] |553| 
+     919 0000010c FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         0000010d 3C00 
+     920 0000010e 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     921 0000010f 6003          B         $C$L35,NEQ            ; [CPU_ALU] |553| 
+     922                      ; branchcc occurs ; [] |553| 
+     923 00000110       $C$L34:    
+     924 00000110 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     925 00000111 6007          B         $C$L36,NEQ            ; [CPU_ALU] |553| 
+     926                      ; branchcc occurs ; [] |553| 
+     927 00000112       $C$L35:    
+     928                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     929 00000112 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         00000113 0352 
+     930 00000114 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         00000115 001A 
+     931              $C$DW$44        .dwtag  DW_TAG_TI_branch
+     932                      .dwattr $C$DW$44, DW_AT_low_pc(0x00)
+     933                      .dwattr $C$DW$44, DW_AT_name("___error__")
+     934                      .dwattr $C$DW$44, DW_AT_TI_call
+     935              
+     936 00000116 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         00000117 0000 
+     937                      ; call occurs [#___error__] ; [] |850| 
+     938 00000118       $C$L36:    
+     939                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     940 00000118 7622          EALLOW    ; [CPU_ALU] |853| 
+     941                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     942 00000119 A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+     943                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     944 0000011a BE00          MOVB      XAR6,#0               ; [CPU_ALU] |854| 
+     945 0000011b 8D40          MOVL      XAR1,#258             ; [CPU_ALU] |854| 
+         0000011c 0102 
+     946                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   20
+
+     947 0000011d 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         0000011e 0104 
+     948                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     949 0000011f FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         00000120 0001 
+     950 00000121 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+     951                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     952 00000122 C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_ALU] |854| 
+     953                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+     954 00000123 AA93          MOVL      *+XAR3[AR0],XAR2      ; [CPU_ALU] |855| 
+     955                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     956 00000124 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+     957 00000125 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+     958 00000126 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+     959                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+     960 00000127 761A          EDIS      ; [CPU_ALU] |857| 
+     961                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+     962 00000128 FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000129 3000 
+     963 0000012a 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     964 0000012b 610D          B         $C$L37,EQ             ; [CPU_ALU] |553| 
+     965                      ; branchcc occurs ; [] |553| 
+     966 0000012c FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         0000012d 3400 
+     967 0000012e 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     968 0000012f 6109          B         $C$L37,EQ             ; [CPU_ALU] |553| 
+     969                      ; branchcc occurs ; [] |553| 
+     970 00000130 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000131 3800 
+     971 00000132 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     972 00000133 6105          B         $C$L37,EQ             ; [CPU_ALU] |553| 
+     973                      ; branchcc occurs ; [] |553| 
+     974 00000134 FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         00000135 3C00 
+     975 00000136 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+     976 00000137 6003          B         $C$L38,NEQ            ; [CPU_ALU] |553| 
+     977                      ; branchcc occurs ; [] |553| 
+     978 00000138       $C$L37:    
+     979 00000138 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+     980 00000139 6007          B         $C$L39,NEQ            ; [CPU_ALU] |553| 
+     981                      ; branchcc occurs ; [] |553| 
+     982 0000013a       $C$L38:    
+     983                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+     984 0000013a FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         0000013b 0352 
+     985 0000013c 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         0000013d 001A 
+     986              $C$DW$45        .dwtag  DW_TAG_TI_branch
+     987                      .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+     988                      .dwattr $C$DW$45, DW_AT_name("___error__")
+     989                      .dwattr $C$DW$45, DW_AT_TI_call
+     990              
+     991 0000013e 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         0000013f 0000 
+     992                      ; call occurs [#___error__] ; [] |850| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   21
+
+     993 00000140       $C$L39:    
+     994                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+     995 00000140 7622          EALLOW    ; [CPU_ALU] |853| 
+     996                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+     997 00000141 BE04          MOVB      XAR6,#4               ; [CPU_ALU] |854| 
+     998                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+     999 00000142 A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+    1000 00000143 FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         00000144 0001 
+    1001                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+    1002 00000145 C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_FPU] |854| 
+    1003 00000146 C442          MOVL      XAR6,*-SP[2]          ; [CPU_FPU] |854| 
+    1004                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1005 00000147 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+    1006                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+    1007 00000148 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         00000149 0104 
+    1008                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1009 0000014a 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+    1010                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+    1011 0000014b C293          MOVL      *+XAR3[AR0],XAR6      ; [CPU_ALU] |855| 
+    1012                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1013 0000014c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+    1014 0000014d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+    1015                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+    1016 0000014e 761A          EDIS      ; [CPU_ALU] |857| 
+    1017                      .dwpsn  file "..\device\driverlib\clb.h",line 553,column 5,is_stmt,isa 0
+    1018 0000014f FF20          MOV       ACC,#12288            ; [CPU_ALU] |553| 
+         00000150 3000 
+    1019 00000151 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+    1020 00000152 610D          B         $C$L40,EQ             ; [CPU_ALU] |553| 
+    1021                      ; branchcc occurs ; [] |553| 
+    1022 00000153 FF20          MOV       ACC,#13312            ; [CPU_ALU] |553| 
+         00000154 3400 
+    1023 00000155 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+    1024 00000156 6109          B         $C$L40,EQ             ; [CPU_ALU] |553| 
+    1025                      ; branchcc occurs ; [] |553| 
+    1026 00000157 FF20          MOV       ACC,#14336            ; [CPU_ALU] |553| 
+         00000158 3800 
+    1027 00000159 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+    1028 0000015a 6105          B         $C$L40,EQ             ; [CPU_ALU] |553| 
+    1029                      ; branchcc occurs ; [] |553| 
+    1030 0000015b FF20          MOV       ACC,#15360            ; [CPU_ALU] |553| 
+         0000015c 3C00 
+    1031 0000015d 0FA3          CMPL      ACC,XAR3              ; [CPU_ALU] |553| 
+    1032 0000015e 6003          B         $C$L41,NEQ            ; [CPU_ALU] |553| 
+    1033                      ; branchcc occurs ; [] |553| 
+    1034 0000015f       $C$L40:    
+    1035 0000015f 9A01          MOVB      AL,#1                 ; [CPU_ALU] |553| 
+    1036 00000160 6007          B         $C$L42,NEQ            ; [CPU_ALU] |553| 
+    1037                      ; branchcc occurs ; [] |553| 
+    1038 00000161       $C$L41:    
+    1039                      .dwpsn  file "..\device\driverlib\clb.h",line 850,column 5,is_stmt,isa 0
+    1040 00000161 FF20          MOV       ACC,#850              ; [CPU_ALU] |850| 
+         00000162 0352 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   22
+
+    1041 00000163 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |850| 
+         00000164 001A 
+    1042              $C$DW$46        .dwtag  DW_TAG_TI_branch
+    1043                      .dwattr $C$DW$46, DW_AT_low_pc(0x00)
+    1044                      .dwattr $C$DW$46, DW_AT_name("___error__")
+    1045                      .dwattr $C$DW$46, DW_AT_TI_call
+    1046              
+    1047 00000165 7640!         LCR       #___error__           ; [CPU_ALU] |850| 
+         00000166 0000 
+    1048                      ; call occurs [#___error__] ; [] |850| 
+    1049 00000167       $C$L42:    
+    1050                      .dwpsn  file "..\device\driverlib\clb.h",line 853,column 5,is_stmt,isa 0
+    1051 00000167 7622          EALLOW    ; [CPU_ALU] |853| 
+    1052                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+    1053 00000168 BE08          MOVB      XAR6,#8               ; [CPU_ALU] |854| 
+    1054 00000169       $C$L43:    
+    1055 00000169 C29B          MOVL      *+XAR3[AR1],XAR6      ; [CPU_ALU] |854| 
+    1056                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1057 0000016a A2A9          MOVL      ACC,XAR3              ; [CPU_ALU] |856| 
+    1058                      .dwpsn  file "..\device\driverlib\clb.h",line 854,column 5,is_stmt,isa 0
+    1059 0000016b C444          MOVL      XAR6,*-SP[4]          ; [CPU_ALU] |854| 
+    1060                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1061 0000016c FF18          ADD       ACC,#1 << 8           ; [CPU_ALU] |856| 
+         0000016d 0001 
+    1062 0000016e 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |856| 
+    1063                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+    1064 0000016f 8D00          MOVL      XAR0,#260             ; [CPU_ALU] |855| 
+         00000170 0104 
+    1065                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1066 00000171 0201          MOVB      ACC,#1                ; [CPU_ALU] |856| 
+    1067                      .dwpsn  file "..\device\driverlib\clb.h",line 855,column 5,is_stmt,isa 0
+    1068 00000172 C293          MOVL      *+XAR3[AR0],XAR6      ; [CPU_ALU] |855| 
+    1069                      .dwpsn  file "..\device\driverlib\clb.h",line 856,column 5,is_stmt,isa 0
+    1070 00000173 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |856| 
+    1071 00000174 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |856| 
+    1072                      .dwpsn  file "..\device\driverlib\clb.h",line 857,column 5,is_stmt,isa 0
+    1073 00000175 761A          EDIS      ; [CPU_ALU] |857| 
+    1074 00000176       $C$L44:    
+    1075                      .dwpsn  file "../device/driverlib/clb.c",line 80,column 5,is_stmt,isa 0
+    1076 00000176 761A          EDIS      ; [CPU_ALU] |80| 
+    1077 00000177 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+    1078                      .dwcfi  cfa_offset, -8
+    1079 00000178 82BE          MOVL      XAR3,*--SP            ; [CPU_ALU] 
+    1080                      .dwcfi  cfa_offset, -6
+    1081                      .dwcfi  restore_reg, 11
+    1082 00000179 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+    1083                      .dwcfi  cfa_offset, -4
+    1084                      .dwcfi  restore_reg, 9
+    1085 0000017a 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+    1086                      .dwcfi  cfa_offset, -2
+    1087                      .dwcfi  restore_reg, 7
+    1088              $C$DW$47        .dwtag  DW_TAG_TI_branch
+    1089                      .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+    1090                      .dwattr $C$DW$47, DW_AT_TI_return
+    1091              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   23
+
+    1092 0000017b 0006          LRETR     ; [CPU_ALU] 
+    1093                      ; return occurs ; [] 
+    1094                      .dwattr $C$DW$26, DW_AT_TI_end_file("../device/driverlib/clb.c")
+    1095                      .dwattr $C$DW$26, DW_AT_TI_end_line(0x51)
+    1096                      .dwattr $C$DW$26, DW_AT_TI_end_column(0x01)
+    1097                      .dwendentry
+    1098                      .dwendtag $C$DW$26
+    1099              
+    1100              ;***************************************************************
+    1101              ;* FAR STRINGS                                                 *
+    1102              ;***************************************************************
+    1103 00000000               .sect   ".econst:.string"
+    1104                      .align  2
+    1105 00000000 002E  $C$FSL1:        .string "../device/driverlib/clb.c",0
+         00000001 002E 
+         00000002 002F 
+         00000003 0064 
+         00000004 0065 
+         00000005 0076 
+         00000006 0069 
+         00000007 0063 
+         00000008 0065 
+         00000009 002F 
+         0000000a 0064 
+         0000000b 0072 
+         0000000c 0069 
+         0000000d 0076 
+         0000000e 0065 
+         0000000f 0072 
+         00000010 006C 
+         00000011 0069 
+         00000012 0062 
+         00000013 002F 
+         00000014 0063 
+         00000015 006C 
+         00000016 0062 
+         00000017 002E 
+         00000018 0063 
+         00000019 0000 
+    1106                      .align  2
+    1107 0000001a 002E  $C$FSL2:        .string "..",92,"device",92,"driverlib",92,"clb.h",0
+         0000001b 002E 
+         0000001c 005C 
+         0000001d 0064 
+         0000001e 0065 
+         0000001f 0076 
+         00000020 0069 
+         00000021 0063 
+         00000022 0065 
+         00000023 005C 
+         00000024 0064 
+         00000025 0072 
+         00000026 0069 
+         00000027 0076 
+         00000028 0065 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   24
+
+         00000029 0072 
+         0000002a 006C 
+         0000002b 0069 
+         0000002c 0062 
+         0000002d 005C 
+         0000002e 0063 
+         0000002f 006C 
+         00000030 0062 
+         00000031 002E 
+         00000032 0068 
+         00000033 0000 
+    1108              ;**************************************************************
+    1109              ;* UNDEFINED EXTERNAL REFERENCES                              *
+    1110              ;**************************************************************
+    1111                      .global ___error__
+    1112              
+    1113              ;***************************************************************
+    1114              ;* TYPE INFORMATION                                            *
+    1115              ;***************************************************************
+    1116              
+    1117              $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+    1118                      .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+    1119              $C$DW$48        .dwtag  DW_TAG_enumerator
+    1120                      .dwattr $C$DW$48, DW_AT_name("CLB_CTR0")
+    1121                      .dwattr $C$DW$48, DW_AT_const_value(0x00)
+    1122              
+    1123              $C$DW$49        .dwtag  DW_TAG_enumerator
+    1124                      .dwattr $C$DW$49, DW_AT_name("CLB_CTR1")
+    1125                      .dwattr $C$DW$49, DW_AT_const_value(0x01)
+    1126              
+    1127              $C$DW$50        .dwtag  DW_TAG_enumerator
+    1128                      .dwattr $C$DW$50, DW_AT_name("CLB_CTR2")
+    1129                      .dwattr $C$DW$50, DW_AT_const_value(0x02)
+    1130              
+    1131                      .dwendtag $C$DW$T$19
+    1132              
+    1133              $C$DW$T$20      .dwtag  DW_TAG_typedef
+    1134                      .dwattr $C$DW$T$20, DW_AT_name("CLB_Counters")
+    1135                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+    1136                      .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+    1137              
+    1138              $C$DW$51        .dwtag  DW_TAG_TI_far_type
+    1139                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$20)
+    1140              
+    1141              $C$DW$T$21      .dwtag  DW_TAG_const_type
+    1142                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$51)
+    1143              
+    1144              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1145                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1146              
+    1147              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1148                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1149                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1150                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1151              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   25
+
+    1152              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1153                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1154                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1155                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1156              
+    1157              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1158                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1159                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1160                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1161              
+    1162              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1163                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1164                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1165                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    1166              
+    1167              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1168                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1169                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1170                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1171              
+    1172              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1173                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1174                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1175                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1176              
+    1177              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1178                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1179                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1180                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1181              
+    1182              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1183                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1184                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1185                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1186              
+    1187              $C$DW$T$44      .dwtag  DW_TAG_typedef
+    1188                      .dwattr $C$DW$T$44, DW_AT_name("__uint16_t")
+    1189                      .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$11)
+    1190                      .dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+    1191              
+    1192              $C$DW$T$45      .dwtag  DW_TAG_typedef
+    1193                      .dwattr $C$DW$T$45, DW_AT_name("uint16_t")
+    1194                      .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$44)
+    1195                      .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+    1196              
+    1197              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1198                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1199                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1200                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    1201              
+    1202              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1203                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1204                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1205                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1206              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   26
+
+    1207              $C$DW$T$25      .dwtag  DW_TAG_typedef
+    1208                      .dwattr $C$DW$T$25, DW_AT_name("__uint32_t")
+    1209                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$13)
+    1210                      .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+    1211              
+    1212              $C$DW$T$26      .dwtag  DW_TAG_typedef
+    1213                      .dwattr $C$DW$T$26, DW_AT_name("uint32_t")
+    1214                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+    1215                      .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+    1216              
+    1217              $C$DW$T$36      .dwtag  DW_TAG_pointer_type
+    1218                      .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$26)
+    1219                      .dwattr $C$DW$T$36, DW_AT_address_class(0x20)
+    1220              
+    1221              $C$DW$52        .dwtag  DW_TAG_TI_far_type
+    1222                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$36)
+    1223              
+    1224              $C$DW$T$53      .dwtag  DW_TAG_const_type
+    1225                      .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$52)
+    1226              
+    1227              $C$DW$53        .dwtag  DW_TAG_TI_far_type
+    1228                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$26)
+    1229              
+    1230              $C$DW$T$33      .dwtag  DW_TAG_const_type
+    1231                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$53)
+    1232              
+    1233              $C$DW$T$34      .dwtag  DW_TAG_pointer_type
+    1234                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$33)
+    1235                      .dwattr $C$DW$T$34, DW_AT_address_class(0x20)
+    1236              
+    1237              $C$DW$54        .dwtag  DW_TAG_TI_far_type
+    1238                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$34)
+    1239              
+    1240              $C$DW$T$54      .dwtag  DW_TAG_const_type
+    1241                      .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$54)
+    1242              
+    1243              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1244                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1245                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1246                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1247              
+    1248              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1249                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1250                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1251                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1252              
+    1253              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1254                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1255                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1256                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1257              
+    1258              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1259                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1260                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1261                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   27
+
+    1262              
+    1263              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1264                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1265                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1266                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1267              
+    1268              $C$DW$55        .dwtag  DW_TAG_TI_far_type
+    1269                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$5)
+    1270              
+    1271              $C$DW$T$23      .dwtag  DW_TAG_const_type
+    1272                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$55)
+    1273              
+    1274              $C$DW$T$24      .dwtag  DW_TAG_pointer_type
+    1275                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+    1276                      .dwattr $C$DW$T$24, DW_AT_address_class(0x20)
+    1277              
+    1278              $C$DW$T$55      .dwtag  DW_TAG_base_type
+    1279                      .dwattr $C$DW$T$55, DW_AT_encoding(DW_ATE_unsigned_char)
+    1280                      .dwattr $C$DW$T$55, DW_AT_name("unsigned char")
+    1281                      .dwattr $C$DW$T$55, DW_AT_byte_size(0x01)
+    1282              
+    1283                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1284              
+    1285              ;***************************************************************
+    1286              ;* DWARF CIE ENTRIES                                           *
+    1287              ;***************************************************************
+    1288              
+    1289              $C$DW$CIE       .dwcie 26
+    1290                      .dwcfi  cfa_register, 20
+    1291                      .dwcfi  cfa_offset, 0
+    1292                      .dwcfi  same_value, 28
+    1293                      .dwcfi  same_value, 6
+    1294                      .dwcfi  same_value, 7
+    1295                      .dwcfi  same_value, 8
+    1296                      .dwcfi  same_value, 9
+    1297                      .dwcfi  same_value, 10
+    1298                      .dwcfi  same_value, 11
+    1299                      .dwcfi  same_value, 59
+    1300                      .dwcfi  same_value, 63
+    1301                      .dwcfi  same_value, 67
+    1302                      .dwcfi  same_value, 71
+    1303                      .dwendentry
+    1304              
+    1305              ;***************************************************************
+    1306              ;* DWARF REGISTER MAP                                          *
+    1307              ;***************************************************************
+    1308              
+    1309              $C$DW$56        .dwtag  DW_TAG_TI_assign_register
+    1310                      .dwattr $C$DW$56, DW_AT_name("AL")
+    1311                      .dwattr $C$DW$56, DW_AT_location[DW_OP_reg0]
+    1312              
+    1313              $C$DW$57        .dwtag  DW_TAG_TI_assign_register
+    1314                      .dwattr $C$DW$57, DW_AT_name("AH")
+    1315                      .dwattr $C$DW$57, DW_AT_location[DW_OP_reg1]
+    1316              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   28
+
+    1317              $C$DW$58        .dwtag  DW_TAG_TI_assign_register
+    1318                      .dwattr $C$DW$58, DW_AT_name("PL")
+    1319                      .dwattr $C$DW$58, DW_AT_location[DW_OP_reg2]
+    1320              
+    1321              $C$DW$59        .dwtag  DW_TAG_TI_assign_register
+    1322                      .dwattr $C$DW$59, DW_AT_name("PH")
+    1323                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg3]
+    1324              
+    1325              $C$DW$60        .dwtag  DW_TAG_TI_assign_register
+    1326                      .dwattr $C$DW$60, DW_AT_name("SP")
+    1327                      .dwattr $C$DW$60, DW_AT_location[DW_OP_reg20]
+    1328              
+    1329              $C$DW$61        .dwtag  DW_TAG_TI_assign_register
+    1330                      .dwattr $C$DW$61, DW_AT_name("XT")
+    1331                      .dwattr $C$DW$61, DW_AT_location[DW_OP_reg21]
+    1332              
+    1333              $C$DW$62        .dwtag  DW_TAG_TI_assign_register
+    1334                      .dwattr $C$DW$62, DW_AT_name("T")
+    1335                      .dwattr $C$DW$62, DW_AT_location[DW_OP_reg22]
+    1336              
+    1337              $C$DW$63        .dwtag  DW_TAG_TI_assign_register
+    1338                      .dwattr $C$DW$63, DW_AT_name("ST0")
+    1339                      .dwattr $C$DW$63, DW_AT_location[DW_OP_reg23]
+    1340              
+    1341              $C$DW$64        .dwtag  DW_TAG_TI_assign_register
+    1342                      .dwattr $C$DW$64, DW_AT_name("ST1")
+    1343                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg24]
+    1344              
+    1345              $C$DW$65        .dwtag  DW_TAG_TI_assign_register
+    1346                      .dwattr $C$DW$65, DW_AT_name("PC")
+    1347                      .dwattr $C$DW$65, DW_AT_location[DW_OP_reg25]
+    1348              
+    1349              $C$DW$66        .dwtag  DW_TAG_TI_assign_register
+    1350                      .dwattr $C$DW$66, DW_AT_name("RPC")
+    1351                      .dwattr $C$DW$66, DW_AT_location[DW_OP_reg26]
+    1352              
+    1353              $C$DW$67        .dwtag  DW_TAG_TI_assign_register
+    1354                      .dwattr $C$DW$67, DW_AT_name("FP")
+    1355                      .dwattr $C$DW$67, DW_AT_location[DW_OP_reg28]
+    1356              
+    1357              $C$DW$68        .dwtag  DW_TAG_TI_assign_register
+    1358                      .dwattr $C$DW$68, DW_AT_name("DP")
+    1359                      .dwattr $C$DW$68, DW_AT_location[DW_OP_reg29]
+    1360              
+    1361              $C$DW$69        .dwtag  DW_TAG_TI_assign_register
+    1362                      .dwattr $C$DW$69, DW_AT_name("SXM")
+    1363                      .dwattr $C$DW$69, DW_AT_location[DW_OP_reg30]
+    1364              
+    1365              $C$DW$70        .dwtag  DW_TAG_TI_assign_register
+    1366                      .dwattr $C$DW$70, DW_AT_name("PM")
+    1367                      .dwattr $C$DW$70, DW_AT_location[DW_OP_reg31]
+    1368              
+    1369              $C$DW$71        .dwtag  DW_TAG_TI_assign_register
+    1370                      .dwattr $C$DW$71, DW_AT_name("OVM")
+    1371                      .dwattr $C$DW$71, DW_AT_location[DW_OP_regx 0x20]
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   29
+
+    1372              
+    1373              $C$DW$72        .dwtag  DW_TAG_TI_assign_register
+    1374                      .dwattr $C$DW$72, DW_AT_name("PAGE0")
+    1375                      .dwattr $C$DW$72, DW_AT_location[DW_OP_regx 0x21]
+    1376              
+    1377              $C$DW$73        .dwtag  DW_TAG_TI_assign_register
+    1378                      .dwattr $C$DW$73, DW_AT_name("AMODE")
+    1379                      .dwattr $C$DW$73, DW_AT_location[DW_OP_regx 0x22]
+    1380              
+    1381              $C$DW$74        .dwtag  DW_TAG_TI_assign_register
+    1382                      .dwattr $C$DW$74, DW_AT_name("EALLOW")
+    1383                      .dwattr $C$DW$74, DW_AT_location[DW_OP_regx 0x4e]
+    1384              
+    1385              $C$DW$75        .dwtag  DW_TAG_TI_assign_register
+    1386                      .dwattr $C$DW$75, DW_AT_name("INTM")
+    1387                      .dwattr $C$DW$75, DW_AT_location[DW_OP_regx 0x23]
+    1388              
+    1389              $C$DW$76        .dwtag  DW_TAG_TI_assign_register
+    1390                      .dwattr $C$DW$76, DW_AT_name("IFR")
+    1391                      .dwattr $C$DW$76, DW_AT_location[DW_OP_regx 0x24]
+    1392              
+    1393              $C$DW$77        .dwtag  DW_TAG_TI_assign_register
+    1394                      .dwattr $C$DW$77, DW_AT_name("IER")
+    1395                      .dwattr $C$DW$77, DW_AT_location[DW_OP_regx 0x25]
+    1396              
+    1397              $C$DW$78        .dwtag  DW_TAG_TI_assign_register
+    1398                      .dwattr $C$DW$78, DW_AT_name("V")
+    1399                      .dwattr $C$DW$78, DW_AT_location[DW_OP_regx 0x26]
+    1400              
+    1401              $C$DW$79        .dwtag  DW_TAG_TI_assign_register
+    1402                      .dwattr $C$DW$79, DW_AT_name("PSEUDOH")
+    1403                      .dwattr $C$DW$79, DW_AT_location[DW_OP_regx 0x4c]
+    1404              
+    1405              $C$DW$80        .dwtag  DW_TAG_TI_assign_register
+    1406                      .dwattr $C$DW$80, DW_AT_name("VOL")
+    1407                      .dwattr $C$DW$80, DW_AT_location[DW_OP_regx 0x4d]
+    1408              
+    1409              $C$DW$81        .dwtag  DW_TAG_TI_assign_register
+    1410                      .dwattr $C$DW$81, DW_AT_name("AR0")
+    1411                      .dwattr $C$DW$81, DW_AT_location[DW_OP_reg4]
+    1412              
+    1413              $C$DW$82        .dwtag  DW_TAG_TI_assign_register
+    1414                      .dwattr $C$DW$82, DW_AT_name("XAR0")
+    1415                      .dwattr $C$DW$82, DW_AT_location[DW_OP_reg5]
+    1416              
+    1417              $C$DW$83        .dwtag  DW_TAG_TI_assign_register
+    1418                      .dwattr $C$DW$83, DW_AT_name("AR1")
+    1419                      .dwattr $C$DW$83, DW_AT_location[DW_OP_reg6]
+    1420              
+    1421              $C$DW$84        .dwtag  DW_TAG_TI_assign_register
+    1422                      .dwattr $C$DW$84, DW_AT_name("XAR1")
+    1423                      .dwattr $C$DW$84, DW_AT_location[DW_OP_reg7]
+    1424              
+    1425              $C$DW$85        .dwtag  DW_TAG_TI_assign_register
+    1426                      .dwattr $C$DW$85, DW_AT_name("AR2")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   30
+
+    1427                      .dwattr $C$DW$85, DW_AT_location[DW_OP_reg8]
+    1428              
+    1429              $C$DW$86        .dwtag  DW_TAG_TI_assign_register
+    1430                      .dwattr $C$DW$86, DW_AT_name("XAR2")
+    1431                      .dwattr $C$DW$86, DW_AT_location[DW_OP_reg9]
+    1432              
+    1433              $C$DW$87        .dwtag  DW_TAG_TI_assign_register
+    1434                      .dwattr $C$DW$87, DW_AT_name("AR3")
+    1435                      .dwattr $C$DW$87, DW_AT_location[DW_OP_reg10]
+    1436              
+    1437              $C$DW$88        .dwtag  DW_TAG_TI_assign_register
+    1438                      .dwattr $C$DW$88, DW_AT_name("XAR3")
+    1439                      .dwattr $C$DW$88, DW_AT_location[DW_OP_reg11]
+    1440              
+    1441              $C$DW$89        .dwtag  DW_TAG_TI_assign_register
+    1442                      .dwattr $C$DW$89, DW_AT_name("AR4")
+    1443                      .dwattr $C$DW$89, DW_AT_location[DW_OP_reg12]
+    1444              
+    1445              $C$DW$90        .dwtag  DW_TAG_TI_assign_register
+    1446                      .dwattr $C$DW$90, DW_AT_name("XAR4")
+    1447                      .dwattr $C$DW$90, DW_AT_location[DW_OP_reg13]
+    1448              
+    1449              $C$DW$91        .dwtag  DW_TAG_TI_assign_register
+    1450                      .dwattr $C$DW$91, DW_AT_name("AR5")
+    1451                      .dwattr $C$DW$91, DW_AT_location[DW_OP_reg14]
+    1452              
+    1453              $C$DW$92        .dwtag  DW_TAG_TI_assign_register
+    1454                      .dwattr $C$DW$92, DW_AT_name("XAR5")
+    1455                      .dwattr $C$DW$92, DW_AT_location[DW_OP_reg15]
+    1456              
+    1457              $C$DW$93        .dwtag  DW_TAG_TI_assign_register
+    1458                      .dwattr $C$DW$93, DW_AT_name("AR6")
+    1459                      .dwattr $C$DW$93, DW_AT_location[DW_OP_reg16]
+    1460              
+    1461              $C$DW$94        .dwtag  DW_TAG_TI_assign_register
+    1462                      .dwattr $C$DW$94, DW_AT_name("XAR6")
+    1463                      .dwattr $C$DW$94, DW_AT_location[DW_OP_reg17]
+    1464              
+    1465              $C$DW$95        .dwtag  DW_TAG_TI_assign_register
+    1466                      .dwattr $C$DW$95, DW_AT_name("AR7")
+    1467                      .dwattr $C$DW$95, DW_AT_location[DW_OP_reg18]
+    1468              
+    1469              $C$DW$96        .dwtag  DW_TAG_TI_assign_register
+    1470                      .dwattr $C$DW$96, DW_AT_name("XAR7")
+    1471                      .dwattr $C$DW$96, DW_AT_location[DW_OP_reg19]
+    1472              
+    1473              $C$DW$97        .dwtag  DW_TAG_TI_assign_register
+    1474                      .dwattr $C$DW$97, DW_AT_name("R0H")
+    1475                      .dwattr $C$DW$97, DW_AT_location[DW_OP_regx 0x2b]
+    1476              
+    1477              $C$DW$98        .dwtag  DW_TAG_TI_assign_register
+    1478                      .dwattr $C$DW$98, DW_AT_name("R1H")
+    1479                      .dwattr $C$DW$98, DW_AT_location[DW_OP_regx 0x2f]
+    1480              
+    1481              $C$DW$99        .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   31
+
+    1482                      .dwattr $C$DW$99, DW_AT_name("R2H")
+    1483                      .dwattr $C$DW$99, DW_AT_location[DW_OP_regx 0x33]
+    1484              
+    1485              $C$DW$100       .dwtag  DW_TAG_TI_assign_register
+    1486                      .dwattr $C$DW$100, DW_AT_name("R3H")
+    1487                      .dwattr $C$DW$100, DW_AT_location[DW_OP_regx 0x37]
+    1488              
+    1489              $C$DW$101       .dwtag  DW_TAG_TI_assign_register
+    1490                      .dwattr $C$DW$101, DW_AT_name("R4H")
+    1491                      .dwattr $C$DW$101, DW_AT_location[DW_OP_regx 0x3b]
+    1492              
+    1493              $C$DW$102       .dwtag  DW_TAG_TI_assign_register
+    1494                      .dwattr $C$DW$102, DW_AT_name("R5H")
+    1495                      .dwattr $C$DW$102, DW_AT_location[DW_OP_regx 0x3f]
+    1496              
+    1497              $C$DW$103       .dwtag  DW_TAG_TI_assign_register
+    1498                      .dwattr $C$DW$103, DW_AT_name("R6H")
+    1499                      .dwattr $C$DW$103, DW_AT_location[DW_OP_regx 0x43]
+    1500              
+    1501              $C$DW$104       .dwtag  DW_TAG_TI_assign_register
+    1502                      .dwattr $C$DW$104, DW_AT_name("R7H")
+    1503                      .dwattr $C$DW$104, DW_AT_location[DW_OP_regx 0x47]
+    1504              
+    1505              $C$DW$105       .dwtag  DW_TAG_TI_assign_register
+    1506                      .dwattr $C$DW$105, DW_AT_name("RB")
+    1507                      .dwattr $C$DW$105, DW_AT_location[DW_OP_regx 0x4a]
+    1508              
+    1509              $C$DW$106       .dwtag  DW_TAG_TI_assign_register
+    1510                      .dwattr $C$DW$106, DW_AT_name("STF")
+    1511                      .dwattr $C$DW$106, DW_AT_location[DW_OP_regx 0x28]
+    1512              
+    1513              $C$DW$107       .dwtag  DW_TAG_TI_assign_register
+    1514                      .dwattr $C$DW$107, DW_AT_name("FPUHAZ")
+    1515                      .dwattr $C$DW$107, DW_AT_location[DW_OP_reg27]
+    1516              
+    1517              $C$DW$108       .dwtag  DW_TAG_TI_assign_register
+    1518                      .dwattr $C$DW$108, DW_AT_name("STF_HWDIV")
+    1519                      .dwattr $C$DW$108, DW_AT_location[DW_OP_regx 0x4f]
+    1520              
+    1521              $C$DW$109       .dwtag  DW_TAG_TI_assign_register
+    1522                      .dwattr $C$DW$109, DW_AT_name("VCRC")
+    1523                      .dwattr $C$DW$109, DW_AT_location[DW_OP_regx 0x50]
+    1524              
+    1525              $C$DW$110       .dwtag  DW_TAG_TI_assign_register
+    1526                      .dwattr $C$DW$110, DW_AT_name("VSTATUS")
+    1527                      .dwattr $C$DW$110, DW_AT_location[DW_OP_regx 0x51]
+    1528              
+    1529              $C$DW$111       .dwtag  DW_TAG_TI_assign_register
+    1530                      .dwattr $C$DW$111, DW_AT_name("VCRCPOLY")
+    1531                      .dwattr $C$DW$111, DW_AT_location[DW_OP_regx 0x52]
+    1532              
+    1533              $C$DW$112       .dwtag  DW_TAG_TI_assign_register
+    1534                      .dwattr $C$DW$112, DW_AT_name("VCRCSIZE")
+    1535                      .dwattr $C$DW$112, DW_AT_location[DW_OP_regx 0x53]
+    1536              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{D15ED499-7B90-47DC-8AF1-DE5DCBF24522} PAGE   32
+
+    1537                      .dwendtag $C$DW$CU
+    1538              
+
+No Assembly Errors, No Assembly Warnings

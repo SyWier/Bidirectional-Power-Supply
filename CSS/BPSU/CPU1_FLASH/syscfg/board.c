@@ -318,11 +318,11 @@ void COMP_CURRENT_init(){
     //
     // Sets the value of the internal DAC of the high comparator.
     //
-    CMPSS_setDACValueHigh(COMP_CURRENT_BASE,3785U);
+    CMPSS_setDACValueHigh(COMP_CURRENT_BASE,4034U);
     //
     // Sets the value of the internal DAC of the low comparator.
     //
-    CMPSS_setDACValueLow(COMP_CURRENT_BASE,310U);
+    CMPSS_setDACValueLow(COMP_CURRENT_BASE,62U);
     //
     //  Configures the digital filter of the high comparator.
     //
@@ -399,18 +399,29 @@ void COMP_CURRENT_init(){
 //
 //*****************************************************************************
 void CPUTIMER_init(){
-	TIMER_1MS_init();
+	TIMER_1_init();
+	TIMER_0_init();
 }
 
-void TIMER_1MS_init(){
-	CPUTimer_setEmulationMode(TIMER_1MS_BASE, CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
-	CPUTimer_setPreScaler(TIMER_1MS_BASE, 0U);
-	CPUTimer_setPeriod(TIMER_1MS_BASE, 120000U);
-	CPUTimer_enableInterrupt(TIMER_1MS_BASE);
-	CPUTimer_stopTimer(TIMER_1MS_BASE);
+void TIMER_1_init(){
+	CPUTimer_setEmulationMode(TIMER_1_BASE, CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
+	CPUTimer_setPreScaler(TIMER_1_BASE, 0U);
+	CPUTimer_setPeriod(TIMER_1_BASE, 12000U);
+	CPUTimer_enableInterrupt(TIMER_1_BASE);
+	CPUTimer_stopTimer(TIMER_1_BASE);
 
-	CPUTimer_reloadTimerCounter(TIMER_1MS_BASE);
-	CPUTimer_startTimer(TIMER_1MS_BASE);
+	CPUTimer_reloadTimerCounter(TIMER_1_BASE);
+	CPUTimer_startTimer(TIMER_1_BASE);
+}
+void TIMER_0_init(){
+	CPUTimer_setEmulationMode(TIMER_0_BASE, CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
+	CPUTimer_setPreScaler(TIMER_0_BASE, 0U);
+	CPUTimer_setPeriod(TIMER_0_BASE, 10000U);
+	CPUTimer_disableInterrupt(TIMER_0_BASE);
+	CPUTimer_stopTimer(TIMER_0_BASE);
+
+	CPUTimer_reloadTimerCounter(TIMER_0_BASE);
+	CPUTimer_startTimer(TIMER_0_BASE);
 }
 
 //*****************************************************************************
@@ -468,7 +479,7 @@ void EPWM_init(){
     EPWM_setTripZoneDigitalCompareEventCondition(GATE_PWM_BASE, EPWM_TZ_DC_OUTPUT_B1, EPWM_TZ_EVENT_DCXL_HIGH);	
     EPWM_enableADCTrigger(GATE_PWM_BASE, EPWM_SOC_A);	
     EPWM_setADCTriggerSource(GATE_PWM_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO_OR_PERIOD);	
-    EPWM_setADCTriggerEventPrescale(GATE_PWM_BASE, EPWM_SOC_A, 3);	
+    EPWM_setADCTriggerEventPrescale(GATE_PWM_BASE, EPWM_SOC_A, 1);	
     EPWM_enableADCTriggerEventCountInit(GATE_PWM_BASE, EPWM_SOC_A);	
 }
 
@@ -521,14 +532,14 @@ void SYSTEM_RESET_init(){
 	GPIO_setControllerCore(SYSTEM_RESET, GPIO_CORE_CPU1);
 }
 void LED1_init(){
-	GPIO_writePin(LED1, 1);
+	GPIO_writePin(LED1, 0);
 	GPIO_setPadConfig(LED1, GPIO_PIN_TYPE_STD);
 	GPIO_setQualificationMode(LED1, GPIO_QUAL_SYNC);
 	GPIO_setDirectionMode(LED1, GPIO_DIR_MODE_OUT);
 	GPIO_setControllerCore(LED1, GPIO_CORE_CPU1);
 }
 void LED2_init(){
-	GPIO_writePin(LED2, 1);
+	GPIO_writePin(LED2, 0);
 	GPIO_setPadConfig(LED2, GPIO_PIN_TYPE_STD);
 	GPIO_setQualificationMode(LED2, GPIO_QUAL_SYNC);
 	GPIO_setDirectionMode(LED2, GPIO_DIR_MODE_OUT);
@@ -547,15 +558,10 @@ void INTERRUPT_init(){
 	Interrupt_register(INT_ADC0_1, &INT_ADC0_1_ISR);
 	Interrupt_enable(INT_ADC0_1);
 	
-	// Interrupt Settings for INT_TIMER_1MS
+	// Interrupt Settings for INT_TIMER_1
 	// ISR need to be defined for the registered interrupts
-	Interrupt_register(INT_TIMER_1MS, &INT_TIMER_1MS_ISR);
-	Interrupt_enable(INT_TIMER_1MS);
-	
-	// Interrupt Settings for INT_GATE_PWM_TZ
-	// ISR need to be defined for the registered interrupts
-	Interrupt_register(INT_GATE_PWM_TZ, &INT_GATE_PWM_TZ_ISR);
-	Interrupt_enable(INT_GATE_PWM_TZ);
+	Interrupt_register(INT_TIMER_1, &INT_TIMER_1_ISR);
+	Interrupt_enable(INT_TIMER_1);
 }
 //*****************************************************************************
 //

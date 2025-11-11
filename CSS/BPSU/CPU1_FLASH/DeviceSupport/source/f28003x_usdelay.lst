@@ -1,0 +1,107 @@
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:55 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../DeviceSupport/source/f28003x_usdelay.asm                          PAGE    1
+
+       1              ;;#############################################################################
+       2              ;;
+       3              ;; FILE:   f28003x_usdelay.asm
+       4              ;;
+       5              ;; TITLE:  Simple Delay Function
+       6              ;;
+       7              ;; DESCRIPTION:
+       8              ;;
+       9              ;;  This is a simple delay function that can be used to insert a specified
+      10              ;;  delay into code.
+      11              ;;  This function is only accurate if executed from internal zero-waitstate
+      12              ;;  SARAM. If it is executed from waitstate memory then the delay will be
+      13              ;;  longer then specified.
+      14              ;;  To use this function:
+      15              ;;   1 - update the CPU clock speed in the f28003x_examples.h
+      16              ;;     file.
+      17              ;;   2 - Call this function by using the DELAY_US(A) macro
+      18              ;;     that is defined in the f28003x_device.h file.  This macro
+      19              ;;     will convert the number of microseconds specified
+      20              ;;     into a loop count for use with this function.
+      21              ;;     This count will be based on the CPU frequency you specify.
+      22              ;;   3 - For the most accurate delay
+      23              ;;     - Execute this function in 0 waitstate RAM.
+      24              ;;     - Disable interrupts before calling the function
+      25              ;;       If you do not disable interrupts, then think of
+      26              ;;       this as an "at least" delay function as the actual
+      27              ;;       delay may be longer.
+      28              ;;   The C assembly call from the DELAY_US(time) macro will
+      29              ;;   look as follows:
+      30              ;;   extern void Delay(long LoopCount);
+      31              ;;         MOV   AL,#LowLoopCount
+      32              ;;         MOV   AH,#HighLoopCount
+      33              ;;         LCR   _Delay
+      34              ;;   Or as follows (if count is less then 16-bits):
+      35              ;;         MOV   ACC,#LoopCount
+      36              ;;         LCR   _Delay
+      37              ;;#############################################################################
+      38              ;; $Copyright:
+      39              ;// Copyright (C) 2022 Texas Instruments Incorporated - http://www.ti.com/
+      40              ;//
+      41              ;// Redistribution and use in source and binary forms, with or without 
+      42              ;// modification, are permitted provided that the following conditions 
+      43              ;// are met:
+      44              ;// 
+      45              ;//   Redistributions of source code must retain the above copyright 
+      46              ;//   notice, this list of conditions and the following disclaimer.
+      47              ;// 
+      48              ;//   Redistributions in binary form must reproduce the above copyright
+      49              ;//   notice, this list of conditions and the following disclaimer in the 
+      50              ;//   documentation and/or other materials provided with the   
+      51              ;//   distribution.
+      52              ;// 
+      53              ;//   Neither the name of Texas Instruments Incorporated nor the names of
+      54              ;//   its contributors may be used to endorse or promote products derived
+      55              ;//   from this software without specific prior written permission.
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:55 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+../DeviceSupport/source/f28003x_usdelay.asm                          PAGE    2
+
+      56              ;// 
+      57              ;// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
+      58              ;// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+      59              ;// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+      60              ;// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+      61              ;// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+      62              ;// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+      63              ;// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+      64              ;// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+      65              ;// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+      66              ;// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+      67              ;// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      68              ;// $
+      69              ;;#############################################################################
+      70              
+      71                         .if __TI_EABI__
+      72                         .asg F28x_usDelay, _F28x_usDelay
+      73                         .endif
+      74                     .def _F28x_usDelay
+      75              
+      76 00000000               .sect ".TI.ramfunc"
+      77              
+      78                      .global  __F28x_usDelay
+      79 00000000       _F28x_usDelay:
+      80 00000000 1901          SUB    ACC,#1
+      81 00000001 56C3          BF     _F28x_usDelay,GEQ    ;; Loop if ACC >= 0
+         00000002 FFFF 
+      82 00000003 0006          LRETR
+      83              
+      84              ;There is a 9/10 cycle overhead and each loop
+      85              ;takes five cycles. The LoopCount is given by
+      86              ;the following formula:
+      87              ;  DELAY_CPU_CYCLES = 9 + 5*LoopCount
+      88              ; LoopCount = (DELAY_CPU_CYCLES - 9) / 5
+      89              ; The macro DELAY_US(A) performs this calculation for you
+      90              
+      91              ;;#############################################################################
+      92              ;; End of file
+      93              ;;#############################################################################
+      94              
+
+No Assembly Errors, No Assembly Warnings

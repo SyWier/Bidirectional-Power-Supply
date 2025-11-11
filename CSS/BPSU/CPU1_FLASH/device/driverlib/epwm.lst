@@ -1,0 +1,2895 @@
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.1.LTS *
+       3              ;* Date/Time created: Wed May 21 09:51:56 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --cla_support=cla2 --diag_wrap=off --float_support=fpu32 --hll_source=on
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../device/driverlib/epwm.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.1.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\Daniel\CodeComposer\UPS_MUCI\CPU1_FLASH")
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("__error__")
+      16                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("___error__")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      20                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$54)
+      21              
+      22              $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      23                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$56)
+      24              
+      25                      .dwendtag $C$DW$1
+      26              
+      27              ;       D:\Programs\TI\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\opt2000.exe C:\\Users\\Daniel\\
+      28              ;       D:\Programs\TI\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\bin\ac2000.exe -@C:\\Users\\Daniel\
+      29 00000000               .sect   ".text:_EPWM_setEmulationMode"
+      30                      .clink
+      31                      .global _EPWM_setEmulationMode
+      32              
+      33              $C$DW$4 .dwtag  DW_TAG_subprogram
+      34                      .dwattr $C$DW$4, DW_AT_name("EPWM_setEmulationMode")
+      35                      .dwattr $C$DW$4, DW_AT_low_pc(_EPWM_setEmulationMode)
+      36                      .dwattr $C$DW$4, DW_AT_high_pc(0x00)
+      37                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_EPWM_setEmulationMode")
+      38                      .dwattr $C$DW$4, DW_AT_external
+      39                      .dwattr $C$DW$4, DW_AT_TI_begin_file("../device/driverlib/epwm.c")
+      40                      .dwattr $C$DW$4, DW_AT_TI_begin_line(0x30)
+      41                      .dwattr $C$DW$4, DW_AT_TI_begin_column(0x06)
+      42                      .dwattr $C$DW$4, DW_AT_TI_max_frame_size(-6)
+      43                      .dwpsn  file "../device/driverlib/epwm.c",line 49,column 1,is_stmt,address _EPWM_setEmulationMode,isa
+      44              
+      45                      .dwfde $C$DW$CIE, _EPWM_setEmulationMode
+      46              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      47                      .dwattr $C$DW$5, DW_AT_name("base")
+      48                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_base")
+      49                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$56)
+      50                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg0]
+      51              
+      52              $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      53                      .dwattr $C$DW$6, DW_AT_name("emulationMode")
+      54                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_emulationMode")
+      55                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$42)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    2
+
+      56                      .dwattr $C$DW$6, DW_AT_location[DW_OP_reg12]
+      57              
+      58              
+      59              ;***************************************************************
+      60              ;* FNAME: _EPWM_setEmulationMode        FR SIZE:   4           *
+      61              ;*                                                             *
+      62              ;* FUNCTION ENVIRONMENT                                        *
+      63              ;*                                                             *
+      64              ;* FUNCTION PROPERTIES                                         *
+      65              ;*                            0 Parameter,  0 Auto,  4 SOE     *
+      66              ;***************************************************************
+      67              
+      68              _EPWM_setEmulationMode:
+      69              ;* AR2   assigned to _base
+      70              $C$DW$7 .dwtag  DW_TAG_variable
+      71                      .dwattr $C$DW$7, DW_AT_name("base")
+      72                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_base")
+      73                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$81)
+      74                      .dwattr $C$DW$7, DW_AT_location[DW_OP_reg8]
+      75              
+      76              ;* AR1   assigned to _emulationMode
+      77              $C$DW$8 .dwtag  DW_TAG_variable
+      78                      .dwattr $C$DW$8, DW_AT_name("emulationMode")
+      79                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_emulationMode")
+      80                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$43)
+      81                      .dwattr $C$DW$8, DW_AT_location[DW_OP_reg6]
+      82              
+      83                      .dwcfi  cfa_offset, -2
+      84                      .dwcfi  save_reg_to_mem, 26, 0
+      85 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+      86                      .dwcfi  save_reg_to_mem, 7, 2
+      87                      .dwcfi  cfa_offset, -4
+      88 00000001 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+      89                      .dwcfi  save_reg_to_mem, 9, 4
+      90                      .dwcfi  cfa_offset, -6
+      91 00000002 86A9          MOVL      XAR2,ACC              ; [CPU_ALU] |49| 
+      92 00000003 59A4          MOVZ      AR1,AR4               ; [CPU_ALU] |49| 
+      93                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+      94 00000004 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000005 4000 
+      95 00000006 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+      96 00000007 611D          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+      97                      ; branchcc occurs ; [] |1614| 
+      98 00000008 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000009 4100 
+      99 0000000a 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     100 0000000b 6119          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     101                      ; branchcc occurs ; [] |1614| 
+     102 0000000c FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         0000000d 4200 
+     103 0000000e 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     104 0000000f 6115          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     105                      ; branchcc occurs ; [] |1614| 
+     106 00000010 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000011 4300 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    3
+
+     107 00000012 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     108 00000013 6111          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     109                      ; branchcc occurs ; [] |1614| 
+     110 00000014 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000015 4400 
+     111 00000016 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     112 00000017 610D          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     113                      ; branchcc occurs ; [] |1614| 
+     114 00000018 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000019 4500 
+     115 0000001a 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     116 0000001b 6109          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     117                      ; branchcc occurs ; [] |1614| 
+     118 0000001c FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         0000001d 4600 
+     119 0000001e 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     120 0000001f 6105          B         $C$L1,EQ              ; [CPU_ALU] |1614| 
+     121                      ; branchcc occurs ; [] |1614| 
+     122 00000020 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000021 4700 
+     123 00000022 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     124 00000023 6003          B         $C$L2,NEQ             ; [CPU_ALU] |1614| 
+     125                      ; branchcc occurs ; [] |1614| 
+     126 00000024       $C$L1:    
+     127 00000024 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     128 00000025 6006          B         $C$L3,NEQ             ; [CPU_ALU] |1614| 
+     129                      ; branchcc occurs ; [] |1614| 
+     130 00000026       $C$L2:    
+     131                      .dwpsn  file "../device/driverlib/epwm.c",line 53,column 5,is_stmt,isa 0
+     132 00000026 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |53| 
+         00000027 0000 
+     133 00000028 0235          MOVB      ACC,#53               ; [CPU_ALU] |53| 
+     134              $C$DW$9 .dwtag  DW_TAG_TI_branch
+     135                      .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     136                      .dwattr $C$DW$9, DW_AT_name("___error__")
+     137                      .dwattr $C$DW$9, DW_AT_TI_call
+     138              
+     139 00000029 7640!         LCR       #___error__           ; [CPU_ALU] |53| 
+         0000002a 0000 
+     140                      ; call occurs [#___error__] ; [] |53| 
+     141 0000002b       $C$L3:    
+     142                      .dwpsn  file "../device/driverlib/epwm.c",line 58,column 5,is_stmt,isa 0
+     143 0000002b CCC2          AND       AL,*+XAR2[0],#0x3fff  ; [CPU_ALU] |58| 
+         0000002c 3FFF 
+     144 0000002d 88A9          MOVZ      AR6,AL                ; [CPU_ALU] |58| 
+     145 0000002e 5603          MOV       ACC,AR1 << #14        ; [CPU_ALU] |58| 
+         0000002f 0EA1 
+     146 00000030 CAA6          OR        AL,AR6                ; [CPU_ALU] |58| 
+     147 00000031 96C2          MOV       *+XAR2[0],AL          ; [CPU_ALU] |58| 
+     148 00000032 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+     149                      .dwcfi  cfa_offset, -4
+     150                      .dwcfi  restore_reg, 9
+     151 00000033 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     152                      .dwcfi  cfa_offset, -2
+     153                      .dwcfi  restore_reg, 7
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    4
+
+     154              $C$DW$10        .dwtag  DW_TAG_TI_branch
+     155                      .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+     156                      .dwattr $C$DW$10, DW_AT_TI_return
+     157              
+     158 00000034 0006          LRETR     ; [CPU_ALU] 
+     159                      ; return occurs ; [] 
+     160                      .dwattr $C$DW$4, DW_AT_TI_end_file("../device/driverlib/epwm.c")
+     161                      .dwattr $C$DW$4, DW_AT_TI_end_line(0x3d)
+     162                      .dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
+     163                      .dwendentry
+     164                      .dwendtag $C$DW$4
+     165              
+     166 00000000               .sect   ".text:_EPWM_setActionQualifierAction"
+     167                      .clink
+     168              
+     169              $C$DW$11        .dwtag  DW_TAG_subprogram
+     170                      .dwattr $C$DW$11, DW_AT_name("EPWM_setActionQualifierAction")
+     171                      .dwattr $C$DW$11, DW_AT_low_pc(_EPWM_setActionQualifierAction)
+     172                      .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     173                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_EPWM_setActionQualifierAction")
+     174                      .dwattr $C$DW$11, DW_AT_TI_begin_file("..\device\driverlib\epwm.h")
+     175                      .dwattr $C$DW$11, DW_AT_TI_begin_line(0xb9e)
+     176                      .dwattr $C$DW$11, DW_AT_TI_begin_column(0x01)
+     177                      .dwattr $C$DW$11, DW_AT_TI_max_frame_size(-10)
+     178                      .dwpsn  file "..\device\driverlib\epwm.h",line 2978,column 1,is_stmt,address _EPWM_setActionQualifier
+     179              
+     180                      .dwfde $C$DW$CIE, _EPWM_setActionQualifierAction
+     181              $C$DW$12        .dwtag  DW_TAG_formal_parameter
+     182                      .dwattr $C$DW$12, DW_AT_name("base")
+     183                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_base")
+     184                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$56)
+     185                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+     186              
+     187              $C$DW$13        .dwtag  DW_TAG_formal_parameter
+     188                      .dwattr $C$DW$13, DW_AT_name("epwmOutput")
+     189                      .dwattr $C$DW$13, DW_AT_TI_symbol_name("_epwmOutput")
+     190                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$33)
+     191                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg12]
+     192              
+     193              $C$DW$14        .dwtag  DW_TAG_formal_parameter
+     194                      .dwattr $C$DW$14, DW_AT_name("output")
+     195                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_output")
+     196                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$36)
+     197                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg14]
+     198              
+     199              $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     200                      .dwattr $C$DW$15, DW_AT_name("event")
+     201                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_event")
+     202                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$39)
+     203                      .dwattr $C$DW$15, DW_AT_location[DW_OP_breg20 -11]
+     204              
+     205              
+     206              ;***************************************************************
+     207              ;* FNAME: _EPWM_setActionQualifierAction FR SIZE:   8           *
+     208              ;*                                                             *
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    5
+
+     209              ;* FUNCTION ENVIRONMENT                                        *
+     210              ;*                                                             *
+     211              ;* FUNCTION PROPERTIES                                         *
+     212              ;*                            0 Parameter,  1 Auto,  6 SOE     *
+     213              ;***************************************************************
+     214              
+     215              _EPWM_setActionQualifierAction:
+     216              ;* AR4   assigned to $O$C2
+     217              ;* T     assigned to $O$C3
+     218              ;* AR1   assigned to $O$C4
+     219              ;* AR1   assigned to _base
+     220              $C$DW$16        .dwtag  DW_TAG_variable
+     221                      .dwattr $C$DW$16, DW_AT_name("base")
+     222                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_base")
+     223                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$81)
+     224                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg6]
+     225              
+     226              ;* AR3   assigned to _epwmOutput
+     227              $C$DW$17        .dwtag  DW_TAG_variable
+     228                      .dwattr $C$DW$17, DW_AT_name("epwmOutput")
+     229                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_epwmOutput")
+     230                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$34)
+     231                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg10]
+     232              
+     233              ;* AR2   assigned to _output
+     234              $C$DW$18        .dwtag  DW_TAG_variable
+     235                      .dwattr $C$DW$18, DW_AT_name("output")
+     236                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_output")
+     237                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$37)
+     238                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg8]
+     239              
+     240              $C$DW$19        .dwtag  DW_TAG_variable
+     241                      .dwattr $C$DW$19, DW_AT_name("event")
+     242                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_event")
+     243                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$40)
+     244                      .dwattr $C$DW$19, DW_AT_location[DW_OP_breg20 -1]
+     245              
+     246              ;* AR4   assigned to _registerTOffset
+     247              $C$DW$20        .dwtag  DW_TAG_variable
+     248                      .dwattr $C$DW$20, DW_AT_name("registerTOffset")
+     249                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_registerTOffset")
+     250                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$56)
+     251                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg12]
+     252              
+     253                      .dwcfi  cfa_offset, -2
+     254                      .dwcfi  save_reg_to_mem, 26, 0
+     255 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     256                      .dwcfi  save_reg_to_mem, 7, 2
+     257                      .dwcfi  cfa_offset, -4
+     258 00000001 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     259                      .dwcfi  save_reg_to_mem, 9, 4
+     260                      .dwcfi  cfa_offset, -6
+     261 00000002 A2BD          MOVL      *SP++,XAR3            ; [CPU_ALU] 
+     262                      .dwcfi  save_reg_to_mem, 11, 6
+     263                      .dwcfi  cfa_offset, -8
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    6
+
+     264 00000003 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     265                      .dwcfi  cfa_offset, -10
+     266 00000004 8BA9          MOVL      XAR1,ACC              ; [CPU_ALU] |2978| 
+     267 00000005 5BA4          MOVZ      AR3,AR4               ; [CPU_ALU] |2978| 
+     268 00000006 5AA5          MOVZ      AR2,AR5               ; [CPU_ALU] |2978| 
+     269 00000007 924B          MOV       AL,*-SP[11]           ; [CPU_ALU] |2978| 
+     270 00000008 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |2978| 
+     271                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     272 00000009 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         0000000a 4000 
+     273 0000000b 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     274 0000000c 611D          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     275                      ; branchcc occurs ; [] |1614| 
+     276 0000000d FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         0000000e 4100 
+     277 0000000f 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     278 00000010 6119          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     279                      ; branchcc occurs ; [] |1614| 
+     280 00000011 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000012 4200 
+     281 00000013 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     282 00000014 6115          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     283                      ; branchcc occurs ; [] |1614| 
+     284 00000015 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000016 4300 
+     285 00000017 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     286 00000018 6111          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     287                      ; branchcc occurs ; [] |1614| 
+     288 00000019 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         0000001a 4400 
+     289 0000001b 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     290 0000001c 610D          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     291                      ; branchcc occurs ; [] |1614| 
+     292 0000001d FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         0000001e 4500 
+     293 0000001f 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     294 00000020 6109          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     295                      ; branchcc occurs ; [] |1614| 
+     296 00000021 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000022 4600 
+     297 00000023 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     298 00000024 6105          B         $C$L4,EQ              ; [CPU_ALU] |1614| 
+     299                      ; branchcc occurs ; [] |1614| 
+     300 00000025 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000026 4700 
+     301 00000027 0FA1          CMPL      ACC,XAR1              ; [CPU_ALU] |1614| 
+     302 00000028 6003          B         $C$L5,NEQ             ; [CPU_ALU] |1614| 
+     303                      ; branchcc occurs ; [] |1614| 
+     304 00000029       $C$L4:    
+     305 00000029 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     306 0000002a 6007          B         $C$L6,NEQ             ; [CPU_ALU] |1614| 
+     307                      ; branchcc occurs ; [] |1614| 
+     308 0000002b       $C$L5:    
+     309                      .dwpsn  file "..\device\driverlib\epwm.h",line 2985,column 5,is_stmt,isa 0
+     310 0000002b FF20          MOV       ACC,#2985             ; [CPU_ALU] |2985| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    7
+
+         0000002c 0BA9 
+     311 0000002d 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2985| 
+         0000002e 001C 
+     312              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     313                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     314                      .dwattr $C$DW$21, DW_AT_name("___error__")
+     315                      .dwattr $C$DW$21, DW_AT_TI_call
+     316              
+     317 0000002f 7640!         LCR       #___error__           ; [CPU_ALU] |2985| 
+         00000030 0000 
+     318                      ; call occurs [#___error__] ; [] |2985| 
+     319 00000031       $C$L6:    
+     320                      .dwpsn  file "..\device\driverlib\epwm.h",line 2991,column 5,is_stmt,isa 0
+     321 00000031 0EA3          MOVU      ACC,AR3               ; [CPU_ALU] |2991| 
+     322 00000032 0941          ADDB      ACC,#65               ; [CPU_ALU] |2991| 
+     323 00000033 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |2991| 
+     324 00000034 9241          MOV       AL,*-SP[1]            ; [CPU_ALU] |2991| 
+     325                      .dwpsn  file "..\device\driverlib\epwm.h",line 2996,column 5,is_stmt,isa 0
+     326 00000035 40A9          TBIT      AL,#0                 ; [CPU_ALU] |2996| 
+     327 00000036 6D0F          B         $C$L7,TC              ; [CPU_ALU] |2996| 
+     328                      ; branchcc occurs ; [] |2996| 
+     329                      .dwpsn  file "..\device\driverlib\epwm.h",line 3010,column 9,is_stmt,isa 0
+     330 00000037 B2A9          MOVL      ACC,XAR1              ; [CPU_ALU] |3010| 
+     331 00000038 2D41          MOV       T,*-SP[1]             ; [CPU_ALU] |3010| 
+     332 00000039 0DA3          ADDU      ACC,AR3               ; [CPU_ALU] |3010| 
+     333 0000003a 0940          ADDB      ACC,#64               ; [CPU_ALU] |3010| 
+     334 0000003b 8BA9          MOVL      XAR1,ACC              ; [CPU_ALU] |3010| 
+     335 0000003c 9B03          MOVB      AH,#3                 ; [CPU_ALU] |3010| 
+     336 0000003d 92A2          MOV       AL,AR2                ; [CPU_ALU] |3010| 
+     337 0000003e FF67          LSL       AH,T                  ; [CPU_ALU] |3010| 
+     338 0000003f FF66          LSL       AL,T                  ; [CPU_ALU] |3010| 
+     339 00000040 FF5F          NOT       AH                    ; [CPU_ALU] |3010| 
+     340 00000041 CFC1          AND       AH,*+XAR1[0]          ; [CPU_ALU] |3010| 
+     341 00000042 CAA8          OR        AL,AH                 ; [CPU_ALU] |3010| 
+     342 00000043 96C1          MOV       *+XAR1[0],AL          ; [CPU_ALU] |3010| 
+     343 00000044 6F0F          B         $C$L8,UNC             ; [CPU_ALU] |3010| 
+     344                      ; branch occurs ; [] |3010| 
+     345 00000045       $C$L7:    
+     346                      .dwpsn  file "..\device\driverlib\epwm.h",line 3001,column 9,is_stmt,isa 0
+     347 00000045 9CFF          ADDB      AL,#-1                ; [CPU_ALU] |3001| 
+     348 00000046 A8AB          MOVL      P,XAR4                ; [CPU_FPU] |3001| 
+     349 00000047 9B03          MOVB      AH,#3                 ; [CPU_FPU] |3001| 
+     350 00000048 2DA9          MOV       T,AL                  ; [CPU_ALU] |3001| 
+     351 00000049 5657          ADDUL     P,XAR1                ; [CPU_ALU] |3001| 
+         0000004a 00A1 
+     352 0000004b FF67          LSL       AH,T                  ; [CPU_ALU] |3001| 
+     353 0000004c A9A4          MOVL      XAR4,P                ; [CPU_FPU] |3001| 
+     354 0000004d 92A2          MOV       AL,AR2                ; [CPU_FPU] |3001| 
+     355 0000004e FF5F          NOT       AH                    ; [CPU_ALU] |3001| 
+     356 0000004f FF66          LSL       AL,T                  ; [CPU_ALU] |3001| 
+     357 00000050 CFC4          AND       AH,*+XAR4[0]          ; [CPU_ALU] |3001| 
+     358 00000051 CAA8          OR        AL,AH                 ; [CPU_ALU] |3001| 
+     359 00000052 96C4          MOV       *+XAR4[0],AL          ; [CPU_ALU] |3001| 
+     360 00000053       $C$L8:    
+     361 00000053 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    8
+
+     362                      .dwcfi  cfa_offset, -8
+     363 00000054 82BE          MOVL      XAR3,*--SP            ; [CPU_ALU] 
+     364                      .dwcfi  cfa_offset, -6
+     365                      .dwcfi  restore_reg, 11
+     366 00000055 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+     367                      .dwcfi  cfa_offset, -4
+     368                      .dwcfi  restore_reg, 9
+     369 00000056 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     370                      .dwcfi  cfa_offset, -2
+     371                      .dwcfi  restore_reg, 7
+     372              $C$DW$22        .dwtag  DW_TAG_TI_branch
+     373                      .dwattr $C$DW$22, DW_AT_low_pc(0x00)
+     374                      .dwattr $C$DW$22, DW_AT_TI_return
+     375              
+     376 00000057 0006          LRETR     ; [CPU_ALU] 
+     377                      ; return occurs ; [] 
+     378                      .dwattr $C$DW$11, DW_AT_TI_end_file("..\device\driverlib\epwm.h")
+     379                      .dwattr $C$DW$11, DW_AT_TI_end_line(0xbc6)
+     380                      .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     381                      .dwendentry
+     382                      .dwendtag $C$DW$11
+     383              
+     384 00000000               .sect   ".text:_EPWM_configureSignal"
+     385                      .clink
+     386                      .global _EPWM_configureSignal
+     387              
+     388              $C$DW$23        .dwtag  DW_TAG_subprogram
+     389                      .dwattr $C$DW$23, DW_AT_name("EPWM_configureSignal")
+     390                      .dwattr $C$DW$23, DW_AT_low_pc(_EPWM_configureSignal)
+     391                      .dwattr $C$DW$23, DW_AT_high_pc(0x00)
+     392                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_EPWM_configureSignal")
+     393                      .dwattr $C$DW$23, DW_AT_external
+     394                      .dwattr $C$DW$23, DW_AT_TI_begin_file("../device/driverlib/epwm.c")
+     395                      .dwattr $C$DW$23, DW_AT_TI_begin_line(0x44)
+     396                      .dwattr $C$DW$23, DW_AT_TI_begin_column(0x06)
+     397                      .dwattr $C$DW$23, DW_AT_TI_max_frame_size(-14)
+     398                      .dwpsn  file "../device/driverlib/epwm.c",line 69,column 1,is_stmt,address _EPWM_configureSignal,isa 
+     399              
+     400                      .dwfde $C$DW$CIE, _EPWM_configureSignal
+     401              $C$DW$24        .dwtag  DW_TAG_formal_parameter
+     402                      .dwattr $C$DW$24, DW_AT_name("base")
+     403                      .dwattr $C$DW$24, DW_AT_TI_symbol_name("_base")
+     404                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$56)
+     405                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg0]
+     406              
+     407              $C$DW$25        .dwtag  DW_TAG_formal_parameter
+     408                      .dwattr $C$DW$25, DW_AT_name("signalParams")
+     409                      .dwattr $C$DW$25, DW_AT_TI_symbol_name("_signalParams")
+     410                      .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$49)
+     411                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg12]
+     412              
+     413              
+     414              ;***************************************************************
+     415              ;* FNAME: _EPWM_configureSignal         FR SIZE:  12           *
+     416              ;*                                                             *
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE    9
+
+     417              ;* FUNCTION ENVIRONMENT                                        *
+     418              ;*                                                             *
+     419              ;* FUNCTION PROPERTIES                                         *
+     420              ;*                            1 Parameter,  5 Auto,  6 SOE     *
+     421              ;***************************************************************
+     422              
+     423              _EPWM_configureSignal:
+     424              ;* R0    assigned to $O$C12
+     425              ;* R0    assigned to $O$C13
+     426              ;* R0    assigned to $O$C14
+     427              ;* R1    assigned to $O$C15
+     428              ;* AL    assigned to $O$v3
+     429              ;* T     assigned to $O$v2
+     430              ;* AR2   assigned to _base
+     431              $C$DW$26        .dwtag  DW_TAG_variable
+     432                      .dwattr $C$DW$26, DW_AT_name("base")
+     433                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_base")
+     434                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$81)
+     435                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg8]
+     436              
+     437              ;* AR3   assigned to _signalParams
+     438              $C$DW$27        .dwtag  DW_TAG_variable
+     439                      .dwattr $C$DW$27, DW_AT_name("signalParams")
+     440                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_signalParams")
+     441                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$50)
+     442                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg10]
+     443              
+     444              ;* AR6   assigned to _tbPrdVal
+     445              $C$DW$28        .dwtag  DW_TAG_variable
+     446                      .dwattr $C$DW$28, DW_AT_name("tbPrdVal")
+     447                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_tbPrdVal")
+     448                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$60)
+     449                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg16]
+     450              
+     451              $C$DW$29        .dwtag  DW_TAG_variable
+     452                      .dwattr $C$DW$29, DW_AT_name("cmpAVal")
+     453                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_cmpAVal")
+     454                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$60)
+     455                      .dwattr $C$DW$29, DW_AT_location[DW_OP_breg20 -2]
+     456              
+     457              $C$DW$30        .dwtag  DW_TAG_variable
+     458                      .dwattr $C$DW$30, DW_AT_name("prescaler")
+     459                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_prescaler")
+     460                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$24)
+     461                      .dwattr $C$DW$30, DW_AT_location[DW_OP_breg20 -2]
+     462              
+     463              ;* AR1   assigned to _highSpeedPrescaler
+     464              $C$DW$31        .dwtag  DW_TAG_variable
+     465                      .dwattr $C$DW$31, DW_AT_name("highSpeedPrescaler")
+     466                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_highSpeedPrescaler")
+     467                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$26)
+     468                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg6]
+     469              
+     470              ;* AR1   assigned to _counterMode
+     471              $C$DW$32        .dwtag  DW_TAG_variable
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   10
+
+     472                      .dwattr $C$DW$32, DW_AT_name("counterMode")
+     473                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_counterMode")
+     474                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$22)
+     475                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg6]
+     476              
+     477              $C$DW$33        .dwtag  DW_TAG_variable
+     478                      .dwattr $C$DW$33, DW_AT_name("periodCount")
+     479                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_periodCount")
+     480                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$60)
+     481                      .dwattr $C$DW$33, DW_AT_location[DW_OP_breg20 -3]
+     482              
+     483              $C$DW$34        .dwtag  DW_TAG_variable
+     484                      .dwattr $C$DW$34, DW_AT_name("compCount")
+     485                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_compCount")
+     486                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$60)
+     487                      .dwattr $C$DW$34, DW_AT_location[DW_OP_breg20 -2]
+     488              
+     489              $C$DW$35        .dwtag  DW_TAG_variable
+     490                      .dwattr $C$DW$35, DW_AT_name("compCount")
+     491                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_compCount")
+     492                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$60)
+     493                      .dwattr $C$DW$35, DW_AT_location[DW_OP_breg20 -2]
+     494              
+     495                      .dwcfi  cfa_offset, -2
+     496                      .dwcfi  save_reg_to_mem, 26, 0
+     497 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     498                      .dwcfi  save_reg_to_mem, 7, 2
+     499                      .dwcfi  cfa_offset, -4
+     500 00000001 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     501                      .dwcfi  save_reg_to_mem, 9, 4
+     502                      .dwcfi  cfa_offset, -6
+     503 00000002 A2BD          MOVL      *SP++,XAR3            ; [CPU_ALU] 
+     504                      .dwcfi  save_reg_to_mem, 11, 6
+     505                      .dwcfi  cfa_offset, -8
+     506 00000003 FE06          ADDB      SP,#6                 ; [CPU_ARAU] 
+     507                      .dwcfi  cfa_offset, -14
+     508 00000004 86A9          MOVL      XAR2,ACC              ; [CPU_ALU] |69| 
+     509                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     510 00000005 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000006 4000 
+     511                      .dwpsn  file "../device/driverlib/epwm.c",line 69,column 1,is_stmt,isa 0
+     512 00000007 82A4          MOVL      XAR3,XAR4             ; [CPU_ALU] |69| 
+     513                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     514 00000008 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     515 00000009 611D          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     516                      ; branchcc occurs ; [] |1614| 
+     517 0000000a FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         0000000b 4100 
+     518 0000000c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     519 0000000d 6119          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     520                      ; branchcc occurs ; [] |1614| 
+     521 0000000e FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         0000000f 4200 
+     522 00000010 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     523 00000011 6115          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   11
+
+     524                      ; branchcc occurs ; [] |1614| 
+     525 00000012 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000013 4300 
+     526 00000014 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     527 00000015 6111          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     528                      ; branchcc occurs ; [] |1614| 
+     529 00000016 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000017 4400 
+     530 00000018 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     531 00000019 610D          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     532                      ; branchcc occurs ; [] |1614| 
+     533 0000001a FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         0000001b 4500 
+     534 0000001c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     535 0000001d 6109          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     536                      ; branchcc occurs ; [] |1614| 
+     537 0000001e FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         0000001f 4600 
+     538 00000020 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     539 00000021 6105          B         $C$L9,EQ              ; [CPU_ALU] |1614| 
+     540                      ; branchcc occurs ; [] |1614| 
+     541 00000022 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000023 4700 
+     542 00000024 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     543 00000025 6003          B         $C$L10,NEQ            ; [CPU_ALU] |1614| 
+     544                      ; branchcc occurs ; [] |1614| 
+     545 00000026       $C$L9:    
+     546 00000026 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     547 00000027 6006          B         $C$L11,NEQ            ; [CPU_ALU] |1614| 
+     548                      ; branchcc occurs ; [] |1614| 
+     549 00000028       $C$L10:    
+     550                      .dwpsn  file "../device/driverlib/epwm.c",line 76,column 5,is_stmt,isa 0
+     551 00000028 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |76| 
+         00000029 0000 
+     552 0000002a 024C          MOVB      ACC,#76               ; [CPU_ALU] |76| 
+     553              $C$DW$36        .dwtag  DW_TAG_TI_branch
+     554                      .dwattr $C$DW$36, DW_AT_low_pc(0x00)
+     555                      .dwattr $C$DW$36, DW_AT_name("___error__")
+     556                      .dwattr $C$DW$36, DW_AT_TI_call
+     557              
+     558 0000002b 7640!         LCR       #___error__           ; [CPU_ALU] |76| 
+         0000002c 0000 
+     559                      ; call occurs [#___error__] ; [] |76| 
+     560 0000002d       $C$L11:    
+     561                      .dwpsn  file "../device/driverlib/epwm.c",line 82,column 5,is_stmt,isa 0
+     562 0000002d D00A          MOVB      XAR0,#10              ; [CPU_ALU] |82| 
+     563 0000002e 9293          MOV       AL,*+XAR3[AR0]        ; [CPU_ALU] |82| 
+     564 0000002f 5202          CMPB      AL,#2                 ; [CPU_ALU] |82| 
+     565 00000030 6906          B         $C$L12,LOS            ; [CPU_ALU] |82| 
+     566                      ; branchcc occurs ; [] |82| 
+     567 00000031 8F00+         MOVL      XAR4,#$C$FSL1         ; [CPU_ARAU] |82| 
+         00000032 0000 
+     568 00000033 0252          MOVB      ACC,#82               ; [CPU_ALU] |82| 
+     569              $C$DW$37        .dwtag  DW_TAG_TI_branch
+     570                      .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   12
+
+     571                      .dwattr $C$DW$37, DW_AT_name("___error__")
+     572                      .dwattr $C$DW$37, DW_AT_TI_call
+     573              
+     574 00000034 7640!         LCR       #___error__           ; [CPU_ALU] |82| 
+         00000035 0000 
+     575                      ; call occurs [#___error__] ; [] |82| 
+     576 00000036       $C$L12:    
+     577                      .dwpsn  file "..\device\driverlib\epwm.h",line 1722,column 1,is_stmt,isa 0
+     578 00000036 D10B          MOVB      XAR1,#11              ; [CPU_ALU] |1722| 
+     579 00000037 D00C          MOVB      XAR0,#12              ; [CPU_ALU] |1722| 
+     580 00000038 929B          MOV       AL,*+XAR3[AR1]        ; [CPU_ALU] |1722| 
+     581 00000039 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |1722| 
+     582                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     583 0000003a FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         0000003b 4000 
+     584                      .dwpsn  file "..\device\driverlib\epwm.h",line 1722,column 1,is_stmt,isa 0
+     585 0000003c 5993          MOVZ      AR1,*+XAR3[AR0]       ; [CPU_ALU] |1722| 
+     586                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     587 0000003d 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     588 0000003e 611D          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     589                      ; branchcc occurs ; [] |1614| 
+     590 0000003f FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000040 4100 
+     591 00000041 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     592 00000042 6119          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     593                      ; branchcc occurs ; [] |1614| 
+     594 00000043 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000044 4200 
+     595 00000045 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     596 00000046 6115          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     597                      ; branchcc occurs ; [] |1614| 
+     598 00000047 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000048 4300 
+     599 00000049 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     600 0000004a 6111          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     601                      ; branchcc occurs ; [] |1614| 
+     602 0000004b FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         0000004c 4400 
+     603 0000004d 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     604 0000004e 610D          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     605                      ; branchcc occurs ; [] |1614| 
+     606 0000004f FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000050 4500 
+     607 00000051 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     608 00000052 6109          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     609                      ; branchcc occurs ; [] |1614| 
+     610 00000053 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000054 4600 
+     611 00000055 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     612 00000056 6105          B         $C$L13,EQ             ; [CPU_ALU] |1614| 
+     613                      ; branchcc occurs ; [] |1614| 
+     614 00000057 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000058 4700 
+     615 00000059 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     616 0000005a 6003          B         $C$L14,NEQ            ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   13
+
+     617                      ; branchcc occurs ; [] |1614| 
+     618 0000005b       $C$L13:    
+     619 0000005b 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     620 0000005c 6007          B         $C$L15,NEQ            ; [CPU_ALU] |1614| 
+     621                      ; branchcc occurs ; [] |1614| 
+     622 0000005d       $C$L14:    
+     623                      .dwpsn  file "..\device\driverlib\epwm.h",line 1726,column 5,is_stmt,isa 0
+     624 0000005d FF20          MOV       ACC,#1726             ; [CPU_ALU] |1726| 
+         0000005e 06BE 
+     625 0000005f 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |1726| 
+         00000060 001C 
+     626              $C$DW$38        .dwtag  DW_TAG_TI_branch
+     627                      .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     628                      .dwattr $C$DW$38, DW_AT_name("___error__")
+     629                      .dwattr $C$DW$38, DW_AT_TI_call
+     630              
+     631 00000061 7640!         LCR       #___error__           ; [CPU_ALU] |1726| 
+         00000062 0000 
+     632                      ; call occurs [#___error__] ; [] |1726| 
+     633 00000063       $C$L15:    
+     634                      .dwpsn  file "..\device\driverlib\epwm.h",line 1731,column 5,is_stmt,isa 0
+     635 00000063 CCC2          AND       AL,*+XAR2[0],#0xe07f  ; [CPU_ALU] |1731| 
+         00000064 E07F 
+     636 00000065 88A9          MOVZ      AR6,AL                ; [CPU_ALU] |1731| 
+     637 00000066 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |1731| 
+     638                      .dwpsn  file "..\device\driverlib\epwm.h",line 2047,column 1,is_stmt,isa 0
+     639 00000067 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |2047| 
+     640                      .dwpsn  file "..\device\driverlib\epwm.h",line 1731,column 5,is_stmt,isa 0
+     641 00000068 5603          MOV       ACC,AL << #3          ; [CPU_ALU] |1731| 
+         00000069 03A9 
+     642 0000006a CAA1          OR        AL,AR1                ; [CPU_ALU] |1731| 
+     643 0000006b 5603          MOV       ACC,AL << #7          ; [CPU_ALU] |1731| 
+         0000006c 07A9 
+     644 0000006d CAA6          OR        AL,AR6                ; [CPU_ALU] |1731| 
+     645 0000006e 96C2          MOV       *+XAR2[0],AL          ; [CPU_ALU] |1731| 
+     646                      .dwpsn  file "..\device\driverlib\epwm.h",line 2047,column 1,is_stmt,isa 0
+     647 0000006f 5993          MOVZ      AR1,*+XAR3[AR0]       ; [CPU_ALU] |2047| 
+     648                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     649 00000070 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000071 4000 
+     650                      .dwpsn  file "..\device\driverlib\epwm.h",line 2047,column 1,is_stmt,isa 0
+     651 00000072 7942          MOV       *-SP[2],AR1           ; [CPU_ALU] |2047| 
+     652                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     653 00000073 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     654 00000074 611D          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     655                      ; branchcc occurs ; [] |1614| 
+     656 00000075 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000076 4100 
+     657 00000077 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     658 00000078 6119          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     659                      ; branchcc occurs ; [] |1614| 
+     660 00000079 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         0000007a 4200 
+     661 0000007b 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     662 0000007c 6115          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   14
+
+     663                      ; branchcc occurs ; [] |1614| 
+     664 0000007d FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         0000007e 4300 
+     665 0000007f 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     666 00000080 6111          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     667                      ; branchcc occurs ; [] |1614| 
+     668 00000081 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000082 4400 
+     669 00000083 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     670 00000084 610D          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     671                      ; branchcc occurs ; [] |1614| 
+     672 00000085 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000086 4500 
+     673 00000087 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     674 00000088 6109          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     675                      ; branchcc occurs ; [] |1614| 
+     676 00000089 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         0000008a 4600 
+     677 0000008b 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     678 0000008c 6105          B         $C$L16,EQ             ; [CPU_ALU] |1614| 
+     679                      ; branchcc occurs ; [] |1614| 
+     680 0000008d FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         0000008e 4700 
+     681 0000008f 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     682 00000090 6003          B         $C$L17,NEQ            ; [CPU_ALU] |1614| 
+     683                      ; branchcc occurs ; [] |1614| 
+     684 00000091       $C$L16:    
+     685 00000091 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     686 00000092 600A          B         $C$L18,NEQ            ; [CPU_ALU] |1614| 
+     687                      ; branchcc occurs ; [] |1614| 
+     688 00000093       $C$L17:    
+     689                      .dwpsn  file "..\device\driverlib\epwm.h",line 2051,column 5,is_stmt,isa 0
+     690 00000093 FF20          MOV       ACC,#2051             ; [CPU_ALU] |2051| 
+         00000094 0803 
+     691 00000095 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2051| 
+         00000096 001C 
+     692              $C$DW$39        .dwtag  DW_TAG_TI_branch
+     693                      .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     694                      .dwattr $C$DW$39, DW_AT_name("___error__")
+     695                      .dwattr $C$DW$39, DW_AT_TI_call
+     696              
+     697 00000097 7640!         LCR       #___error__           ; [CPU_ALU] |2051| 
+         00000098 0000 
+     698                      ; call occurs [#___error__] ; [] |2051| 
+     699 00000099 D00A          MOVB      XAR0,#10              ; [CPU_ALU] 
+     700 0000009a 9293          MOV       AL,*+XAR3[AR0]        ; [CPU_ALU] 
+     701 0000009b 9642          MOV       *-SP[2],AL            ; [CPU_ALU] 
+     702 0000009c       $C$L18:    
+     703                      .dwpsn  file "..\device\driverlib\epwm.h",line 2056,column 5,is_stmt,isa 0
+     704 0000009c CCC2          AND       AL,*+XAR2[0],#0xfffc  ; [CPU_ALU] |2056| 
+         0000009d FFFC 
+     705                      .dwpsn  file "../device/driverlib/epwm.c",line 99,column 5,is_stmt,isa 0
+     706 0000009e D00B          MOVB      XAR0,#11              ; [CPU_ALU] |99| 
+     707                      .dwpsn  file "..\device\driverlib\epwm.h",line 2056,column 5,is_stmt,isa 0
+     708 0000009f CAA1          OR        AL,AR1                ; [CPU_ALU] |2056| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   15
+
+     709 000000a0 96C2          MOV       *+XAR2[0],AL          ; [CPU_ALU] |2056| 
+     710                      .dwpsn  file "../device/driverlib/epwm.c",line 99,column 5,is_stmt,isa 0
+     711 000000a1 9A01          MOVB      AL,#1                 ; [CPU_ALU] |99| 
+     712 000000a2 2D93          MOV       T,*+XAR3[AR0]         ; [CPU_ALU] |99| 
+     713 000000a3 FF66          LSL       AL,T                  ; [CPU_ALU] |99| 
+     714 000000a4 0EA9          MOVU      ACC,AL                ; [CPU_ALU] |99| 
+     715 000000a5 BDA9          MOV32     R0H,ACC               ; [CPU_FPU] |99| 
+         000000a6 0F12 
+     716 000000a7 7700          NOP       ; [CPU_ALU] 
+     717 000000a8 7700          NOP       ; [CPU_ALU] 
+     718 000000a9 7700          NOP       ; [CPU_ALU] 
+     719 000000aa D008          MOVB      XAR0,#8               ; [CPU_ALU] |99| 
+     720 000000ab E68B          UI32TOF32 R1H,R0H               ; [CPU_FPU] |99| 
+         000000ac 0001 
+     721 000000ad E2AF          MOV32     R0H,*+XAR3[AR0]       ; [CPU_FPU] |99| 
+         000000ae 0093 
+     722              $C$DW$40        .dwtag  DW_TAG_TI_branch
+     723                      .dwattr $C$DW$40, DW_AT_low_pc(0x00)
+     724                      .dwattr $C$DW$40, DW_AT_name("FS$$DIV")
+     725                      .dwattr $C$DW$40, DW_AT_TI_call
+     726              
+     727 000000af 7640!         LCR       #FS$$DIV              ; [CPU_ALU] |99| 
+         000000b0 0000 
+     728                      ; call occurs [#FS$$DIV] ; [] |99| 
+     729                      .dwpsn  file "../device/driverlib/epwm.c",line 102,column 5,is_stmt,isa 0
+     730 000000b1 D00C          MOVB      XAR0,#12              ; [CPU_ALU] |102| 
+     731 000000b2 2D93          MOV       T,*+XAR3[AR0]         ; [CPU_ALU] |102| 
+     732                      .dwpsn  file "../device/driverlib/epwm.c",line 99,column 5,is_stmt,isa 0
+     733 000000b3 92AC          MOV       AL,T                  ; [CPU_ALU] |99| 
+     734                      .dwpsn  file "../device/driverlib/epwm.c",line 102,column 5,is_stmt,isa 0
+     735 000000b4 5202          CMPB      AL,#2                 ; [CPU_ALU] |102| 
+     736 000000b5 6904          B         $C$L19,LOS            ; [CPU_ALU] |102| 
+     737                      ; branchcc occurs ; [] |102| 
+     738                      .dwpsn  file "../device/driverlib/epwm.c",line 108,column 9,is_stmt,isa 0
+     739 000000b6 5603          MOV       ACC,T << #1           ; [CPU_ALU] |108| 
+         000000b7 01AC 
+     740 000000b8 6F03          B         $C$L20,UNC            ; [CPU_ALU] |108| 
+     741                      ; branch occurs ; [] |108| 
+     742 000000b9       $C$L19:    
+     743                      .dwpsn  file "../device/driverlib/epwm.c",line 104,column 9,is_stmt,isa 0
+     744 000000b9 9A01          MOVB      AL,#1                 ; [CPU_ALU] |104| 
+     745 000000ba FF66          LSL       AL,T                  ; [CPU_ALU] |104| 
+     746 000000bb       $C$L20:    
+     747 000000bb 0EA9          MOVU      ACC,AL                ; [CPU_ALU] |104| 
+     748 000000bc BDA9          MOV32     R1H,ACC               ; [CPU_FPU] |104| 
+         000000bd 0F16 
+     749 000000be 7700          NOP       ; [CPU_ALU] 
+     750 000000bf 7700          NOP       ; [CPU_ALU] 
+     751 000000c0 7700          NOP       ; [CPU_ALU] 
+     752 000000c1 7700          NOP       ; [CPU_ALU] 
+     753 000000c2 E68B          UI32TOF32 R1H,R1H               ; [CPU_FPU] |104| 
+         000000c3 0009 
+     754              $C$DW$41        .dwtag  DW_TAG_TI_branch
+     755                      .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     756                      .dwattr $C$DW$41, DW_AT_name("FS$$DIV")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   16
+
+     757                      .dwattr $C$DW$41, DW_AT_TI_call
+     758              
+     759 000000c4 7640!         LCR       #FS$$DIV              ; [CPU_ALU] |104| 
+         000000c5 0000 
+     760                      ; call occurs [#FS$$DIV] ; [] |104| 
+     761 000000c6 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] 
+     762                      .dwpsn  file "../device/driverlib/epwm.c",line 111,column 5,is_stmt,isa 0
+     763 000000c7 614C          B         $C$L22,EQ             ; [CPU_ALU] |111| 
+     764                      ; branchcc occurs ; [] |111| 
+     765                      .dwpsn  file "../device/driverlib/epwm.c",line 119,column 10,is_stmt,isa 0
+     766 000000c8 5201          CMPB      AL,#1                 ; [CPU_ALU] |119| 
+     767 000000c9 6127          B         $C$L21,EQ             ; [CPU_ALU] |119| 
+     768                      ; branchcc occurs ; [] |119| 
+     769                      .dwpsn  file "../device/driverlib/epwm.c",line 129,column 9,is_stmt,isa 0
+     770 000000ca E2AF          MOV32     R1H,*+XAR3[0]         ; [CPU_FPU] |129| 
+         000000cb 01C3 
+     771 000000cc E710          ADDF32    R1H,R1H,R1H           ; [CPU_FPU] |129| 
+         000000cd 0049 
+     772              $C$DW$42        .dwtag  DW_TAG_TI_branch
+     773                      .dwattr $C$DW$42, DW_AT_low_pc(0x00)
+     774                      .dwattr $C$DW$42, DW_AT_name("FS$$DIV")
+     775                      .dwattr $C$DW$42, DW_AT_TI_call
+     776              
+     777 000000ce 7640!         LCR       #FS$$DIV              ; [CPU_ALU] |129| 
+         000000cf 0000 
+     778                      ; call occurs [#FS$$DIV] ; [] |129| 
+     779 000000d0 E68E          F32TOUI16 R0H,R0H               ; [CPU_FPU] |129| 
+         000000d1 0000 
+     780 000000d2 7700          NOP       ; [CPU_ALU] 
+     781 000000d3 7700          NOP       ; [CPU_ALU] 
+     782 000000d4 BFA6          MOV32     XAR6,R0H              ; [CPU_FPU] |129| 
+         000000d5 0F12 
+     783                      .dwpsn  file "../device/driverlib/epwm.c",line 130,column 9,is_stmt,isa 0
+     784 000000d6 0EA6          MOVU      ACC,AR6               ; [CPU_ALU] |130| 
+     785 000000d7 BDA9          MOV32     R0H,ACC               ; [CPU_FPU] |130| 
+         000000d8 0F12 
+     786 000000d9 7700          NOP       ; [CPU_ALU] 
+     787 000000da 7700          NOP       ; [CPU_ALU] 
+     788 000000db 7700          NOP       ; [CPU_ALU] 
+     789 000000dc 7700          NOP       ; [CPU_ALU] 
+     790 000000dd E68B          UI32TOF32 R0H,R0H               ; [CPU_FPU] |130| 
+         000000de 0000 
+     791 000000df E2AF          MOV32     R2H,*+XAR3[2]         ; [CPU_FPU] |130| 
+         000000e0 02D3 
+     792              
+     793 000000e1 E304          MPYF32    R2H,R0H,R2H           ; [CPU_FPU] |130| 
+         000000e2 11E3 
+     794              ||      MOV32     R1H,*+XAR3[4]         ; [CPU_FPU] |133| 
+     795              
+     796                      .dwpsn  file "../device/driverlib/epwm.c",line 133,column 9,is_stmt,isa 0
+     797 000000e3 E700          MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |133| 
+         000000e4 0041 
+     798                      .dwpsn  file "../device/driverlib/epwm.c",line 130,column 9,is_stmt,isa 0
+     799 000000e5 E720          SUBF32    R2H,R0H,R2H           ; [CPU_FPU] |130| 
+         000000e6 0082 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   17
+
+     800                      .dwpsn  file "../device/driverlib/epwm.c",line 133,column 9,is_stmt,isa 0
+     801 000000e7 E720          SUBF32    R0H,R0H,R1H           ; [CPU_FPU] |133| 
+         000000e8 0040 
+     802                      .dwpsn  file "../device/driverlib/epwm.c",line 130,column 9,is_stmt,isa 0
+     803 000000e9 E88F          ADDF32    R1H,R2H,#16128        ; [CPU_FPU] |130| 
+         000000ea C011 
+     804                      .dwpsn  file "../device/driverlib/epwm.c",line 133,column 9,is_stmt,isa 0
+     805 000000eb E88F          ADDF32    R0H,R0H,#16128        ; [CPU_FPU] |133| 
+         000000ec C000 
+     806                      .dwpsn  file "../device/driverlib/epwm.c",line 130,column 9,is_stmt,isa 0
+     807 000000ed E68E          F32TOUI16 R1H,R1H               ; [CPU_FPU] |130| 
+         000000ee 0009 
+     808                      .dwpsn  file "../device/driverlib/epwm.c",line 133,column 9,is_stmt,isa 0
+     809 000000ef 6F46          B         $C$L24,UNC            ; [CPU_ALU] |133| 
+     810                      ; branch occurs ; [] |133| 
+     811 000000f0       $C$L21:    
+     812                      .dwpsn  file "../device/driverlib/epwm.c",line 121,column 9,is_stmt,isa 0
+     813 000000f0 E2AF          MOV32     R1H,*+XAR3[0]         ; [CPU_FPU] |121| 
+         000000f1 01C3 
+     814              $C$DW$43        .dwtag  DW_TAG_TI_branch
+     815                      .dwattr $C$DW$43, DW_AT_low_pc(0x00)
+     816                      .dwattr $C$DW$43, DW_AT_name("FS$$DIV")
+     817                      .dwattr $C$DW$43, DW_AT_TI_call
+     818              
+     819 000000f2 7640!         LCR       #FS$$DIV              ; [CPU_ALU] |121| 
+         000000f3 0000 
+     820                      ; call occurs [#FS$$DIV] ; [] |121| 
+     821 000000f4 E8AF          ADDF32    R0H,R0H,#49024        ; [CPU_FPU] |121| 
+         000000f5 E000 
+     822 000000f6 7700          NOP       ; [CPU_ALU] 
+     823 000000f7 E68E          F32TOUI16 R0H,R0H               ; [CPU_FPU] |121| 
+         000000f8 0000 
+     824 000000f9 7700          NOP       ; [CPU_ALU] 
+     825 000000fa 7700          NOP       ; [CPU_ALU] 
+     826 000000fb BFA6          MOV32     XAR6,R0H              ; [CPU_FPU] |121| 
+         000000fc 0F12 
+     827                      .dwpsn  file "../device/driverlib/epwm.c",line 122,column 9,is_stmt,isa 0
+     828 000000fd 9A01          MOVB      AL,#1                 ; [CPU_ALU] |122| 
+     829 000000fe 94A6          ADD       AL,AR6                ; [CPU_ALU] |122| 
+     830 000000ff 0EA9          MOVU      ACC,AL                ; [CPU_ALU] |122| 
+     831 00000100 BDA9          MOV32     R0H,ACC               ; [CPU_FPU] |122| 
+         00000101 0F12 
+     832 00000102 7700          NOP       ; [CPU_ALU] 
+     833 00000103 7700          NOP       ; [CPU_ALU] 
+     834 00000104 7700          NOP       ; [CPU_ALU] 
+     835 00000105 7700          NOP       ; [CPU_ALU] 
+     836 00000106 E68B          UI32TOF32 R0H,R0H               ; [CPU_FPU] |122| 
+         00000107 0000 
+     837 00000108 E2AF          MOV32     R2H,*+XAR3[2]         ; [CPU_FPU] |122| 
+         00000109 02D3 
+     838              
+     839 0000010a E304          MPYF32    R2H,R0H,R2H           ; [CPU_FPU] |122| 
+         0000010b 11E3 
+     840              ||      MOV32     R1H,*+XAR3[4]         ; [CPU_FPU] |124| 
+     841              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   18
+
+     842                      .dwpsn  file "../device/driverlib/epwm.c",line 124,column 9,is_stmt,isa 0
+     843 0000010c E700          MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |124| 
+         0000010d 0041 
+     844                      .dwpsn  file "../device/driverlib/epwm.c",line 122,column 9,is_stmt,isa 0
+     845 0000010e E720          SUBF32    R2H,R0H,R2H           ; [CPU_FPU] |122| 
+         0000010f 0082 
+     846                      .dwpsn  file "../device/driverlib/epwm.c",line 124,column 9,is_stmt,isa 0
+     847 00000110 E720          SUBF32    R0H,R0H,R1H           ; [CPU_FPU] |124| 
+         00000111 0040 
+     848 00000112 6F1F          B         $C$L23,UNC            ; [CPU_ALU] 
+     849                      ; branch occurs ; [] 
+     850 00000113       $C$L22:    
+     851                      .dwpsn  file "../device/driverlib/epwm.c",line 113,column 9,is_stmt,isa 0
+     852 00000113 E2AF          MOV32     R1H,*+XAR3[0]         ; [CPU_FPU] |113| 
+         00000114 01C3 
+     853              $C$DW$44        .dwtag  DW_TAG_TI_branch
+     854                      .dwattr $C$DW$44, DW_AT_low_pc(0x00)
+     855                      .dwattr $C$DW$44, DW_AT_name("FS$$DIV")
+     856                      .dwattr $C$DW$44, DW_AT_TI_call
+     857              
+     858 00000115 7640!         LCR       #FS$$DIV              ; [CPU_ALU] |113| 
+         00000116 0000 
+     859                      ; call occurs [#FS$$DIV] ; [] |113| 
+     860 00000117 E8AF          ADDF32    R0H,R0H,#49024        ; [CPU_FPU] |113| 
+         00000118 E000 
+     861 00000119 7700          NOP       ; [CPU_ALU] 
+     862 0000011a E68E          F32TOUI16 R0H,R0H               ; [CPU_FPU] |113| 
+         0000011b 0000 
+     863 0000011c 7700          NOP       ; [CPU_ALU] 
+     864 0000011d 7700          NOP       ; [CPU_ALU] 
+     865 0000011e BFA6          MOV32     XAR6,R0H              ; [CPU_FPU] |113| 
+         0000011f 0F12 
+     866                      .dwpsn  file "../device/driverlib/epwm.c",line 114,column 9,is_stmt,isa 0
+     867 00000120 9A01          MOVB      AL,#1                 ; [CPU_ALU] |114| 
+     868 00000121 94A6          ADD       AL,AR6                ; [CPU_ALU] |114| 
+     869 00000122 0EA9          MOVU      ACC,AL                ; [CPU_ALU] |114| 
+     870 00000123 BDA9          MOV32     R0H,ACC               ; [CPU_FPU] |114| 
+         00000124 0F12 
+     871 00000125 7700          NOP       ; [CPU_ALU] 
+     872 00000126 7700          NOP       ; [CPU_ALU] 
+     873 00000127 7700          NOP       ; [CPU_ALU] 
+     874 00000128 7700          NOP       ; [CPU_ALU] 
+     875 00000129 E68B          UI32TOF32 R0H,R0H               ; [CPU_FPU] |114| 
+         0000012a 0000 
+     876 0000012b E2AF          MOV32     R2H,*+XAR3[2]         ; [CPU_FPU] |114| 
+         0000012c 02D3 
+     877              
+     878 0000012d E304          MPYF32    R2H,R0H,R2H           ; [CPU_FPU] |114| 
+         0000012e 11E3 
+     879              ||      MOV32     R1H,*+XAR3[4]         ; [CPU_FPU] |116| 
+     880              
+     881                      .dwpsn  file "../device/driverlib/epwm.c",line 116,column 9,is_stmt,isa 0
+     882 0000012f E700          MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |116| 
+         00000130 0040 
+     883 00000131       $C$L23:    
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   19
+
+     884                      .dwpsn  file "../device/driverlib/epwm.c",line 114,column 9,is_stmt,isa 0
+     885 00000131 E68E          F32TOUI16 R1H,R2H               ; [CPU_FPU] |114| 
+         00000132 0011 
+     886 00000133 7700          NOP       ; [CPU_ALU] 
+     887 00000134 7700          NOP       ; [CPU_ALU] 
+     888 00000135       $C$L24:    
+     889 00000135 BFA9          MOV32     ACC,R1H               ; [CPU_FPU] |114| 
+         00000136 0F16 
+     890                      .dwpsn  file "../device/driverlib/epwm.c",line 116,column 9,is_stmt,isa 0
+     891 00000137 E68E          F32TOUI16 R0H,R0H               ; [CPU_FPU] |116| 
+         00000138 0000 
+     892                      .dwpsn  file "../device/driverlib/epwm.c",line 114,column 9,is_stmt,isa 0
+     893 00000139 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |114| 
+     894                      .dwpsn  file "..\device\driverlib\epwm.h",line 2380,column 1,is_stmt,isa 0
+     895 0000013a 7E43          MOV       *-SP[3],AR6           ; [CPU_ALU] |2380| 
+     896                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     897 0000013b FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         0000013c 4000 
+     898                      .dwpsn  file "../device/driverlib/epwm.c",line 116,column 9,is_stmt,isa 0
+     899 0000013d BFA1          MOV32     XAR1,R0H              ; [CPU_FPU] |116| 
+         0000013e 0F12 
+     900                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     901 0000013f 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     902 00000140 611D          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     903                      ; branchcc occurs ; [] |1614| 
+     904 00000141 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000142 4100 
+     905 00000143 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     906 00000144 6119          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     907                      ; branchcc occurs ; [] |1614| 
+     908 00000145 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000146 4200 
+     909 00000147 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     910 00000148 6115          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     911                      ; branchcc occurs ; [] |1614| 
+     912 00000149 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         0000014a 4300 
+     913 0000014b 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     914 0000014c 6111          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     915                      ; branchcc occurs ; [] |1614| 
+     916 0000014d FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         0000014e 4400 
+     917 0000014f 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     918 00000150 610D          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     919                      ; branchcc occurs ; [] |1614| 
+     920 00000151 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000152 4500 
+     921 00000153 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     922 00000154 6109          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     923                      ; branchcc occurs ; [] |1614| 
+     924 00000155 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000156 4600 
+     925 00000157 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     926 00000158 6105          B         $C$L25,EQ             ; [CPU_ALU] |1614| 
+     927                      ; branchcc occurs ; [] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   20
+
+     928 00000159 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         0000015a 4700 
+     929 0000015b 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     930 0000015c 6003          B         $C$L26,NEQ            ; [CPU_ALU] |1614| 
+     931                      ; branchcc occurs ; [] |1614| 
+     932 0000015d       $C$L25:    
+     933 0000015d 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     934 0000015e 6007          B         $C$L27,NEQ            ; [CPU_ALU] |1614| 
+     935                      ; branchcc occurs ; [] |1614| 
+     936 0000015f       $C$L26:    
+     937                      .dwpsn  file "..\device\driverlib\epwm.h",line 2384,column 5,is_stmt,isa 0
+     938 0000015f FF20          MOV       ACC,#2384             ; [CPU_ALU] |2384| 
+         00000160 0950 
+     939 00000161 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2384| 
+         00000162 001C 
+     940              $C$DW$45        .dwtag  DW_TAG_TI_branch
+     941                      .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+     942                      .dwattr $C$DW$45, DW_AT_name("___error__")
+     943                      .dwattr $C$DW$45, DW_AT_TI_call
+     944              
+     945 00000163 7640!         LCR       #___error__           ; [CPU_ALU] |2384| 
+         00000164 0000 
+     946                      ; call occurs [#___error__] ; [] |2384| 
+     947 00000165       $C$L27:    
+     948                      .dwpsn  file "..\device\driverlib\epwm.h",line 2389,column 5,is_stmt,isa 0
+     949 00000165 D063          MOVB      XAR0,#99              ; [CPU_ALU] |2389| 
+     950 00000166 9243          MOV       AL,*-SP[3]            ; [CPU_ALU] |2389| 
+     951 00000167 9692          MOV       *+XAR2[AR0],AL        ; [CPU_ALU] |2389| 
+     952                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+     953 00000168 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000169 4000 
+     954 0000016a 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     955 0000016b 611D          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     956                      ; branchcc occurs ; [] |1614| 
+     957 0000016c FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         0000016d 4100 
+     958 0000016e 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     959 0000016f 6119          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     960                      ; branchcc occurs ; [] |1614| 
+     961 00000170 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000171 4200 
+     962 00000172 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     963 00000173 6115          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     964                      ; branchcc occurs ; [] |1614| 
+     965 00000174 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000175 4300 
+     966 00000176 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     967 00000177 6111          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     968                      ; branchcc occurs ; [] |1614| 
+     969 00000178 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000179 4400 
+     970 0000017a 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     971 0000017b 610D          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     972                      ; branchcc occurs ; [] |1614| 
+     973 0000017c FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   21
+
+         0000017d 4500 
+     974 0000017e 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     975 0000017f 6109          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     976                      ; branchcc occurs ; [] |1614| 
+     977 00000180 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000181 4600 
+     978 00000182 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     979 00000183 6105          B         $C$L28,EQ             ; [CPU_ALU] |1614| 
+     980                      ; branchcc occurs ; [] |1614| 
+     981 00000184 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000185 4700 
+     982 00000186 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+     983 00000187 6003          B         $C$L29,NEQ            ; [CPU_ALU] |1614| 
+     984                      ; branchcc occurs ; [] |1614| 
+     985 00000188       $C$L28:    
+     986 00000188 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+     987 00000189 6007          B         $C$L30,NEQ            ; [CPU_ALU] |1614| 
+     988                      ; branchcc occurs ; [] |1614| 
+     989 0000018a       $C$L29:    
+     990                      .dwpsn  file "..\device\driverlib\epwm.h",line 2020,column 5,is_stmt,isa 0
+     991 0000018a FF20          MOV       ACC,#2020             ; [CPU_ALU] |2020| 
+         0000018b 07E4 
+     992 0000018c 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2020| 
+         0000018d 001C 
+     993              $C$DW$46        .dwtag  DW_TAG_TI_branch
+     994                      .dwattr $C$DW$46, DW_AT_low_pc(0x00)
+     995                      .dwattr $C$DW$46, DW_AT_name("___error__")
+     996                      .dwattr $C$DW$46, DW_AT_TI_call
+     997              
+     998 0000018e 7640!         LCR       #___error__           ; [CPU_ALU] |2020| 
+         0000018f 0000 
+     999                      ; call occurs [#___error__] ; [] |2020| 
+    1000 00000190       $C$L30:    
+    1001                      .dwpsn  file "..\device\driverlib\epwm.h",line 2025,column 5,is_stmt,isa 0
+    1002 00000190 18C2          AND       *+XAR2[0],#0xfffb     ; [CPU_ALU] |2025| 
+         00000191 FFFB 
+    1003                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1004 00000192 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000193 4000 
+    1005 00000194 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1006 00000195 611D          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1007                      ; branchcc occurs ; [] |1614| 
+    1008 00000196 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000197 4100 
+    1009 00000198 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1010 00000199 6119          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1011                      ; branchcc occurs ; [] |1614| 
+    1012 0000019a FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         0000019b 4200 
+    1013 0000019c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1014 0000019d 6115          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1015                      ; branchcc occurs ; [] |1614| 
+    1016 0000019e FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         0000019f 4300 
+    1017 000001a0 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   22
+
+    1018 000001a1 6111          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1019                      ; branchcc occurs ; [] |1614| 
+    1020 000001a2 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         000001a3 4400 
+    1021 000001a4 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1022 000001a5 610D          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1023                      ; branchcc occurs ; [] |1614| 
+    1024 000001a6 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         000001a7 4500 
+    1025 000001a8 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1026 000001a9 6109          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1027                      ; branchcc occurs ; [] |1614| 
+    1028 000001aa FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         000001ab 4600 
+    1029 000001ac 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1030 000001ad 6105          B         $C$L31,EQ             ; [CPU_ALU] |1614| 
+    1031                      ; branchcc occurs ; [] |1614| 
+    1032 000001ae FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         000001af 4700 
+    1033 000001b0 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1034 000001b1 6003          B         $C$L32,NEQ            ; [CPU_ALU] |1614| 
+    1035                      ; branchcc occurs ; [] |1614| 
+    1036 000001b2       $C$L31:    
+    1037 000001b2 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1038 000001b3 6007          B         $C$L33,NEQ            ; [CPU_ALU] |1614| 
+    1039                      ; branchcc occurs ; [] |1614| 
+    1040 000001b4       $C$L32:    
+    1041                      .dwpsn  file "..\device\driverlib\epwm.h",line 2350,column 5,is_stmt,isa 0
+    1042 000001b4 FF20          MOV       ACC,#2350             ; [CPU_ALU] |2350| 
+         000001b5 092E 
+    1043 000001b6 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2350| 
+         000001b7 001C 
+    1044              $C$DW$47        .dwtag  DW_TAG_TI_branch
+    1045                      .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+    1046                      .dwattr $C$DW$47, DW_AT_name("___error__")
+    1047                      .dwattr $C$DW$47, DW_AT_TI_call
+    1048              
+    1049 000001b8 7640!         LCR       #___error__           ; [CPU_ALU] |2350| 
+         000001b9 0000 
+    1050                      ; call occurs [#___error__] ; [] |2350| 
+    1051 000001ba       $C$L33:    
+    1052                      .dwpsn  file "..\device\driverlib\epwm.h",line 2355,column 5,is_stmt,isa 0
+    1053 000001ba D060          MOVB      XAR0,#96              ; [CPU_ALU] |2355| 
+    1054 000001bb 0692          MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |2355| 
+    1055 000001bc D060          MOVB      XAR0,#96              ; [CPU_ALU] |2355| 
+    1056 000001bd 9100          ANDB      AH,#0                 ; [CPU_ALU] |2355| 
+    1057 000001be 1E92          MOVL      *+XAR2[AR0],ACC       ; [CPU_ALU] |2355| 
+    1058                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1059 000001bf FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         000001c0 4000 
+    1060 000001c1 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1061 000001c2 611D          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1062                      ; branchcc occurs ; [] |1614| 
+    1063 000001c3 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         000001c4 4100 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   23
+
+    1064 000001c5 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1065 000001c6 6119          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1066                      ; branchcc occurs ; [] |1614| 
+    1067 000001c7 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         000001c8 4200 
+    1068 000001c9 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1069 000001ca 6115          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1070                      ; branchcc occurs ; [] |1614| 
+    1071 000001cb FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         000001cc 4300 
+    1072 000001cd 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1073 000001ce 6111          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1074                      ; branchcc occurs ; [] |1614| 
+    1075 000001cf FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         000001d0 4400 
+    1076 000001d1 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1077 000001d2 610D          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1078                      ; branchcc occurs ; [] |1614| 
+    1079 000001d3 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         000001d4 4500 
+    1080 000001d5 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1081 000001d6 6109          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1082                      ; branchcc occurs ; [] |1614| 
+    1083 000001d7 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         000001d8 4600 
+    1084 000001d9 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1085 000001da 6105          B         $C$L34,EQ             ; [CPU_ALU] |1614| 
+    1086                      ; branchcc occurs ; [] |1614| 
+    1087 000001db FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         000001dc 4700 
+    1088 000001dd 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1089 000001de 6003          B         $C$L35,NEQ            ; [CPU_ALU] |1614| 
+    1090                      ; branchcc occurs ; [] |1614| 
+    1091 000001df       $C$L34:    
+    1092 000001df 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1093 000001e0 6007          B         $C$L36,NEQ            ; [CPU_ALU] |1614| 
+    1094                      ; branchcc occurs ; [] |1614| 
+    1095 000001e1       $C$L35:    
+    1096                      .dwpsn  file "..\device\driverlib\epwm.h",line 1648,column 5,is_stmt,isa 0
+    1097 000001e1 FF20          MOV       ACC,#1648             ; [CPU_ALU] |1648| 
+         000001e2 0670 
+    1098 000001e3 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |1648| 
+         000001e4 001C 
+    1099              $C$DW$48        .dwtag  DW_TAG_TI_branch
+    1100                      .dwattr $C$DW$48, DW_AT_low_pc(0x00)
+    1101                      .dwattr $C$DW$48, DW_AT_name("___error__")
+    1102                      .dwattr $C$DW$48, DW_AT_TI_call
+    1103              
+    1104 000001e5 7640!         LCR       #___error__           ; [CPU_ALU] |1648| 
+         000001e6 0000 
+    1105                      ; call occurs [#___error__] ; [] |1648| 
+    1106 000001e7       $C$L36:    
+    1107                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1108 000001e7 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         000001e8 4000 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   24
+
+    1109                      .dwpsn  file "..\device\driverlib\epwm.h",line 1653,column 5,is_stmt,isa 0
+    1110 000001e9 2BE2          MOV       *+XAR2[4],#0          ; [CPU_ALU] |1653| 
+    1111                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1112 000001ea 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1113 000001eb 611D          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1114                      ; branchcc occurs ; [] |1614| 
+    1115 000001ec FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         000001ed 4100 
+    1116 000001ee 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1117 000001ef 6119          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1118                      ; branchcc occurs ; [] |1614| 
+    1119 000001f0 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         000001f1 4200 
+    1120 000001f2 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1121 000001f3 6115          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1122                      ; branchcc occurs ; [] |1614| 
+    1123 000001f4 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         000001f5 4300 
+    1124 000001f6 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1125 000001f7 6111          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1126                      ; branchcc occurs ; [] |1614| 
+    1127 000001f8 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         000001f9 4400 
+    1128 000001fa 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1129 000001fb 610D          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1130                      ; branchcc occurs ; [] |1614| 
+    1131 000001fc FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         000001fd 4500 
+    1132 000001fe 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1133 000001ff 6109          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1134                      ; branchcc occurs ; [] |1614| 
+    1135 00000200 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000201 4600 
+    1136 00000202 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1137 00000203 6105          B         $C$L37,EQ             ; [CPU_ALU] |1614| 
+    1138                      ; branchcc occurs ; [] |1614| 
+    1139 00000204 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000205 4700 
+    1140 00000206 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1141 00000207 6003          B         $C$L38,NEQ            ; [CPU_ALU] |1614| 
+    1142                      ; branchcc occurs ; [] |1614| 
+    1143 00000208       $C$L37:    
+    1144 00000208 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1145 00000209 6007          B         $C$L39,NEQ            ; [CPU_ALU] |1614| 
+    1146                      ; branchcc occurs ; [] |1614| 
+    1147 0000020a       $C$L38:    
+    1148                      .dwpsn  file "..\device\driverlib\epwm.h",line 2518,column 5,is_stmt,isa 0
+    1149 0000020a FF20          MOV       ACC,#2518             ; [CPU_ALU] |2518| 
+         0000020b 09D6 
+    1150 0000020c 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2518| 
+         0000020d 001C 
+    1151              $C$DW$49        .dwtag  DW_TAG_TI_branch
+    1152                      .dwattr $C$DW$49, DW_AT_low_pc(0x00)
+    1153                      .dwattr $C$DW$49, DW_AT_name("___error__")
+    1154                      .dwattr $C$DW$49, DW_AT_TI_call
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   25
+
+    1155              
+    1156 0000020e 7640!         LCR       #___error__           ; [CPU_ALU] |2518| 
+         0000020f 0000 
+    1157                      ; call occurs [#___error__] ; [] |2518| 
+    1158 00000210       $C$L39:    
+    1159                      .dwpsn  file "..\device\driverlib\epwm.h",line 2544,column 5,is_stmt,isa 0
+    1160 00000210 8AA2          MOVL      XAR4,XAR2             ; [CPU_ALU] |2544| 
+    1161 00000211 D008          MOVB      XAR0,#8               ; [CPU_ALU] |2544| 
+    1162 00000212 CC92          AND       AL,*+XAR2[AR0],#0xf3ec ; [CPU_ALU] |2544| 
+         00000213 F3EC 
+    1163 00000214 DC08          ADDB      XAR4,#8               ; [CPU_ALU] |2544| 
+    1164 00000215 96C4          MOV       *+XAR4[0],AL          ; [CPU_ALU] |2544| 
+    1165 00000216 A846          MOVL      *-SP[6],XAR4          ; [CPU_ALU] |2544| 
+    1166                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1167 00000217 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000218 4000 
+    1168 00000219 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1169 0000021a 611D          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1170                      ; branchcc occurs ; [] |1614| 
+    1171 0000021b FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         0000021c 4100 
+    1172 0000021d 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1173 0000021e 6119          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1174                      ; branchcc occurs ; [] |1614| 
+    1175 0000021f FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000220 4200 
+    1176 00000221 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1177 00000222 6115          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1178                      ; branchcc occurs ; [] |1614| 
+    1179 00000223 FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         00000224 4300 
+    1180 00000225 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1181 00000226 6111          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1182                      ; branchcc occurs ; [] |1614| 
+    1183 00000227 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000228 4400 
+    1184 00000229 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1185 0000022a 610D          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1186                      ; branchcc occurs ; [] |1614| 
+    1187 0000022b FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         0000022c 4500 
+    1188 0000022d 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1189 0000022e 6109          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1190                      ; branchcc occurs ; [] |1614| 
+    1191 0000022f FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000230 4600 
+    1192 00000231 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1193 00000232 6105          B         $C$L40,EQ             ; [CPU_ALU] |1614| 
+    1194                      ; branchcc occurs ; [] |1614| 
+    1195 00000233 FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         00000234 4700 
+    1196 00000235 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1197 00000236 6003          B         $C$L41,NEQ            ; [CPU_ALU] |1614| 
+    1198                      ; branchcc occurs ; [] |1614| 
+    1199 00000237       $C$L40:    
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   26
+
+    1200 00000237 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1201 00000238 6007          B         $C$L42,NEQ            ; [CPU_ALU] |1614| 
+    1202                      ; branchcc occurs ; [] |1614| 
+    1203 00000239       $C$L41:    
+    1204                      .dwpsn  file "..\device\driverlib\epwm.h",line 2518,column 5,is_stmt,isa 0
+    1205 00000239 FF20          MOV       ACC,#2518             ; [CPU_ALU] |2518| 
+         0000023a 09D6 
+    1206 0000023b 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2518| 
+         0000023c 001C 
+    1207              $C$DW$50        .dwtag  DW_TAG_TI_branch
+    1208                      .dwattr $C$DW$50, DW_AT_low_pc(0x00)
+    1209                      .dwattr $C$DW$50, DW_AT_name("___error__")
+    1210                      .dwattr $C$DW$50, DW_AT_TI_call
+    1211              
+    1212 0000023d 7640!         LCR       #___error__           ; [CPU_ALU] |2518| 
+         0000023e 0000 
+    1213                      ; call occurs [#___error__] ; [] |2518| 
+    1214 0000023f       $C$L42:    
+    1215 0000023f 8A46          MOVL      XAR4,*-SP[6]          ; [CPU_ALU] 
+    1216                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1217 00000240 FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         00000241 4000 
+    1218                      .dwpsn  file "..\device\driverlib\epwm.h",line 2544,column 5,is_stmt,isa 0
+    1219 00000242 18C4          AND       *+XAR4[0],#0xcfb3     ; [CPU_ALU] |2544| 
+         00000243 CFB3 
+    1220                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1221 00000244 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1222 00000245 611D          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1223                      ; branchcc occurs ; [] |1614| 
+    1224 00000246 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000247 4100 
+    1225 00000248 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1226 00000249 6119          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1227                      ; branchcc occurs ; [] |1614| 
+    1228 0000024a FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         0000024b 4200 
+    1229 0000024c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1230 0000024d 6115          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1231                      ; branchcc occurs ; [] |1614| 
+    1232 0000024e FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         0000024f 4300 
+    1233 00000250 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1234 00000251 6111          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1235                      ; branchcc occurs ; [] |1614| 
+    1236 00000252 FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         00000253 4400 
+    1237 00000254 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1238 00000255 610D          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1239                      ; branchcc occurs ; [] |1614| 
+    1240 00000256 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000257 4500 
+    1241 00000258 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1242 00000259 6109          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1243                      ; branchcc occurs ; [] |1614| 
+    1244 0000025a FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   27
+
+         0000025b 4600 
+    1245 0000025c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1246 0000025d 6105          B         $C$L43,EQ             ; [CPU_ALU] |1614| 
+    1247                      ; branchcc occurs ; [] |1614| 
+    1248 0000025e FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         0000025f 4700 
+    1249 00000260 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1250 00000261 6003          B         $C$L44,NEQ            ; [CPU_ALU] |1614| 
+    1251                      ; branchcc occurs ; [] |1614| 
+    1252 00000262       $C$L43:    
+    1253 00000262 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1254 00000263 6007          B         $C$L45,NEQ            ; [CPU_ALU] |1614| 
+    1255                      ; branchcc occurs ; [] |1614| 
+    1256 00000264       $C$L44:    
+    1257                      .dwpsn  file "..\device\driverlib\epwm.h",line 2633,column 5,is_stmt,isa 0
+    1258 00000264 FF20          MOV       ACC,#2633             ; [CPU_ALU] |2633| 
+         00000265 0A49 
+    1259 00000266 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2633| 
+         00000267 001C 
+    1260              $C$DW$51        .dwtag  DW_TAG_TI_branch
+    1261                      .dwattr $C$DW$51, DW_AT_low_pc(0x00)
+    1262                      .dwattr $C$DW$51, DW_AT_name("___error__")
+    1263                      .dwattr $C$DW$51, DW_AT_TI_call
+    1264              
+    1265 00000268 7640!         LCR       #___error__           ; [CPU_ALU] |2633| 
+         00000269 0000 
+    1266                      ; call occurs [#___error__] ; [] |2633| 
+    1267 0000026a       $C$L45:    
+    1268                      .dwpsn  file "..\device\driverlib\epwm.h",line 2649,column 9,is_stmt,isa 0
+    1269 0000026a D06B          MOVB      XAR0,#107             ; [CPU_ALU] |2649| 
+    1270 0000026b 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |2649| 
+    1271 0000026c 9692          MOV       *+XAR2[AR0],AL        ; [CPU_ALU] |2649| 
+    1272                      .dwpsn  file "..\device\driverlib\epwm.h",line 2627,column 1,is_stmt,isa 0
+    1273 0000026d 7942          MOV       *-SP[2],AR1           ; [CPU_ALU] |2627| 
+    1274                      .dwpsn  file "..\device\driverlib\epwm.h",line 1614,column 5,is_stmt,isa 0
+    1275 0000026e FF20          MOV       ACC,#16384            ; [CPU_ALU] |1614| 
+         0000026f 4000 
+    1276 00000270 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1277 00000271 611D          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1278                      ; branchcc occurs ; [] |1614| 
+    1279 00000272 FF20          MOV       ACC,#16640            ; [CPU_ALU] |1614| 
+         00000273 4100 
+    1280 00000274 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1281 00000275 6119          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1282                      ; branchcc occurs ; [] |1614| 
+    1283 00000276 FF20          MOV       ACC,#16896            ; [CPU_ALU] |1614| 
+         00000277 4200 
+    1284 00000278 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1285 00000279 6115          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1286                      ; branchcc occurs ; [] |1614| 
+    1287 0000027a FF20          MOV       ACC,#17152            ; [CPU_ALU] |1614| 
+         0000027b 4300 
+    1288 0000027c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1289 0000027d 6111          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1290                      ; branchcc occurs ; [] |1614| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   28
+
+    1291 0000027e FF20          MOV       ACC,#17408            ; [CPU_ALU] |1614| 
+         0000027f 4400 
+    1292 00000280 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1293 00000281 610D          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1294                      ; branchcc occurs ; [] |1614| 
+    1295 00000282 FF20          MOV       ACC,#17664            ; [CPU_ALU] |1614| 
+         00000283 4500 
+    1296 00000284 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1297 00000285 6109          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1298                      ; branchcc occurs ; [] |1614| 
+    1299 00000286 FF20          MOV       ACC,#17920            ; [CPU_ALU] |1614| 
+         00000287 4600 
+    1300 00000288 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1301 00000289 6105          B         $C$L46,EQ             ; [CPU_ALU] |1614| 
+    1302                      ; branchcc occurs ; [] |1614| 
+    1303 0000028a FF20          MOV       ACC,#18176            ; [CPU_ALU] |1614| 
+         0000028b 4700 
+    1304 0000028c 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |1614| 
+    1305 0000028d 6003          B         $C$L47,NEQ            ; [CPU_ALU] |1614| 
+    1306                      ; branchcc occurs ; [] |1614| 
+    1307 0000028e       $C$L46:    
+    1308 0000028e 9A01          MOVB      AL,#1                 ; [CPU_ALU] |1614| 
+    1309 0000028f 6007          B         $C$L48,NEQ            ; [CPU_ALU] |1614| 
+    1310                      ; branchcc occurs ; [] |1614| 
+    1311 00000290       $C$L47:    
+    1312                      .dwpsn  file "..\device\driverlib\epwm.h",line 2633,column 5,is_stmt,isa 0
+    1313 00000290 FF20          MOV       ACC,#2633             ; [CPU_ALU] |2633| 
+         00000291 0A49 
+    1314 00000292 8F00+         MOVL      XAR4,#$C$FSL2         ; [CPU_ARAU] |2633| 
+         00000293 001C 
+    1315              $C$DW$52        .dwtag  DW_TAG_TI_branch
+    1316                      .dwattr $C$DW$52, DW_AT_low_pc(0x00)
+    1317                      .dwattr $C$DW$52, DW_AT_name("___error__")
+    1318                      .dwattr $C$DW$52, DW_AT_TI_call
+    1319              
+    1320 00000294 7640!         LCR       #___error__           ; [CPU_ALU] |2633| 
+         00000295 0000 
+    1321                      ; call occurs [#___error__] ; [] |2633| 
+    1322 00000296       $C$L48:    
+    1323                      .dwpsn  file "..\device\driverlib\epwm.h",line 2649,column 9,is_stmt,isa 0
+    1324 00000296 D16D          MOVB      XAR1,#109             ; [CPU_ALU] |2649| 
+    1325                      .dwpsn  file "../device/driverlib/epwm.c",line 170,column 5,is_stmt,isa 0
+    1326 00000297 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |170| 
+    1327 00000298 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |170| 
+    1328                      .dwpsn  file "..\device\driverlib\epwm.h",line 2649,column 9,is_stmt,isa 0
+    1329 00000299 969A          MOV       *+XAR2[AR1],AL        ; [CPU_ALU] |2649| 
+    1330                      .dwpsn  file "../device/driverlib/epwm.c",line 170,column 5,is_stmt,isa 0
+    1331 0000029a 9293          MOV       AL,*+XAR3[AR0]        ; [CPU_ALU] |170| 
+    1332 0000029b 6023          B         $C$L51,NEQ            ; [CPU_ALU] |170| 
+    1333                      ; branchcc occurs ; [] |170| 
+    1334                      .dwpsn  file "../device/driverlib/epwm.c",line 175,column 9,is_stmt,isa 0
+    1335 0000029c 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |175| 
+    1336 0000029d AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |175| 
+    1337 0000029e D400          MOVB      XAR4,#0               ; [CPU_ALU] |175| 
+    1338 0000029f D502          MOVB      XAR5,#2               ; [CPU_ALU] |175| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   29
+
+    1339              $C$DW$53        .dwtag  DW_TAG_TI_branch
+    1340                      .dwattr $C$DW$53, DW_AT_low_pc(0x00)
+    1341                      .dwattr $C$DW$53, DW_AT_name("_EPWM_setActionQualifierAction")
+    1342                      .dwattr $C$DW$53, DW_AT_TI_call
+    1343              
+    1344 000002a0 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |175| 
+         000002a1 0000 
+    1345                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |175| 
+    1346                      .dwpsn  file "../device/driverlib/epwm.c",line 183,column 9,is_stmt,isa 0
+    1347 000002a2 56BF          MOVB      *-SP[1],#4,UNC        ; [CPU_ALU] |183| 
+         000002a3 0441 
+    1348 000002a4 D400          MOVB      XAR4,#0               ; [CPU_ALU] |183| 
+    1349 000002a5 D501          MOVB      XAR5,#1               ; [CPU_ALU] |183| 
+    1350 000002a6 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |183| 
+    1351              $C$DW$54        .dwtag  DW_TAG_TI_branch
+    1352                      .dwattr $C$DW$54, DW_AT_low_pc(0x00)
+    1353                      .dwattr $C$DW$54, DW_AT_name("_EPWM_setActionQualifierAction")
+    1354                      .dwattr $C$DW$54, DW_AT_TI_call
+    1355              
+    1356 000002a7 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |183| 
+         000002a8 0000 
+    1357                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |183| 
+    1358                      .dwpsn  file "../device/driverlib/epwm.c",line 188,column 9,is_stmt,isa 0
+    1359 000002a9 92F3          MOV       AL,*+XAR3[6]          ; [CPU_ALU] |188| 
+    1360 000002aa 5201          CMPB      AL,#1                 ; [CPU_ALU] |188| 
+    1361 000002ab 6109          B         $C$L49,EQ             ; [CPU_ALU] |188| 
+    1362                      ; branchcc occurs ; [] |188| 
+    1363                      .dwpsn  file "../device/driverlib/epwm.c",line 210,column 13,is_stmt,isa 0
+    1364 000002ac 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |210| 
+    1365 000002ad AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |210| 
+    1366 000002ae D402          MOVB      XAR4,#2               ; [CPU_ALU] |210| 
+    1367 000002af D502          MOVB      XAR5,#2               ; [CPU_ALU] |210| 
+    1368              $C$DW$55        .dwtag  DW_TAG_TI_branch
+    1369                      .dwattr $C$DW$55, DW_AT_low_pc(0x00)
+    1370                      .dwattr $C$DW$55, DW_AT_name("_EPWM_setActionQualifierAction")
+    1371                      .dwattr $C$DW$55, DW_AT_TI_call
+    1372              
+    1373 000002b0 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |210| 
+         000002b1 0000 
+    1374                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |210| 
+    1375                      .dwpsn  file "../device/driverlib/epwm.c",line 217,column 13,is_stmt,isa 0
+    1376 000002b2 D501          MOVB      XAR5,#1               ; [CPU_ALU] |217| 
+    1377 000002b3 6F08          B         $C$L50,UNC            ; [CPU_ALU] |217| 
+    1378                      ; branch occurs ; [] |217| 
+    1379 000002b4       $C$L49:    
+    1380                      .dwpsn  file "../device/driverlib/epwm.c",line 193,column 13,is_stmt,isa 0
+    1381 000002b4 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |193| 
+    1382 000002b5 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |193| 
+    1383 000002b6 D402          MOVB      XAR4,#2               ; [CPU_ALU] |193| 
+    1384 000002b7 D501          MOVB      XAR5,#1               ; [CPU_ALU] |193| 
+    1385              $C$DW$56        .dwtag  DW_TAG_TI_branch
+    1386                      .dwattr $C$DW$56, DW_AT_low_pc(0x00)
+    1387                      .dwattr $C$DW$56, DW_AT_name("_EPWM_setActionQualifierAction")
+    1388                      .dwattr $C$DW$56, DW_AT_TI_call
+    1389              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   30
+
+    1390 000002b8 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |193| 
+         000002b9 0000 
+    1391                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |193| 
+    1392                      .dwpsn  file "../device/driverlib/epwm.c",line 200,column 13,is_stmt,isa 0
+    1393 000002ba D502          MOVB      XAR5,#2               ; [CPU_ALU] |200| 
+    1394 000002bb       $C$L50:    
+    1395 000002bb 56BF          MOVB      *-SP[1],#8,UNC        ; [CPU_ALU] |200| 
+         000002bc 0841 
+    1396 000002bd 6F4D          B         $C$L58,UNC            ; [CPU_ALU] 
+    1397                      ; branch occurs ; [] 
+    1398 000002be       $C$L51:    
+    1399                      .dwpsn  file "../device/driverlib/epwm.c",line 224,column 10,is_stmt,isa 0
+    1400 000002be 5201          CMPB      AL,#1                 ; [CPU_ALU] |224| 
+    1401 000002bf 6130          B         $C$L54,EQ             ; [CPU_ALU] |224| 
+    1402                      ; branchcc occurs ; [] |224| 
+    1403                      .dwpsn  file "../device/driverlib/epwm.c",line 282,column 9,is_stmt,isa 0
+    1404 000002c0 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |282| 
+    1405 000002c1 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |282| 
+    1406 000002c2 D400          MOVB      XAR4,#0               ; [CPU_ALU] |282| 
+    1407 000002c3 D501          MOVB      XAR5,#1               ; [CPU_ALU] |282| 
+    1408              $C$DW$57        .dwtag  DW_TAG_TI_branch
+    1409                      .dwattr $C$DW$57, DW_AT_low_pc(0x00)
+    1410                      .dwattr $C$DW$57, DW_AT_name("_EPWM_setActionQualifierAction")
+    1411                      .dwattr $C$DW$57, DW_AT_TI_call
+    1412              
+    1413 000002c4 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |282| 
+         000002c5 0000 
+    1414                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |282| 
+    1415                      .dwpsn  file "../device/driverlib/epwm.c",line 290,column 9,is_stmt,isa 0
+    1416 000002c6 56BF          MOVB      *-SP[1],#4,UNC        ; [CPU_ALU] |290| 
+         000002c7 0441 
+    1417 000002c8 D400          MOVB      XAR4,#0               ; [CPU_ALU] |290| 
+    1418 000002c9 D502          MOVB      XAR5,#2               ; [CPU_ALU] |290| 
+    1419 000002ca AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |290| 
+    1420              $C$DW$58        .dwtag  DW_TAG_TI_branch
+    1421                      .dwattr $C$DW$58, DW_AT_low_pc(0x00)
+    1422                      .dwattr $C$DW$58, DW_AT_name("_EPWM_setActionQualifierAction")
+    1423                      .dwattr $C$DW$58, DW_AT_TI_call
+    1424              
+    1425 000002cb 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |290| 
+         000002cc 0000 
+    1426                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |290| 
+    1427                      .dwpsn  file "../device/driverlib/epwm.c",line 298,column 9,is_stmt,isa 0
+    1428 000002cd 56BF          MOVB      *-SP[1],#6,UNC        ; [CPU_ALU] |298| 
+         000002ce 0641 
+    1429 000002cf D400          MOVB      XAR4,#0               ; [CPU_ALU] |298| 
+    1430 000002d0 D501          MOVB      XAR5,#1               ; [CPU_ALU] |298| 
+    1431 000002d1 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |298| 
+    1432              $C$DW$59        .dwtag  DW_TAG_TI_branch
+    1433                      .dwattr $C$DW$59, DW_AT_low_pc(0x00)
+    1434                      .dwattr $C$DW$59, DW_AT_name("_EPWM_setActionQualifierAction")
+    1435                      .dwattr $C$DW$59, DW_AT_TI_call
+    1436              
+    1437 000002d2 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |298| 
+         000002d3 0000 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   31
+
+    1438                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |298| 
+    1439                      .dwpsn  file "../device/driverlib/epwm.c",line 303,column 9,is_stmt,isa 0
+    1440 000002d4 92F3          MOV       AL,*+XAR3[6]          ; [CPU_ALU] |303| 
+    1441 000002d5 5201          CMPB      AL,#1                 ; [CPU_ALU] |303| 
+    1442 000002d6 6110          B         $C$L53,EQ             ; [CPU_ALU] |303| 
+    1443                      ; branchcc occurs ; [] |303| 
+    1444                      .dwpsn  file "../device/driverlib/epwm.c",line 333,column 13,is_stmt,isa 0
+    1445 000002d7 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |333| 
+    1446 000002d8 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |333| 
+    1447 000002d9 D402          MOVB      XAR4,#2               ; [CPU_ALU] |333| 
+    1448 000002da D501          MOVB      XAR5,#1               ; [CPU_ALU] |333| 
+    1449              $C$DW$60        .dwtag  DW_TAG_TI_branch
+    1450                      .dwattr $C$DW$60, DW_AT_low_pc(0x00)
+    1451                      .dwattr $C$DW$60, DW_AT_name("_EPWM_setActionQualifierAction")
+    1452                      .dwattr $C$DW$60, DW_AT_TI_call
+    1453              
+    1454 000002db 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |333| 
+         000002dc 0000 
+    1455                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |333| 
+    1456                      .dwpsn  file "../device/driverlib/epwm.c",line 341,column 13,is_stmt,isa 0
+    1457 000002dd 56BF          MOVB      *-SP[1],#8,UNC        ; [CPU_ALU] |341| 
+         000002de 0841 
+    1458 000002df       $C$L52:    
+    1459 000002df D402          MOVB      XAR4,#2               ; [CPU_ALU] |341| 
+    1460 000002e0 D502          MOVB      XAR5,#2               ; [CPU_ALU] |341| 
+    1461 000002e1 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |341| 
+    1462              $C$DW$61        .dwtag  DW_TAG_TI_branch
+    1463                      .dwattr $C$DW$61, DW_AT_low_pc(0x00)
+    1464                      .dwattr $C$DW$61, DW_AT_name("_EPWM_setActionQualifierAction")
+    1465                      .dwattr $C$DW$61, DW_AT_TI_call
+    1466              
+    1467 000002e2 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |341| 
+         000002e3 0000 
+    1468                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |341| 
+    1469                      .dwpsn  file "../device/driverlib/epwm.c",line 348,column 13,is_stmt,isa 0
+    1470 000002e4 D501          MOVB      XAR5,#1               ; [CPU_ALU] |348| 
+    1471 000002e5 6F23          B         $C$L57,UNC            ; [CPU_ALU] |348| 
+    1472                      ; branch occurs ; [] |348| 
+    1473 000002e6       $C$L53:    
+    1474                      .dwpsn  file "../device/driverlib/epwm.c",line 308,column 13,is_stmt,isa 0
+    1475 000002e6 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |308| 
+    1476 000002e7 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |308| 
+    1477 000002e8 D402          MOVB      XAR4,#2               ; [CPU_ALU] |308| 
+    1478 000002e9 D502          MOVB      XAR5,#2               ; [CPU_ALU] |308| 
+    1479              $C$DW$62        .dwtag  DW_TAG_TI_branch
+    1480                      .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+    1481                      .dwattr $C$DW$62, DW_AT_name("_EPWM_setActionQualifierAction")
+    1482                      .dwattr $C$DW$62, DW_AT_TI_call
+    1483              
+    1484 000002ea 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |308| 
+         000002eb 0000 
+    1485                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |308| 
+    1486                      .dwpsn  file "../device/driverlib/epwm.c",line 316,column 13,is_stmt,isa 0
+    1487 000002ec 56BF          MOVB      *-SP[1],#8,UNC        ; [CPU_ALU] |316| 
+         000002ed 0841 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   32
+
+    1488 000002ee 6F14          B         $C$L56,UNC            ; [CPU_ALU] 
+    1489                      ; branch occurs ; [] 
+    1490 000002ef       $C$L54:    
+    1491                      .dwpsn  file "../device/driverlib/epwm.c",line 229,column 9,is_stmt,isa 0
+    1492 000002ef 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |229| 
+    1493 000002f0 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |229| 
+    1494 000002f1 D400          MOVB      XAR4,#0               ; [CPU_ALU] |229| 
+    1495 000002f2 D502          MOVB      XAR5,#2               ; [CPU_ALU] |229| 
+    1496              $C$DW$63        .dwtag  DW_TAG_TI_branch
+    1497                      .dwattr $C$DW$63, DW_AT_low_pc(0x00)
+    1498                      .dwattr $C$DW$63, DW_AT_name("_EPWM_setActionQualifierAction")
+    1499                      .dwattr $C$DW$63, DW_AT_TI_call
+    1500              
+    1501 000002f3 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |229| 
+         000002f4 0000 
+    1502                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |229| 
+    1503                      .dwpsn  file "../device/driverlib/epwm.c",line 237,column 9,is_stmt,isa 0
+    1504 000002f5 56BF          MOVB      *-SP[1],#6,UNC        ; [CPU_ALU] |237| 
+         000002f6 0641 
+    1505 000002f7 D400          MOVB      XAR4,#0               ; [CPU_ALU] |237| 
+    1506 000002f8 D501          MOVB      XAR5,#1               ; [CPU_ALU] |237| 
+    1507 000002f9 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |237| 
+    1508              $C$DW$64        .dwtag  DW_TAG_TI_branch
+    1509                      .dwattr $C$DW$64, DW_AT_low_pc(0x00)
+    1510                      .dwattr $C$DW$64, DW_AT_name("_EPWM_setActionQualifierAction")
+    1511                      .dwattr $C$DW$64, DW_AT_TI_call
+    1512              
+    1513 000002fa 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |237| 
+         000002fb 0000 
+    1514                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |237| 
+    1515                      .dwpsn  file "../device/driverlib/epwm.c",line 242,column 9,is_stmt,isa 0
+    1516 000002fc 92F3          MOV       AL,*+XAR3[6]          ; [CPU_ALU] |242| 
+    1517 000002fd 5201          CMPB      AL,#1                 ; [CPU_ALU] |242| 
+    1518 000002fe 6103          B         $C$L55,EQ             ; [CPU_ALU] |242| 
+    1519                      ; branchcc occurs ; [] |242| 
+    1520                      .dwpsn  file "../device/driverlib/epwm.c",line 264,column 13,is_stmt,isa 0
+    1521 000002ff 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |264| 
+    1522                      .dwpsn  file "../device/driverlib/epwm.c",line 271,column 13,is_stmt,isa 0
+    1523 00000300 6FDF          B         $C$L52,UNC            ; [CPU_ALU] |271| 
+    1524                      ; branch occurs ; [] |271| 
+    1525 00000301       $C$L55:    
+    1526                      .dwpsn  file "../device/driverlib/epwm.c",line 247,column 13,is_stmt,isa 0
+    1527 00000301 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |247| 
+    1528 00000302       $C$L56:    
+    1529 00000302 AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |247| 
+    1530 00000303 D402          MOVB      XAR4,#2               ; [CPU_ALU] |247| 
+    1531 00000304 D501          MOVB      XAR5,#1               ; [CPU_ALU] |247| 
+    1532              $C$DW$65        .dwtag  DW_TAG_TI_branch
+    1533                      .dwattr $C$DW$65, DW_AT_low_pc(0x00)
+    1534                      .dwattr $C$DW$65, DW_AT_name("_EPWM_setActionQualifierAction")
+    1535                      .dwattr $C$DW$65, DW_AT_TI_call
+    1536              
+    1537 00000305 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |247| 
+         00000306 0000 
+    1538                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |247| 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   33
+
+    1539                      .dwpsn  file "../device/driverlib/epwm.c",line 254,column 13,is_stmt,isa 0
+    1540 00000307 D502          MOVB      XAR5,#2               ; [CPU_ALU] |254| 
+    1541 00000308       $C$L57:    
+    1542 00000308 56BF          MOVB      *-SP[1],#10,UNC       ; [CPU_ALU] |254| 
+         00000309 0A41 
+    1543 0000030a       $C$L58:    
+    1544 0000030a D402          MOVB      XAR4,#2               ; [CPU_ALU] |254| 
+    1545 0000030b AAA9          MOVL      ACC,XAR2              ; [CPU_ALU] |254| 
+    1546              $C$DW$66        .dwtag  DW_TAG_TI_branch
+    1547                      .dwattr $C$DW$66, DW_AT_low_pc(0x00)
+    1548                      .dwattr $C$DW$66, DW_AT_name("_EPWM_setActionQualifierAction")
+    1549                      .dwattr $C$DW$66, DW_AT_TI_call
+    1550              
+    1551 0000030c 7640+         LCR       #_EPWM_setActionQualifierAction ; [CPU_ALU] |254| 
+         0000030d 0000 
+    1552                      ; call occurs [#_EPWM_setActionQualifierAction] ; [] |254| 
+    1553 0000030e FE86          SUBB      SP,#6                 ; [CPU_ARAU] 
+    1554                      .dwcfi  cfa_offset, -8
+    1555 0000030f 82BE          MOVL      XAR3,*--SP            ; [CPU_ALU] 
+    1556                      .dwcfi  cfa_offset, -6
+    1557                      .dwcfi  restore_reg, 11
+    1558 00000310 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+    1559                      .dwcfi  cfa_offset, -4
+    1560                      .dwcfi  restore_reg, 9
+    1561 00000311 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+    1562                      .dwcfi  cfa_offset, -2
+    1563                      .dwcfi  restore_reg, 7
+    1564              $C$DW$67        .dwtag  DW_TAG_TI_branch
+    1565                      .dwattr $C$DW$67, DW_AT_low_pc(0x00)
+    1566                      .dwattr $C$DW$67, DW_AT_TI_return
+    1567              
+    1568 00000312 0006          LRETR     ; [CPU_ALU] 
+    1569                      ; return occurs ; [] 
+    1570                      .dwattr $C$DW$23, DW_AT_TI_end_file("../device/driverlib/epwm.c")
+    1571                      .dwattr $C$DW$23, DW_AT_TI_end_line(0x162)
+    1572                      .dwattr $C$DW$23, DW_AT_TI_end_column(0x01)
+    1573                      .dwendentry
+    1574                      .dwendtag $C$DW$23
+    1575              
+    1576              ;***************************************************************
+    1577              ;* FAR STRINGS                                                 *
+    1578              ;***************************************************************
+    1579 00000000               .sect   ".econst:.string"
+    1580                      .align  2
+    1581 00000000 002E  $C$FSL1:        .string "../device/driverlib/epwm.c",0
+         00000001 002E 
+         00000002 002F 
+         00000003 0064 
+         00000004 0065 
+         00000005 0076 
+         00000006 0069 
+         00000007 0063 
+         00000008 0065 
+         00000009 002F 
+         0000000a 0064 
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   34
+
+         0000000b 0072 
+         0000000c 0069 
+         0000000d 0076 
+         0000000e 0065 
+         0000000f 0072 
+         00000010 006C 
+         00000011 0069 
+         00000012 0062 
+         00000013 002F 
+         00000014 0065 
+         00000015 0070 
+         00000016 0077 
+         00000017 006D 
+         00000018 002E 
+         00000019 0063 
+         0000001a 0000 
+    1582                      .align  2
+    1583 0000001c 002E  $C$FSL2:        .string "..",92,"device",92,"driverlib",92,"epwm.h",0
+         0000001d 002E 
+         0000001e 005C 
+         0000001f 0064 
+         00000020 0065 
+         00000021 0076 
+         00000022 0069 
+         00000023 0063 
+         00000024 0065 
+         00000025 005C 
+         00000026 0064 
+         00000027 0072 
+         00000028 0069 
+         00000029 0076 
+         0000002a 0065 
+         0000002b 0072 
+         0000002c 006C 
+         0000002d 0069 
+         0000002e 0062 
+         0000002f 005C 
+         00000030 0065 
+         00000031 0070 
+         00000032 0077 
+         00000033 006D 
+         00000034 002E 
+         00000035 0068 
+         00000036 0000 
+    1584              ;**************************************************************
+    1585              ;* UNDEFINED EXTERNAL REFERENCES                              *
+    1586              ;**************************************************************
+    1587                      .global ___error__
+    1588                      .global FS$$DIV
+    1589              
+    1590              ;***************************************************************
+    1591              ;* TYPE INFORMATION                                            *
+    1592              ;***************************************************************
+    1593              
+    1594              $C$DW$T$21      .dwtag  DW_TAG_enumeration_type
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   35
+
+    1595                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1596              $C$DW$68        .dwtag  DW_TAG_enumerator
+    1597                      .dwattr $C$DW$68, DW_AT_name("EPWM_COUNTER_MODE_UP")
+    1598                      .dwattr $C$DW$68, DW_AT_const_value(0x00)
+    1599              
+    1600              $C$DW$69        .dwtag  DW_TAG_enumerator
+    1601                      .dwattr $C$DW$69, DW_AT_name("EPWM_COUNTER_MODE_DOWN")
+    1602                      .dwattr $C$DW$69, DW_AT_const_value(0x01)
+    1603              
+    1604              $C$DW$70        .dwtag  DW_TAG_enumerator
+    1605                      .dwattr $C$DW$70, DW_AT_name("EPWM_COUNTER_MODE_UP_DOWN")
+    1606                      .dwattr $C$DW$70, DW_AT_const_value(0x02)
+    1607              
+    1608              $C$DW$71        .dwtag  DW_TAG_enumerator
+    1609                      .dwattr $C$DW$71, DW_AT_name("EPWM_COUNTER_MODE_STOP_FREEZE")
+    1610                      .dwattr $C$DW$71, DW_AT_const_value(0x03)
+    1611              
+    1612                      .dwendtag $C$DW$T$21
+    1613              
+    1614              $C$DW$T$22      .dwtag  DW_TAG_typedef
+    1615                      .dwattr $C$DW$T$22, DW_AT_name("EPWM_TimeBaseCountMode")
+    1616                      .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1617                      .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+    1618              
+    1619              
+    1620              $C$DW$T$23      .dwtag  DW_TAG_enumeration_type
+    1621                      .dwattr $C$DW$T$23, DW_AT_byte_size(0x01)
+    1622              $C$DW$72        .dwtag  DW_TAG_enumerator
+    1623                      .dwattr $C$DW$72, DW_AT_name("EPWM_CLOCK_DIVIDER_1")
+    1624                      .dwattr $C$DW$72, DW_AT_const_value(0x00)
+    1625              
+    1626              $C$DW$73        .dwtag  DW_TAG_enumerator
+    1627                      .dwattr $C$DW$73, DW_AT_name("EPWM_CLOCK_DIVIDER_2")
+    1628                      .dwattr $C$DW$73, DW_AT_const_value(0x01)
+    1629              
+    1630              $C$DW$74        .dwtag  DW_TAG_enumerator
+    1631                      .dwattr $C$DW$74, DW_AT_name("EPWM_CLOCK_DIVIDER_4")
+    1632                      .dwattr $C$DW$74, DW_AT_const_value(0x02)
+    1633              
+    1634              $C$DW$75        .dwtag  DW_TAG_enumerator
+    1635                      .dwattr $C$DW$75, DW_AT_name("EPWM_CLOCK_DIVIDER_8")
+    1636                      .dwattr $C$DW$75, DW_AT_const_value(0x03)
+    1637              
+    1638              $C$DW$76        .dwtag  DW_TAG_enumerator
+    1639                      .dwattr $C$DW$76, DW_AT_name("EPWM_CLOCK_DIVIDER_16")
+    1640                      .dwattr $C$DW$76, DW_AT_const_value(0x04)
+    1641              
+    1642              $C$DW$77        .dwtag  DW_TAG_enumerator
+    1643                      .dwattr $C$DW$77, DW_AT_name("EPWM_CLOCK_DIVIDER_32")
+    1644                      .dwattr $C$DW$77, DW_AT_const_value(0x05)
+    1645              
+    1646              $C$DW$78        .dwtag  DW_TAG_enumerator
+    1647                      .dwattr $C$DW$78, DW_AT_name("EPWM_CLOCK_DIVIDER_64")
+    1648                      .dwattr $C$DW$78, DW_AT_const_value(0x06)
+    1649              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   36
+
+    1650              $C$DW$79        .dwtag  DW_TAG_enumerator
+    1651                      .dwattr $C$DW$79, DW_AT_name("EPWM_CLOCK_DIVIDER_128")
+    1652                      .dwattr $C$DW$79, DW_AT_const_value(0x07)
+    1653              
+    1654                      .dwendtag $C$DW$T$23
+    1655              
+    1656              $C$DW$T$24      .dwtag  DW_TAG_typedef
+    1657                      .dwattr $C$DW$T$24, DW_AT_name("EPWM_ClockDivider")
+    1658                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$23)
+    1659                      .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+    1660              
+    1661              
+    1662              $C$DW$T$25      .dwtag  DW_TAG_enumeration_type
+    1663                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x01)
+    1664              $C$DW$80        .dwtag  DW_TAG_enumerator
+    1665                      .dwattr $C$DW$80, DW_AT_name("EPWM_HSCLOCK_DIVIDER_1")
+    1666                      .dwattr $C$DW$80, DW_AT_const_value(0x00)
+    1667              
+    1668              $C$DW$81        .dwtag  DW_TAG_enumerator
+    1669                      .dwattr $C$DW$81, DW_AT_name("EPWM_HSCLOCK_DIVIDER_2")
+    1670                      .dwattr $C$DW$81, DW_AT_const_value(0x01)
+    1671              
+    1672              $C$DW$82        .dwtag  DW_TAG_enumerator
+    1673                      .dwattr $C$DW$82, DW_AT_name("EPWM_HSCLOCK_DIVIDER_4")
+    1674                      .dwattr $C$DW$82, DW_AT_const_value(0x02)
+    1675              
+    1676              $C$DW$83        .dwtag  DW_TAG_enumerator
+    1677                      .dwattr $C$DW$83, DW_AT_name("EPWM_HSCLOCK_DIVIDER_6")
+    1678                      .dwattr $C$DW$83, DW_AT_const_value(0x03)
+    1679              
+    1680              $C$DW$84        .dwtag  DW_TAG_enumerator
+    1681                      .dwattr $C$DW$84, DW_AT_name("EPWM_HSCLOCK_DIVIDER_8")
+    1682                      .dwattr $C$DW$84, DW_AT_const_value(0x04)
+    1683              
+    1684              $C$DW$85        .dwtag  DW_TAG_enumerator
+    1685                      .dwattr $C$DW$85, DW_AT_name("EPWM_HSCLOCK_DIVIDER_10")
+    1686                      .dwattr $C$DW$85, DW_AT_const_value(0x05)
+    1687              
+    1688              $C$DW$86        .dwtag  DW_TAG_enumerator
+    1689                      .dwattr $C$DW$86, DW_AT_name("EPWM_HSCLOCK_DIVIDER_12")
+    1690                      .dwattr $C$DW$86, DW_AT_const_value(0x06)
+    1691              
+    1692              $C$DW$87        .dwtag  DW_TAG_enumerator
+    1693                      .dwattr $C$DW$87, DW_AT_name("EPWM_HSCLOCK_DIVIDER_14")
+    1694                      .dwattr $C$DW$87, DW_AT_const_value(0x07)
+    1695              
+    1696                      .dwendtag $C$DW$T$25
+    1697              
+    1698              $C$DW$T$26      .dwtag  DW_TAG_typedef
+    1699                      .dwattr $C$DW$T$26, DW_AT_name("EPWM_HSClockDivider")
+    1700                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+    1701                      .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+    1702              
+    1703              
+    1704              $C$DW$T$28      .dwtag  DW_TAG_enumeration_type
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   37
+
+    1705                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x01)
+    1706              $C$DW$88        .dwtag  DW_TAG_enumerator
+    1707                      .dwattr $C$DW$88, DW_AT_name("EPWM_COUNTER_COMPARE_A")
+    1708                      .dwattr $C$DW$88, DW_AT_const_value(0x00)
+    1709              
+    1710              $C$DW$89        .dwtag  DW_TAG_enumerator
+    1711                      .dwattr $C$DW$89, DW_AT_name("EPWM_COUNTER_COMPARE_B")
+    1712                      .dwattr $C$DW$89, DW_AT_const_value(0x02)
+    1713              
+    1714              $C$DW$90        .dwtag  DW_TAG_enumerator
+    1715                      .dwattr $C$DW$90, DW_AT_name("EPWM_COUNTER_COMPARE_C")
+    1716                      .dwattr $C$DW$90, DW_AT_const_value(0x05)
+    1717              
+    1718              $C$DW$91        .dwtag  DW_TAG_enumerator
+    1719                      .dwattr $C$DW$91, DW_AT_name("EPWM_COUNTER_COMPARE_D")
+    1720                      .dwattr $C$DW$91, DW_AT_const_value(0x07)
+    1721              
+    1722                      .dwendtag $C$DW$T$28
+    1723              
+    1724              $C$DW$T$29      .dwtag  DW_TAG_typedef
+    1725                      .dwattr $C$DW$T$29, DW_AT_name("EPWM_CounterCompareModule")
+    1726                      .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+    1727                      .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+    1728              
+    1729              
+    1730              $C$DW$T$30      .dwtag  DW_TAG_enumeration_type
+    1731                      .dwattr $C$DW$T$30, DW_AT_byte_size(0x01)
+    1732              $C$DW$92        .dwtag  DW_TAG_enumerator
+    1733                      .dwattr $C$DW$92, DW_AT_name("EPWM_COMP_LOAD_ON_CNTR_ZERO")
+    1734                      .dwattr $C$DW$92, DW_AT_const_value(0x00)
+    1735              
+    1736              $C$DW$93        .dwtag  DW_TAG_enumerator
+    1737                      .dwattr $C$DW$93, DW_AT_name("EPWM_COMP_LOAD_ON_CNTR_PERIOD")
+    1738                      .dwattr $C$DW$93, DW_AT_const_value(0x01)
+    1739              
+    1740              $C$DW$94        .dwtag  DW_TAG_enumerator
+    1741                      .dwattr $C$DW$94, DW_AT_name("EPWM_COMP_LOAD_ON_CNTR_ZERO_PERIOD")
+    1742                      .dwattr $C$DW$94, DW_AT_const_value(0x02)
+    1743              
+    1744              $C$DW$95        .dwtag  DW_TAG_enumerator
+    1745                      .dwattr $C$DW$95, DW_AT_name("EPWM_COMP_LOAD_FREEZE")
+    1746                      .dwattr $C$DW$95, DW_AT_const_value(0x03)
+    1747              
+    1748              $C$DW$96        .dwtag  DW_TAG_enumerator
+    1749                      .dwattr $C$DW$96, DW_AT_name("EPWM_COMP_LOAD_ON_SYNC_CNTR_ZERO")
+    1750                      .dwattr $C$DW$96, DW_AT_const_value(0x04)
+    1751              
+    1752              $C$DW$97        .dwtag  DW_TAG_enumerator
+    1753                      .dwattr $C$DW$97, DW_AT_name("EPWM_COMP_LOAD_ON_SYNC_CNTR_PERIOD")
+    1754                      .dwattr $C$DW$97, DW_AT_const_value(0x05)
+    1755              
+    1756              $C$DW$98        .dwtag  DW_TAG_enumerator
+    1757                      .dwattr $C$DW$98, DW_AT_name("EPWM_COMP_LOAD_ON_SYNC_CNTR_ZERO_PERIOD")
+    1758                      .dwattr $C$DW$98, DW_AT_const_value(0x06)
+    1759              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   38
+
+    1760              $C$DW$99        .dwtag  DW_TAG_enumerator
+    1761                      .dwattr $C$DW$99, DW_AT_name("EPWM_COMP_LOAD_ON_SYNC_ONLY")
+    1762                      .dwattr $C$DW$99, DW_AT_const_value(0x08)
+    1763              
+    1764                      .dwendtag $C$DW$T$30
+    1765              
+    1766              $C$DW$T$31      .dwtag  DW_TAG_typedef
+    1767                      .dwattr $C$DW$T$31, DW_AT_name("EPWM_CounterCompareLoadMode")
+    1768                      .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
+    1769                      .dwattr $C$DW$T$31, DW_AT_language(DW_LANG_C)
+    1770              
+    1771              
+    1772              $C$DW$T$32      .dwtag  DW_TAG_enumeration_type
+    1773                      .dwattr $C$DW$T$32, DW_AT_byte_size(0x01)
+    1774              $C$DW$100       .dwtag  DW_TAG_enumerator
+    1775                      .dwattr $C$DW$100, DW_AT_name("EPWM_AQ_OUTPUT_A")
+    1776                      .dwattr $C$DW$100, DW_AT_const_value(0x00)
+    1777              
+    1778              $C$DW$101       .dwtag  DW_TAG_enumerator
+    1779                      .dwattr $C$DW$101, DW_AT_name("EPWM_AQ_OUTPUT_B")
+    1780                      .dwattr $C$DW$101, DW_AT_const_value(0x02)
+    1781              
+    1782                      .dwendtag $C$DW$T$32
+    1783              
+    1784              $C$DW$T$33      .dwtag  DW_TAG_typedef
+    1785                      .dwattr $C$DW$T$33, DW_AT_name("EPWM_ActionQualifierOutputModule")
+    1786                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$32)
+    1787                      .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+    1788              
+    1789              $C$DW$102       .dwtag  DW_TAG_TI_far_type
+    1790                      .dwattr $C$DW$102, DW_AT_type(*$C$DW$T$33)
+    1791              
+    1792              $C$DW$T$34      .dwtag  DW_TAG_const_type
+    1793                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$102)
+    1794              
+    1795              
+    1796              $C$DW$T$35      .dwtag  DW_TAG_enumeration_type
+    1797                      .dwattr $C$DW$T$35, DW_AT_byte_size(0x01)
+    1798              $C$DW$103       .dwtag  DW_TAG_enumerator
+    1799                      .dwattr $C$DW$103, DW_AT_name("EPWM_AQ_OUTPUT_NO_CHANGE")
+    1800                      .dwattr $C$DW$103, DW_AT_const_value(0x00)
+    1801              
+    1802              $C$DW$104       .dwtag  DW_TAG_enumerator
+    1803                      .dwattr $C$DW$104, DW_AT_name("EPWM_AQ_OUTPUT_LOW")
+    1804                      .dwattr $C$DW$104, DW_AT_const_value(0x01)
+    1805              
+    1806              $C$DW$105       .dwtag  DW_TAG_enumerator
+    1807                      .dwattr $C$DW$105, DW_AT_name("EPWM_AQ_OUTPUT_HIGH")
+    1808                      .dwattr $C$DW$105, DW_AT_const_value(0x02)
+    1809              
+    1810              $C$DW$106       .dwtag  DW_TAG_enumerator
+    1811                      .dwattr $C$DW$106, DW_AT_name("EPWM_AQ_OUTPUT_TOGGLE")
+    1812                      .dwattr $C$DW$106, DW_AT_const_value(0x03)
+    1813              
+    1814                      .dwendtag $C$DW$T$35
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   39
+
+    1815              
+    1816              $C$DW$T$36      .dwtag  DW_TAG_typedef
+    1817                      .dwattr $C$DW$T$36, DW_AT_name("EPWM_ActionQualifierOutput")
+    1818                      .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+    1819                      .dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+    1820              
+    1821              $C$DW$107       .dwtag  DW_TAG_TI_far_type
+    1822                      .dwattr $C$DW$107, DW_AT_type(*$C$DW$T$36)
+    1823              
+    1824              $C$DW$T$37      .dwtag  DW_TAG_const_type
+    1825                      .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$107)
+    1826              
+    1827              
+    1828              $C$DW$T$38      .dwtag  DW_TAG_enumeration_type
+    1829                      .dwattr $C$DW$T$38, DW_AT_byte_size(0x01)
+    1830              $C$DW$108       .dwtag  DW_TAG_enumerator
+    1831                      .dwattr $C$DW$108, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO")
+    1832                      .dwattr $C$DW$108, DW_AT_const_value(0x00)
+    1833              
+    1834              $C$DW$109       .dwtag  DW_TAG_enumerator
+    1835                      .dwattr $C$DW$109, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_PERIOD")
+    1836                      .dwattr $C$DW$109, DW_AT_const_value(0x02)
+    1837              
+    1838              $C$DW$110       .dwtag  DW_TAG_enumerator
+    1839                      .dwattr $C$DW$110, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA")
+    1840                      .dwattr $C$DW$110, DW_AT_const_value(0x04)
+    1841              
+    1842              $C$DW$111       .dwtag  DW_TAG_enumerator
+    1843                      .dwattr $C$DW$111, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA")
+    1844                      .dwattr $C$DW$111, DW_AT_const_value(0x06)
+    1845              
+    1846              $C$DW$112       .dwtag  DW_TAG_enumerator
+    1847                      .dwattr $C$DW$112, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB")
+    1848                      .dwattr $C$DW$112, DW_AT_const_value(0x08)
+    1849              
+    1850              $C$DW$113       .dwtag  DW_TAG_enumerator
+    1851                      .dwattr $C$DW$113, DW_AT_name("EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPB")
+    1852                      .dwattr $C$DW$113, DW_AT_const_value(0x0a)
+    1853              
+    1854              $C$DW$114       .dwtag  DW_TAG_enumerator
+    1855                      .dwattr $C$DW$114, DW_AT_name("EPWM_AQ_OUTPUT_ON_T1_COUNT_UP")
+    1856                      .dwattr $C$DW$114, DW_AT_const_value(0x01)
+    1857              
+    1858              $C$DW$115       .dwtag  DW_TAG_enumerator
+    1859                      .dwattr $C$DW$115, DW_AT_name("EPWM_AQ_OUTPUT_ON_T1_COUNT_DOWN")
+    1860                      .dwattr $C$DW$115, DW_AT_const_value(0x03)
+    1861              
+    1862              $C$DW$116       .dwtag  DW_TAG_enumerator
+    1863                      .dwattr $C$DW$116, DW_AT_name("EPWM_AQ_OUTPUT_ON_T2_COUNT_UP")
+    1864                      .dwattr $C$DW$116, DW_AT_const_value(0x05)
+    1865              
+    1866              $C$DW$117       .dwtag  DW_TAG_enumerator
+    1867                      .dwattr $C$DW$117, DW_AT_name("EPWM_AQ_OUTPUT_ON_T2_COUNT_DOWN")
+    1868                      .dwattr $C$DW$117, DW_AT_const_value(0x07)
+    1869              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   40
+
+    1870                      .dwendtag $C$DW$T$38
+    1871              
+    1872              $C$DW$T$39      .dwtag  DW_TAG_typedef
+    1873                      .dwattr $C$DW$T$39, DW_AT_name("EPWM_ActionQualifierOutputEvent")
+    1874                      .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$38)
+    1875                      .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+    1876              
+    1877              $C$DW$118       .dwtag  DW_TAG_TI_far_type
+    1878                      .dwattr $C$DW$118, DW_AT_type(*$C$DW$T$39)
+    1879              
+    1880              $C$DW$T$40      .dwtag  DW_TAG_const_type
+    1881                      .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$118)
+    1882              
+    1883              
+    1884              $C$DW$T$41      .dwtag  DW_TAG_enumeration_type
+    1885                      .dwattr $C$DW$T$41, DW_AT_byte_size(0x01)
+    1886              $C$DW$119       .dwtag  DW_TAG_enumerator
+    1887                      .dwattr $C$DW$119, DW_AT_name("EPWM_EMULATION_STOP_AFTER_NEXT_TB")
+    1888                      .dwattr $C$DW$119, DW_AT_const_value(0x00)
+    1889              
+    1890              $C$DW$120       .dwtag  DW_TAG_enumerator
+    1891                      .dwattr $C$DW$120, DW_AT_name("EPWM_EMULATION_STOP_AFTER_FULL_CYCLE")
+    1892                      .dwattr $C$DW$120, DW_AT_const_value(0x01)
+    1893              
+    1894              $C$DW$121       .dwtag  DW_TAG_enumerator
+    1895                      .dwattr $C$DW$121, DW_AT_name("EPWM_EMULATION_FREE_RUN")
+    1896                      .dwattr $C$DW$121, DW_AT_const_value(0x02)
+    1897              
+    1898                      .dwendtag $C$DW$T$41
+    1899              
+    1900              $C$DW$T$42      .dwtag  DW_TAG_typedef
+    1901                      .dwattr $C$DW$T$42, DW_AT_name("EPWM_EmulationMode")
+    1902                      .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$41)
+    1903                      .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+    1904              
+    1905              $C$DW$122       .dwtag  DW_TAG_TI_far_type
+    1906                      .dwattr $C$DW$122, DW_AT_type(*$C$DW$T$42)
+    1907              
+    1908              $C$DW$T$43      .dwtag  DW_TAG_const_type
+    1909                      .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$122)
+    1910              
+    1911              
+    1912              $C$DW$T$27      .dwtag  DW_TAG_structure_type
+    1913                      .dwattr $C$DW$T$27, DW_AT_byte_size(0x0e)
+    1914              $C$DW$123       .dwtag  DW_TAG_member
+    1915                      .dwattr $C$DW$123, DW_AT_type(*$C$DW$T$19)
+    1916                      .dwattr $C$DW$123, DW_AT_name("freqInHz")
+    1917                      .dwattr $C$DW$123, DW_AT_TI_symbol_name("_freqInHz")
+    1918                      .dwattr $C$DW$123, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1919                      .dwattr $C$DW$123, DW_AT_accessibility(DW_ACCESS_public)
+    1920              
+    1921              $C$DW$124       .dwtag  DW_TAG_member
+    1922                      .dwattr $C$DW$124, DW_AT_type(*$C$DW$T$19)
+    1923                      .dwattr $C$DW$124, DW_AT_name("dutyValA")
+    1924                      .dwattr $C$DW$124, DW_AT_TI_symbol_name("_dutyValA")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   41
+
+    1925                      .dwattr $C$DW$124, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1926                      .dwattr $C$DW$124, DW_AT_accessibility(DW_ACCESS_public)
+    1927              
+    1928              $C$DW$125       .dwtag  DW_TAG_member
+    1929                      .dwattr $C$DW$125, DW_AT_type(*$C$DW$T$19)
+    1930                      .dwattr $C$DW$125, DW_AT_name("dutyValB")
+    1931                      .dwattr $C$DW$125, DW_AT_TI_symbol_name("_dutyValB")
+    1932                      .dwattr $C$DW$125, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1933                      .dwattr $C$DW$125, DW_AT_accessibility(DW_ACCESS_public)
+    1934              
+    1935              $C$DW$126       .dwtag  DW_TAG_member
+    1936                      .dwattr $C$DW$126, DW_AT_type(*$C$DW$T$20)
+    1937                      .dwattr $C$DW$126, DW_AT_name("invertSignalB")
+    1938                      .dwattr $C$DW$126, DW_AT_TI_symbol_name("_invertSignalB")
+    1939                      .dwattr $C$DW$126, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1940                      .dwattr $C$DW$126, DW_AT_accessibility(DW_ACCESS_public)
+    1941              
+    1942              $C$DW$127       .dwtag  DW_TAG_member
+    1943                      .dwattr $C$DW$127, DW_AT_type(*$C$DW$T$19)
+    1944                      .dwattr $C$DW$127, DW_AT_name("sysClkInHz")
+    1945                      .dwattr $C$DW$127, DW_AT_TI_symbol_name("_sysClkInHz")
+    1946                      .dwattr $C$DW$127, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1947                      .dwattr $C$DW$127, DW_AT_accessibility(DW_ACCESS_public)
+    1948              
+    1949              $C$DW$128       .dwtag  DW_TAG_member
+    1950                      .dwattr $C$DW$128, DW_AT_type(*$C$DW$T$22)
+    1951                      .dwattr $C$DW$128, DW_AT_name("tbCtrMode")
+    1952                      .dwattr $C$DW$128, DW_AT_TI_symbol_name("_tbCtrMode")
+    1953                      .dwattr $C$DW$128, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+    1954                      .dwattr $C$DW$128, DW_AT_accessibility(DW_ACCESS_public)
+    1955              
+    1956              $C$DW$129       .dwtag  DW_TAG_member
+    1957                      .dwattr $C$DW$129, DW_AT_type(*$C$DW$T$24)
+    1958                      .dwattr $C$DW$129, DW_AT_name("tbClkDiv")
+    1959                      .dwattr $C$DW$129, DW_AT_TI_symbol_name("_tbClkDiv")
+    1960                      .dwattr $C$DW$129, DW_AT_data_member_location[DW_OP_plus_uconst 0xb]
+    1961                      .dwattr $C$DW$129, DW_AT_accessibility(DW_ACCESS_public)
+    1962              
+    1963              $C$DW$130       .dwtag  DW_TAG_member
+    1964                      .dwattr $C$DW$130, DW_AT_type(*$C$DW$T$26)
+    1965                      .dwattr $C$DW$130, DW_AT_name("tbHSClkDiv")
+    1966                      .dwattr $C$DW$130, DW_AT_TI_symbol_name("_tbHSClkDiv")
+    1967                      .dwattr $C$DW$130, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1968                      .dwattr $C$DW$130, DW_AT_accessibility(DW_ACCESS_public)
+    1969              
+    1970                      .dwendtag $C$DW$T$27
+    1971              
+    1972              $C$DW$T$47      .dwtag  DW_TAG_typedef
+    1973                      .dwattr $C$DW$T$47, DW_AT_name("EPWM_SignalParams")
+    1974                      .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$27)
+    1975                      .dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+    1976              
+    1977              $C$DW$131       .dwtag  DW_TAG_TI_far_type
+    1978                      .dwattr $C$DW$131, DW_AT_type(*$C$DW$T$47)
+    1979              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   42
+
+    1980              $C$DW$T$48      .dwtag  DW_TAG_const_type
+    1981                      .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$131)
+    1982              
+    1983              $C$DW$T$49      .dwtag  DW_TAG_pointer_type
+    1984                      .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$48)
+    1985                      .dwattr $C$DW$T$49, DW_AT_address_class(0x20)
+    1986              
+    1987              $C$DW$132       .dwtag  DW_TAG_TI_far_type
+    1988                      .dwattr $C$DW$132, DW_AT_type(*$C$DW$T$49)
+    1989              
+    1990              $C$DW$T$50      .dwtag  DW_TAG_const_type
+    1991                      .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$132)
+    1992              
+    1993              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1994                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1995              
+    1996              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1997                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1998                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1999                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    2000              
+    2001              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    2002                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    2003                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    2004                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    2005              
+    2006              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    2007                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    2008                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    2009                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    2010              
+    2011              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    2012                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    2013                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    2014                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    2015              
+    2016              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    2017                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    2018                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    2019                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    2020              
+    2021              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    2022                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    2023                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    2024                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    2025              
+    2026              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    2027                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    2028                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    2029                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    2030              
+    2031              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    2032                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    2033                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    2034                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   43
+
+    2035              
+    2036              $C$DW$T$59      .dwtag  DW_TAG_typedef
+    2037                      .dwattr $C$DW$T$59, DW_AT_name("__uint16_t")
+    2038                      .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$11)
+    2039                      .dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+    2040              
+    2041              $C$DW$T$60      .dwtag  DW_TAG_typedef
+    2042                      .dwattr $C$DW$T$60, DW_AT_name("uint16_t")
+    2043                      .dwattr $C$DW$T$60, DW_AT_type(*$C$DW$T$59)
+    2044                      .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+    2045              
+    2046              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    2047                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    2048                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    2049                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    2050              
+    2051              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    2052                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    2053                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    2054                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    2055              
+    2056              $C$DW$T$55      .dwtag  DW_TAG_typedef
+    2057                      .dwattr $C$DW$T$55, DW_AT_name("__uint32_t")
+    2058                      .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$13)
+    2059                      .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+    2060              
+    2061              $C$DW$T$56      .dwtag  DW_TAG_typedef
+    2062                      .dwattr $C$DW$T$56, DW_AT_name("uint32_t")
+    2063                      .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+    2064                      .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+    2065              
+    2066              $C$DW$133       .dwtag  DW_TAG_TI_far_type
+    2067                      .dwattr $C$DW$133, DW_AT_type(*$C$DW$T$56)
+    2068              
+    2069              $C$DW$T$81      .dwtag  DW_TAG_const_type
+    2070                      .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$133)
+    2071              
+    2072              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    2073                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    2074                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    2075                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    2076              
+    2077              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    2078                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    2079                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    2080                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    2081              
+    2082              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    2083                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    2084                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    2085                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    2086              
+    2087              $C$DW$T$19      .dwtag  DW_TAG_typedef
+    2088                      .dwattr $C$DW$T$19, DW_AT_name("float32_t")
+    2089                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$16)
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   44
+
+    2090                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    2091              
+    2092              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    2093                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    2094                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    2095                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+    2096              
+    2097              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    2098                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    2099                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    2100                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    2101              
+    2102              $C$DW$T$20      .dwtag  DW_TAG_base_type
+    2103                      .dwattr $C$DW$T$20, DW_AT_encoding(DW_ATE_unsigned_char)
+    2104                      .dwattr $C$DW$T$20, DW_AT_name("unsigned char")
+    2105                      .dwattr $C$DW$T$20, DW_AT_byte_size(0x01)
+    2106              
+    2107              $C$DW$134       .dwtag  DW_TAG_TI_far_type
+    2108                      .dwattr $C$DW$134, DW_AT_type(*$C$DW$T$5)
+    2109              
+    2110              $C$DW$T$53      .dwtag  DW_TAG_const_type
+    2111                      .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$134)
+    2112              
+    2113              $C$DW$T$54      .dwtag  DW_TAG_pointer_type
+    2114                      .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$53)
+    2115                      .dwattr $C$DW$T$54, DW_AT_address_class(0x20)
+    2116              
+    2117                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    2118              
+    2119              ;***************************************************************
+    2120              ;* DWARF CIE ENTRIES                                           *
+    2121              ;***************************************************************
+    2122              
+    2123              $C$DW$CIE       .dwcie 26
+    2124                      .dwcfi  cfa_register, 20
+    2125                      .dwcfi  cfa_offset, 0
+    2126                      .dwcfi  same_value, 28
+    2127                      .dwcfi  same_value, 6
+    2128                      .dwcfi  same_value, 7
+    2129                      .dwcfi  same_value, 8
+    2130                      .dwcfi  same_value, 9
+    2131                      .dwcfi  same_value, 10
+    2132                      .dwcfi  same_value, 11
+    2133                      .dwcfi  same_value, 59
+    2134                      .dwcfi  same_value, 63
+    2135                      .dwcfi  same_value, 67
+    2136                      .dwcfi  same_value, 71
+    2137                      .dwendentry
+    2138              
+    2139              ;***************************************************************
+    2140              ;* DWARF REGISTER MAP                                          *
+    2141              ;***************************************************************
+    2142              
+    2143              $C$DW$135       .dwtag  DW_TAG_TI_assign_register
+    2144                      .dwattr $C$DW$135, DW_AT_name("AL")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   45
+
+    2145                      .dwattr $C$DW$135, DW_AT_location[DW_OP_reg0]
+    2146              
+    2147              $C$DW$136       .dwtag  DW_TAG_TI_assign_register
+    2148                      .dwattr $C$DW$136, DW_AT_name("AH")
+    2149                      .dwattr $C$DW$136, DW_AT_location[DW_OP_reg1]
+    2150              
+    2151              $C$DW$137       .dwtag  DW_TAG_TI_assign_register
+    2152                      .dwattr $C$DW$137, DW_AT_name("PL")
+    2153                      .dwattr $C$DW$137, DW_AT_location[DW_OP_reg2]
+    2154              
+    2155              $C$DW$138       .dwtag  DW_TAG_TI_assign_register
+    2156                      .dwattr $C$DW$138, DW_AT_name("PH")
+    2157                      .dwattr $C$DW$138, DW_AT_location[DW_OP_reg3]
+    2158              
+    2159              $C$DW$139       .dwtag  DW_TAG_TI_assign_register
+    2160                      .dwattr $C$DW$139, DW_AT_name("SP")
+    2161                      .dwattr $C$DW$139, DW_AT_location[DW_OP_reg20]
+    2162              
+    2163              $C$DW$140       .dwtag  DW_TAG_TI_assign_register
+    2164                      .dwattr $C$DW$140, DW_AT_name("XT")
+    2165                      .dwattr $C$DW$140, DW_AT_location[DW_OP_reg21]
+    2166              
+    2167              $C$DW$141       .dwtag  DW_TAG_TI_assign_register
+    2168                      .dwattr $C$DW$141, DW_AT_name("T")
+    2169                      .dwattr $C$DW$141, DW_AT_location[DW_OP_reg22]
+    2170              
+    2171              $C$DW$142       .dwtag  DW_TAG_TI_assign_register
+    2172                      .dwattr $C$DW$142, DW_AT_name("ST0")
+    2173                      .dwattr $C$DW$142, DW_AT_location[DW_OP_reg23]
+    2174              
+    2175              $C$DW$143       .dwtag  DW_TAG_TI_assign_register
+    2176                      .dwattr $C$DW$143, DW_AT_name("ST1")
+    2177                      .dwattr $C$DW$143, DW_AT_location[DW_OP_reg24]
+    2178              
+    2179              $C$DW$144       .dwtag  DW_TAG_TI_assign_register
+    2180                      .dwattr $C$DW$144, DW_AT_name("PC")
+    2181                      .dwattr $C$DW$144, DW_AT_location[DW_OP_reg25]
+    2182              
+    2183              $C$DW$145       .dwtag  DW_TAG_TI_assign_register
+    2184                      .dwattr $C$DW$145, DW_AT_name("RPC")
+    2185                      .dwattr $C$DW$145, DW_AT_location[DW_OP_reg26]
+    2186              
+    2187              $C$DW$146       .dwtag  DW_TAG_TI_assign_register
+    2188                      .dwattr $C$DW$146, DW_AT_name("FP")
+    2189                      .dwattr $C$DW$146, DW_AT_location[DW_OP_reg28]
+    2190              
+    2191              $C$DW$147       .dwtag  DW_TAG_TI_assign_register
+    2192                      .dwattr $C$DW$147, DW_AT_name("DP")
+    2193                      .dwattr $C$DW$147, DW_AT_location[DW_OP_reg29]
+    2194              
+    2195              $C$DW$148       .dwtag  DW_TAG_TI_assign_register
+    2196                      .dwattr $C$DW$148, DW_AT_name("SXM")
+    2197                      .dwattr $C$DW$148, DW_AT_location[DW_OP_reg30]
+    2198              
+    2199              $C$DW$149       .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   46
+
+    2200                      .dwattr $C$DW$149, DW_AT_name("PM")
+    2201                      .dwattr $C$DW$149, DW_AT_location[DW_OP_reg31]
+    2202              
+    2203              $C$DW$150       .dwtag  DW_TAG_TI_assign_register
+    2204                      .dwattr $C$DW$150, DW_AT_name("OVM")
+    2205                      .dwattr $C$DW$150, DW_AT_location[DW_OP_regx 0x20]
+    2206              
+    2207              $C$DW$151       .dwtag  DW_TAG_TI_assign_register
+    2208                      .dwattr $C$DW$151, DW_AT_name("PAGE0")
+    2209                      .dwattr $C$DW$151, DW_AT_location[DW_OP_regx 0x21]
+    2210              
+    2211              $C$DW$152       .dwtag  DW_TAG_TI_assign_register
+    2212                      .dwattr $C$DW$152, DW_AT_name("AMODE")
+    2213                      .dwattr $C$DW$152, DW_AT_location[DW_OP_regx 0x22]
+    2214              
+    2215              $C$DW$153       .dwtag  DW_TAG_TI_assign_register
+    2216                      .dwattr $C$DW$153, DW_AT_name("EALLOW")
+    2217                      .dwattr $C$DW$153, DW_AT_location[DW_OP_regx 0x4e]
+    2218              
+    2219              $C$DW$154       .dwtag  DW_TAG_TI_assign_register
+    2220                      .dwattr $C$DW$154, DW_AT_name("INTM")
+    2221                      .dwattr $C$DW$154, DW_AT_location[DW_OP_regx 0x23]
+    2222              
+    2223              $C$DW$155       .dwtag  DW_TAG_TI_assign_register
+    2224                      .dwattr $C$DW$155, DW_AT_name("IFR")
+    2225                      .dwattr $C$DW$155, DW_AT_location[DW_OP_regx 0x24]
+    2226              
+    2227              $C$DW$156       .dwtag  DW_TAG_TI_assign_register
+    2228                      .dwattr $C$DW$156, DW_AT_name("IER")
+    2229                      .dwattr $C$DW$156, DW_AT_location[DW_OP_regx 0x25]
+    2230              
+    2231              $C$DW$157       .dwtag  DW_TAG_TI_assign_register
+    2232                      .dwattr $C$DW$157, DW_AT_name("V")
+    2233                      .dwattr $C$DW$157, DW_AT_location[DW_OP_regx 0x26]
+    2234              
+    2235              $C$DW$158       .dwtag  DW_TAG_TI_assign_register
+    2236                      .dwattr $C$DW$158, DW_AT_name("PSEUDOH")
+    2237                      .dwattr $C$DW$158, DW_AT_location[DW_OP_regx 0x4c]
+    2238              
+    2239              $C$DW$159       .dwtag  DW_TAG_TI_assign_register
+    2240                      .dwattr $C$DW$159, DW_AT_name("VOL")
+    2241                      .dwattr $C$DW$159, DW_AT_location[DW_OP_regx 0x4d]
+    2242              
+    2243              $C$DW$160       .dwtag  DW_TAG_TI_assign_register
+    2244                      .dwattr $C$DW$160, DW_AT_name("AR0")
+    2245                      .dwattr $C$DW$160, DW_AT_location[DW_OP_reg4]
+    2246              
+    2247              $C$DW$161       .dwtag  DW_TAG_TI_assign_register
+    2248                      .dwattr $C$DW$161, DW_AT_name("XAR0")
+    2249                      .dwattr $C$DW$161, DW_AT_location[DW_OP_reg5]
+    2250              
+    2251              $C$DW$162       .dwtag  DW_TAG_TI_assign_register
+    2252                      .dwattr $C$DW$162, DW_AT_name("AR1")
+    2253                      .dwattr $C$DW$162, DW_AT_location[DW_OP_reg6]
+    2254              
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   47
+
+    2255              $C$DW$163       .dwtag  DW_TAG_TI_assign_register
+    2256                      .dwattr $C$DW$163, DW_AT_name("XAR1")
+    2257                      .dwattr $C$DW$163, DW_AT_location[DW_OP_reg7]
+    2258              
+    2259              $C$DW$164       .dwtag  DW_TAG_TI_assign_register
+    2260                      .dwattr $C$DW$164, DW_AT_name("AR2")
+    2261                      .dwattr $C$DW$164, DW_AT_location[DW_OP_reg8]
+    2262              
+    2263              $C$DW$165       .dwtag  DW_TAG_TI_assign_register
+    2264                      .dwattr $C$DW$165, DW_AT_name("XAR2")
+    2265                      .dwattr $C$DW$165, DW_AT_location[DW_OP_reg9]
+    2266              
+    2267              $C$DW$166       .dwtag  DW_TAG_TI_assign_register
+    2268                      .dwattr $C$DW$166, DW_AT_name("AR3")
+    2269                      .dwattr $C$DW$166, DW_AT_location[DW_OP_reg10]
+    2270              
+    2271              $C$DW$167       .dwtag  DW_TAG_TI_assign_register
+    2272                      .dwattr $C$DW$167, DW_AT_name("XAR3")
+    2273                      .dwattr $C$DW$167, DW_AT_location[DW_OP_reg11]
+    2274              
+    2275              $C$DW$168       .dwtag  DW_TAG_TI_assign_register
+    2276                      .dwattr $C$DW$168, DW_AT_name("AR4")
+    2277                      .dwattr $C$DW$168, DW_AT_location[DW_OP_reg12]
+    2278              
+    2279              $C$DW$169       .dwtag  DW_TAG_TI_assign_register
+    2280                      .dwattr $C$DW$169, DW_AT_name("XAR4")
+    2281                      .dwattr $C$DW$169, DW_AT_location[DW_OP_reg13]
+    2282              
+    2283              $C$DW$170       .dwtag  DW_TAG_TI_assign_register
+    2284                      .dwattr $C$DW$170, DW_AT_name("AR5")
+    2285                      .dwattr $C$DW$170, DW_AT_location[DW_OP_reg14]
+    2286              
+    2287              $C$DW$171       .dwtag  DW_TAG_TI_assign_register
+    2288                      .dwattr $C$DW$171, DW_AT_name("XAR5")
+    2289                      .dwattr $C$DW$171, DW_AT_location[DW_OP_reg15]
+    2290              
+    2291              $C$DW$172       .dwtag  DW_TAG_TI_assign_register
+    2292                      .dwattr $C$DW$172, DW_AT_name("AR6")
+    2293                      .dwattr $C$DW$172, DW_AT_location[DW_OP_reg16]
+    2294              
+    2295              $C$DW$173       .dwtag  DW_TAG_TI_assign_register
+    2296                      .dwattr $C$DW$173, DW_AT_name("XAR6")
+    2297                      .dwattr $C$DW$173, DW_AT_location[DW_OP_reg17]
+    2298              
+    2299              $C$DW$174       .dwtag  DW_TAG_TI_assign_register
+    2300                      .dwattr $C$DW$174, DW_AT_name("AR7")
+    2301                      .dwattr $C$DW$174, DW_AT_location[DW_OP_reg18]
+    2302              
+    2303              $C$DW$175       .dwtag  DW_TAG_TI_assign_register
+    2304                      .dwattr $C$DW$175, DW_AT_name("XAR7")
+    2305                      .dwattr $C$DW$175, DW_AT_location[DW_OP_reg19]
+    2306              
+    2307              $C$DW$176       .dwtag  DW_TAG_TI_assign_register
+    2308                      .dwattr $C$DW$176, DW_AT_name("R0H")
+    2309                      .dwattr $C$DW$176, DW_AT_location[DW_OP_regx 0x2b]
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   48
+
+    2310              
+    2311              $C$DW$177       .dwtag  DW_TAG_TI_assign_register
+    2312                      .dwattr $C$DW$177, DW_AT_name("R1H")
+    2313                      .dwattr $C$DW$177, DW_AT_location[DW_OP_regx 0x2f]
+    2314              
+    2315              $C$DW$178       .dwtag  DW_TAG_TI_assign_register
+    2316                      .dwattr $C$DW$178, DW_AT_name("R2H")
+    2317                      .dwattr $C$DW$178, DW_AT_location[DW_OP_regx 0x33]
+    2318              
+    2319              $C$DW$179       .dwtag  DW_TAG_TI_assign_register
+    2320                      .dwattr $C$DW$179, DW_AT_name("R3H")
+    2321                      .dwattr $C$DW$179, DW_AT_location[DW_OP_regx 0x37]
+    2322              
+    2323              $C$DW$180       .dwtag  DW_TAG_TI_assign_register
+    2324                      .dwattr $C$DW$180, DW_AT_name("R4H")
+    2325                      .dwattr $C$DW$180, DW_AT_location[DW_OP_regx 0x3b]
+    2326              
+    2327              $C$DW$181       .dwtag  DW_TAG_TI_assign_register
+    2328                      .dwattr $C$DW$181, DW_AT_name("R5H")
+    2329                      .dwattr $C$DW$181, DW_AT_location[DW_OP_regx 0x3f]
+    2330              
+    2331              $C$DW$182       .dwtag  DW_TAG_TI_assign_register
+    2332                      .dwattr $C$DW$182, DW_AT_name("R6H")
+    2333                      .dwattr $C$DW$182, DW_AT_location[DW_OP_regx 0x43]
+    2334              
+    2335              $C$DW$183       .dwtag  DW_TAG_TI_assign_register
+    2336                      .dwattr $C$DW$183, DW_AT_name("R7H")
+    2337                      .dwattr $C$DW$183, DW_AT_location[DW_OP_regx 0x47]
+    2338              
+    2339              $C$DW$184       .dwtag  DW_TAG_TI_assign_register
+    2340                      .dwattr $C$DW$184, DW_AT_name("RB")
+    2341                      .dwattr $C$DW$184, DW_AT_location[DW_OP_regx 0x4a]
+    2342              
+    2343              $C$DW$185       .dwtag  DW_TAG_TI_assign_register
+    2344                      .dwattr $C$DW$185, DW_AT_name("STF")
+    2345                      .dwattr $C$DW$185, DW_AT_location[DW_OP_regx 0x28]
+    2346              
+    2347              $C$DW$186       .dwtag  DW_TAG_TI_assign_register
+    2348                      .dwattr $C$DW$186, DW_AT_name("FPUHAZ")
+    2349                      .dwattr $C$DW$186, DW_AT_location[DW_OP_reg27]
+    2350              
+    2351              $C$DW$187       .dwtag  DW_TAG_TI_assign_register
+    2352                      .dwattr $C$DW$187, DW_AT_name("STF_HWDIV")
+    2353                      .dwattr $C$DW$187, DW_AT_location[DW_OP_regx 0x4f]
+    2354              
+    2355              $C$DW$188       .dwtag  DW_TAG_TI_assign_register
+    2356                      .dwattr $C$DW$188, DW_AT_name("VCRC")
+    2357                      .dwattr $C$DW$188, DW_AT_location[DW_OP_regx 0x50]
+    2358              
+    2359              $C$DW$189       .dwtag  DW_TAG_TI_assign_register
+    2360                      .dwattr $C$DW$189, DW_AT_name("VSTATUS")
+    2361                      .dwattr $C$DW$189, DW_AT_location[DW_OP_regx 0x51]
+    2362              
+    2363              $C$DW$190       .dwtag  DW_TAG_TI_assign_register
+    2364                      .dwattr $C$DW$190, DW_AT_name("VCRCPOLY")
+TMS320C2000 Assembler PC v22.6.1 Wed May 21 09:51:56 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:\Users\Daniel\AppData\Local\Temp\{FF3B037A-87FB-4E37-8A05-A230264B4C77} PAGE   49
+
+    2365                      .dwattr $C$DW$190, DW_AT_location[DW_OP_regx 0x52]
+    2366              
+    2367              $C$DW$191       .dwtag  DW_TAG_TI_assign_register
+    2368                      .dwattr $C$DW$191, DW_AT_name("VCRCSIZE")
+    2369                      .dwattr $C$DW$191, DW_AT_location[DW_OP_regx 0x53]
+    2370              
+    2371                      .dwendtag $C$DW$CU
+    2372              
+
+No Assembly Errors, No Assembly Warnings

@@ -153,8 +153,10 @@ void COMP_CURRENT_init();
 // CPUTIMER Configurations
 //
 //*****************************************************************************
-#define TIMER_1MS_BASE CPUTIMER1_BASE
-void TIMER_1MS_init();
+#define TIMER_1_BASE CPUTIMER1_BASE
+void TIMER_1_init();
+#define TIMER_0_BASE CPUTIMER0_BASE
+void TIMER_0_init();
 
 //*****************************************************************************
 //
@@ -214,16 +216,10 @@ void LED2_init();
 #define INT_ADC0_1_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP1
 extern __interrupt void INT_ADC0_1_ISR(void);
 
-// Interrupt Settings for INT_TIMER_1MS
+// Interrupt Settings for INT_TIMER_1
 // ISR need to be defined for the registered interrupts
-#define INT_TIMER_1MS INT_TIMER1
-extern __interrupt void INT_TIMER_1MS_ISR(void);
-
-// Interrupt Settings for INT_GATE_PWM_TZ
-// ISR need to be defined for the registered interrupts
-#define INT_GATE_PWM_TZ INT_EPWM1_TZ
-#define INT_GATE_PWM_TZ_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP2
-extern __interrupt void INT_GATE_PWM_TZ_ISR(void);
+#define INT_TIMER_1 INT_TIMER1
+extern __interrupt void INT_TIMER_1_ISR(void);
 
 //*****************************************************************************
 //
